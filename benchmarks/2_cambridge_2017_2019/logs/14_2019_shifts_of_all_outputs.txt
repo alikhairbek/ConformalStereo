@@ -1,0 +1,2 @@
+outputs 576, isomer blocks 2894: reproduced to the printed precision 1910, no structure found 2
+outputs with every isomer reproduced: 295

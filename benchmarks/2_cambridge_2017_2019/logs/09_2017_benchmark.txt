@@ -1,0 +1,22 @@
+compounds 42 in 30 families (molecule archives), levels 12, records 504; candidates per compound: 11 x 2, 17 x 4, 9 x 8, 3 x 16, 2 x 32
+chance of naming the actual structure by a random pick: 26.5% on average
+
+level                      first  first(C)  first(H)  calls >=99%  of them right  actual <=1%
+B3LYP/6-31G(d,p)         24/42     23/42     27/42         25         20 (80.0%)       10
+B3LYP/6-311G(d)          27/42     26/42     24/42         24         20 (83.3%)        8
+mPW1PW91/6-31G(d,p)      28/42     24/42     26/42         24         22 (91.7%)        8
+mPW1PW91/6-311G(d)       31/42     24/42     26/42         26         22 (84.6%)        7
+WP04/6-31G(d,p)          24/42     21/42     24/42         20         17 (85.0%)       11
+WP04/6-311G(d)           25/42     21/42     24/42         18         14 (77.8%)       11
+M06-2X/6-31G(d,p)        27/42     22/42     21/42         20         16 (80.0%)        7
+M06-2X/6-311G(d)         29/42     25/42     25/42         20         17 (85.0%)        7
+B3LYP/gen                28/42     24/42     24/42         19         17 (89.5%)        8
+mPW1PW91/gen             29/42     28/42     24/42         21         18 (85.7%)        8
+WP04/gen                 27/42     22/42     25/42         20         16 (80.0%)        9
+M06-2X/gen               27/42     24/42     17/42         21         16 (76.2%)       10
+all levels              326/504   284/504   287/504       258        215 (83.3%)      104
+
+sets taken from the DP4 probabilities (smallest set summing to 90%): contain the actual structure in 377 of 504 records (74.8%), mean size 1.34
+sets taken from the DP4 probabilities (smallest set summing to 80%): contain the actual structure in 358 of 504 records (71.0%), mean size 1.21
+split conformal, target 90%: coverage 91.5% (levels 91.4-91.7%), mean set size 3.73, single-structure sets 17.1% (2000 splits by family)
+split conformal, target 80%: coverage 81.9% (levels 81.3-82.4%), mean set size 2.05, single-structure sets 45.1% (2000 splits by family)

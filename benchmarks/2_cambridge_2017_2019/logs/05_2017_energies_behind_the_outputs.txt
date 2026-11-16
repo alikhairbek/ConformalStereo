@@ -1,0 +1,62 @@
+isomer blocks 3480: reproduced with the energies of the same level 3346, only with another level 113, not reproduced 21
+
+isomer blocks with more than one conformer, by level of the output (shieldings):
+   BF1   same level 254, not reproduced 1
+   BF2   same level 246, energies of BF12 8, not reproduced 1
+   BF3   same level 246, energies of BF12 7, not reproduced 2
+   BF4   same level 204, energies of BF1 50, not reproduced 1
+   BF5   same level 246, energies of BF12 8, not reproduced 1
+   BF6   same level 246, energies of BF12 8, not reproduced 1
+   BF7   same level 254, not reproduced 1
+   BF8   same level 246, energies of BF12 8, not reproduced 1
+   BF9   same level 246, energies of BF12 8, not reproduced 1
+   BF10  same level 246, not reproduced 9
+   BF11  same level 246, energies of BF12 8, not reproduced 1
+   BF12  same level 246, energies of BF5 6, energies of another level (several fit) 2, not reproduced 1
+
+outputs behind which other energies stand (experiment: level of the output <- level of the energies, isomer blocks):
+   1109ENMR                 BF4   <- BF1      4
+   AtazanavirP1NMR          BF2   <- BF12     8
+   AtazanavirP1NMR          BF3   <- BF12     7
+   AtazanavirP1NMR          BF5   <- BF12     8
+   AtazanavirP1NMR          BF6   <- BF12     8
+   AtazanavirP1NMR          BF8   <- BF12     8
+   AtazanavirP1NMR          BF9   <- BF12     8
+   AtazanavirP1NMR          BF11  <- BF12     8
+   AtazanavirP1NMR          BF12  <- BF5      6
+   AtazanavirP1NMR          BF12  <- several  2
+   CMaNMR                   BF4   <- BF1      2
+   CMbNMR                   BF4   <- BF1      2
+   DidanosineNMR            BF4   <- BF1      2
+   EntecavirNMR             BF4   <- BF1      4
+   EzetimibeNMR             BF4   <- BF1      4
+   FormoterolNMR            BF4   <- BF1      2
+   LopinavirNMR             BF4   <- BF1      8
+   Nankakurine1NMRreal      BF4   <- BF1      2
+   NeopeltolideNMR          BF4   <- BF1      8
+   NeopeltolidePropNMR      BF4   <- BF1      8
+   hydroxycurvularin1NMR    BF4   <- BF1      2
+   hydroxycurvularin2NMR    BF4   <- BF1      2
+
+not reproduced (experiment, level, isomer, structure, conformers, spread of the offsets C / H in ppm):
+   AtazanavirP1NMR          BF3    5 AtazanavirP5      16  2.82 / 0.469
+   AtazanavirP1NMR          BF10   1 AtazanavirP1       4  16.50 / 0.533
+   AtazanavirP1NMR          BF10   2 AtazanavirP2      14  18.81 / 0.917
+   AtazanavirP1NMR          BF10   3 AtazanavirP3       9  21.30 / 1.108
+   AtazanavirP1NMR          BF10   4 AtazanavirP4      21  17.10 / 0.500
+   AtazanavirP1NMR          BF10   5 AtazanavirP5      16  16.39 / 1.143
+   AtazanavirP1NMR          BF10   6 AtazanavirP6       3  21.28 / 2.108
+   AtazanavirP1NMR          BF10   7 AtazanavirP7      18  16.16 / 1.106
+   AtazanavirP1NMR          BF10   8 AtazanavirP8      14  17.87 / 0.576
+   CapecitabineNMR          BF1    4 Capecitabine4    106  0.11 / 0.023
+   CapecitabineNMR          BF2    4 Capecitabine4    106  0.14 / 0.021
+   CapecitabineNMR          BF3    4 Capecitabine4    106  0.12 / 0.022
+   CapecitabineNMR          BF4    4 Capecitabine4    106  0.15 / 0.026
+   CapecitabineNMR          BF5    4 Capecitabine4    106  0.11 / 0.019
+   CapecitabineNMR          BF6    4 Capecitabine4    106  0.12 / 0.014
+   CapecitabineNMR          BF7    4 Capecitabine4    106  0.11 / 0.019
+   CapecitabineNMR          BF8    4 Capecitabine4    106  0.15 / 0.022
+   CapecitabineNMR          BF9    2 Capecitabine2    214  0.13 / 0.018
+   CapecitabineNMR          BF10   2 Capecitabine2    214  0.14 / 0.020
+   CapecitabineNMR          BF11   2 Capecitabine2    214  0.07 / 0.013
+   CapecitabineNMR          BF12   2 Capecitabine2    214  0.25 / 0.032

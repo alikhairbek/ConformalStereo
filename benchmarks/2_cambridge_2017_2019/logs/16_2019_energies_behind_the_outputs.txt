@@ -1,0 +1,322 @@
+isomer blocks 2412: reproduced with the energies of the same level 1802, only with another level 344, not reproduced 266
+of the blocks not reproduced, 64 hold the shifts of another level (a copied output file)
+
+isomer blocks with more than one conformer, by level of the output (shieldings):
+   BF1   same level 100
+   BF4   same level 100
+   BF7   same level 100
+   BF1s  same level 100
+   BF4s  energies of BF7s 87, same level 11, energies of another level (several fit) 2
+   BF7s  same level 100
+   BF1pm7 same level 100
+   BF4pm7 energies of BF7pm7 78, energies of another level (several fit) 21, same level 1
+   BF7pm7 same level 100
+   BF1h  same level 129
+   BF4h  energies of BF7h 51, not reproduced 34, same level 33, energies of another level (several fit) 11
+   BF7h  same level 111, not reproduced 18
+   BF1d  same level 116, not reproduced 13
+   BF4d  not reproduced 56, energies of BF7d 33, same level 29, energies of another level (several fit) 10
+   BF7d  same level 92, not reproduced 37
+   BF1m  same level 101, not reproduced 28
+   BF4m  same level 43, energies of BF7m 41, not reproduced 35, energies of another level (several fit) 10
+   BF7m  same level 107, not reproduced 22
+
+outputs behind which other energies stand (experiment: level of the output <- level of the energies, isomer blocks):
+   1166ANMR                 BF4s  <- BF7s     4
+   1166ANMR                 BF4pm7 <- BF7pm7   4
+   1166ANMR                 BF4h  <- BF7h     3
+   1166ANMR                 BF4m  <- BF7m     2
+   1166BNMR                 BF4s  <- BF7s     4
+   1166BNMR                 BF4pm7 <- BF7pm7   4
+   1166BNMR                 BF4h  <- BF7h     3
+   1166BNMR                 BF4m  <- BF7m     2
+   1166CNMR                 BF4s  <- BF7s     4
+   1166CNMR                 BF4pm7 <- BF7pm7   4
+   1166CNMR                 BF4h  <- BF7h     3
+   1166CNMR                 BF4m  <- BF7m     2
+   1166DNMR                 BF4s  <- BF7s     4
+   1166DNMR                 BF4pm7 <- BF7pm7   4
+   1166DNMR                 BF4h  <- BF7h     3
+   1166DNMR                 BF4m  <- BF7m     2
+   CallipeltinRRRNMR        BF4s  <- BF7s     4
+   CallipeltinRRRNMR        BF4pm7 <- BF7pm7   4
+   CallipeltinRRRNMR        BF4h  <- BF7h     4
+   CallipeltinRRRNMR        BF4d  <- BF7d     3
+   CallipeltinRRRNMR        BF4m  <- BF7m     4
+   CallipeltinRRSNMR        BF4s  <- BF7s     4
+   CallipeltinRRSNMR        BF4pm7 <- BF7pm7   4
+   CallipeltinRRSNMR        BF4h  <- BF7h     4
+   CallipeltinRRSNMR        BF4d  <- BF7d     3
+   CallipeltinRRSNMR        BF4m  <- BF7m     4
+   CallipeltinSRRNMR        BF4s  <- BF7s     4
+   CallipeltinSRRNMR        BF4pm7 <- BF7pm7   4
+   CallipeltinSRRNMR        BF4h  <- BF7h     4
+   CallipeltinSRRNMR        BF4d  <- BF7d     3
+   CallipeltinSRRNMR        BF4m  <- BF7m     4
+   CallipeltinSRSNMR        BF4s  <- BF7s     4
+   CallipeltinSRSNMR        BF4pm7 <- BF7pm7   4
+   CallipeltinSRSNMR        BF4h  <- BF7h     4
+   CallipeltinSRSNMR        BF4d  <- BF7d     3
+   CallipeltinSRSNMR        BF4m  <- BF7m     4
+   CitrinadinBNMR           BF4s  <- BF7s     10
+   CitrinadinBNMR           BF4s  <- several  2
+   CitrinadinBNMR           BF4pm7 <- several  21
+   CitrinadinBNMR           BF4h  <- several  11
+   CitrinadinBNMR           BF4h  <- BF7h     11
+   CitrinadinBNMR           BF4d  <- several  10
+   CitrinadinBNMR           BF4d  <- BF7d     11
+   CitrinadinBNMR           BF4m  <- several  10
+   CitrinadinBNMR           BF4m  <- BF7m     7
+   DidanosineNMR            BF4s  <- BF7s     2
+   DidanosineNMR            BF4pm7 <- BF7pm7   2
+   DidanosineNMR            BF4h  <- BF7h     1
+   DidanosineNMR            BF4d  <- BF7d     1
+   EntecavirNMR             BF4s  <- BF7s     3
+   EntecavirNMR             BF4pm7 <- BF7pm7   4
+   EntecavirNMR             BF4h  <- BF7h     4
+   EntecavirNMR             BF4d  <- BF7d     4
+   EntecavirNMR             BF4m  <- BF7m     3
+   EzetimibeNMR             BF4s  <- BF7s     4
+   EzetimibeNMR             BF4pm7 <- BF7pm7   4
+   FormoterolNMR            BF4s  <- BF7s     2
+   FormoterolNMR            BF4pm7 <- BF7pm7   2
+   LopinavirNMR             BF4s  <- BF7s     8
+   LopinavirNMR             BF4pm7 <- BF7pm7   8
+   LopinavirNMR             BF4h  <- BF7h     2
+   LopinavirNMR             BF4d  <- BF7d     1
+   OseltamivirNMR           BF4s  <- BF7s     4
+   OseltamivirNMR           BF4pm7 <- BF7pm7   4
+   RosuvastatinNMR          BF4s  <- BF7s     2
+   RosuvastatinNMR          BF4pm7 <- BF7pm7   2
+   SolifenacinNMR           BF4s  <- BF7s     2
+   SolifenacinNMR           BF4pm7 <- BF7pm7   2
+   TadalafilNMR             BF4s  <- BF7s     2
+   TadalafilNMR             BF4pm7 <- BF7pm7   2
+   Tanarifuranolol1NMR      BF4s  <- BF7s     4
+   Tanarifuranolol1NMR      BF4pm7 <- BF7pm7   4
+   Tanarifuranolol1NMR      BF4h  <- BF7h     1
+   Tanarifuranolol1NMR      BF4d  <- BF7d     1
+   Tanarifuranolol1NMR      BF4m  <- BF7m     2
+   Tanarifuranolol2NMR      BF4s  <- BF7s     4
+   Tanarifuranolol2NMR      BF4pm7 <- BF7pm7   4
+   Tanarifuranolol2NMR      BF4h  <- BF7h     1
+   Tanarifuranolol2NMR      BF4d  <- BF7d     1
+   Tanarifuranolol2NMR      BF4m  <- BF7m     2
+   Tiotropium1NMR           BF4s  <- BF7s     4
+   Tiotropium1NMR           BF4pm7 <- BF7pm7   4
+   ZidovudineNMR            BF4s  <- BF7s     4
+   ZidovudineNMR            BF4pm7 <- BF7pm7   4
+   ZidovudineNMR            BF4h  <- BF7h     3
+   ZidovudineNMR            BF4d  <- BF7d     2
+   ZidovudineNMR            BF4m  <- BF7m     3
+
+outputs that hold the shifts of another level (experiment: level of the folder <- level of the shifts, isomer blocks):
+   ArtemisininNMR           BF4d   <- BF1d   32
+   AspergillideACDCl3NMR    BF4h   <- BF1h   8
+   AspergillideACDCl3NMR    BF4d   <- BF1d   8
+   AspergillideACDCl3NMR    BF4m   <- BF1m   8
+   AspergillideBC6D6NMR     BF4h   <- BF1h   8
+
+not reproduced (experiment, level, isomer, structure, conformers, spread of the offsets C / H in ppm):
+   CallipeltinRRRNMR        BF4d   3 1012N             20  0.88 / 0.055
+   CallipeltinRRRNMR        BF7d   3 1012N             20  0.06 / 0.006
+   CallipeltinRRSNMR        BF4d   3 1012N             20  0.88 / 0.055
+   CallipeltinRRSNMR        BF7d   3 1012N             20  0.06 / 0.006
+   CallipeltinSRRNMR        BF4d   3 1012N             20  0.88 / 0.055
+   CallipeltinSRRNMR        BF7d   3 1012N             20  0.06 / 0.006
+   CallipeltinSRSNMR        BF4d   3 1012N             20  0.88 / 0.055
+   CallipeltinSRSNMR        BF7d   3 1012N             20  0.06 / 0.006
+   CitrinadinBNMR           BF7d  23 CitrinadinB23      4  0.01 / 0.009
+   CitrinadinBNMR           BF1m  15 CitrinadinB15      1  0.70 / 0.036
+   CitrinadinBNMR           BF1m  19 CitrinadinB19      2  0.01 / 0.009
+   CitrinadinBNMR           BF1m  21 CitrinadinB21      2  8.35 / 0.969
+   CitrinadinBNMR           BF1m  26 CitrinadinB26      4  0.05 / 0.012
+   CitrinadinBNMR           BF4m   3 CitrinadinB3       3  0.23 / 0.079
+   CitrinadinBNMR           BF4m  15 CitrinadinB15      1  0.77 / 0.039
+   CitrinadinBNMR           BF4m  19 CitrinadinB19      2  0.02 / 0.009
+   CitrinadinBNMR           BF4m  21 CitrinadinB21      2  9.02 / 0.869
+   CitrinadinBNMR           BF4m  26 CitrinadinB26      4  0.10 / 0.034
+   CitrinadinBNMR           BF4m  27 CitrinadinB27      3  10.53 / 1.132
+   CitrinadinBNMR           BF7m   3 CitrinadinB3       3  0.02 / 0.011
+   CitrinadinBNMR           BF7m  15 CitrinadinB15      1  0.76 / 0.057
+   CitrinadinBNMR           BF7m  19 CitrinadinB19      2  0.03 / 0.011
+   CitrinadinBNMR           BF7m  21 CitrinadinB21      2  9.91 / 0.936
+   CitrinadinBNMR           BF7m  26 CitrinadinB26      4  0.05 / 0.011
+   CitrinadinBNMR           BF7m  27 CitrinadinB27      3  0.02 / 0.009
+   DidanosineNMR            BF4h   2 Didanosine2       14  3.46 / 0.198
+   DidanosineNMR            BF7h   2 Didanosine2       14  0.16 / 0.019
+   DidanosineNMR            BF4d   2 Didanosine2       14  4.07 / 0.235
+   DidanosineNMR            BF7d   2 Didanosine2       14  0.09 / 0.010
+   DidanosineNMR            BF1m   2 Didanosine2       14  0.04 / 0.009
+   EntecavirNMR             BF1m   4 Entecavir4        18  0.06 / 0.009
+   EntecavirNMR             BF4m   4 Entecavir4        18  1.81 / 0.251
+   EntecavirNMR             BF7m   4 Entecavir4        18  0.02 / 0.007
+   LopinavirNMR             BF4h   1 Lopinavir1        14  3.52 / 0.677
+   LopinavirNMR             BF4h   2 Lopinavir2        24  4.58 / 0.651
+   LopinavirNMR             BF4h   4 Lopinavir4        12  2.44 / 0.390
+   LopinavirNMR             BF4h   6 Lopinavir6        51  13.96 / 2.158
+   LopinavirNMR             BF4h   7 Lopinavir7        40  5.04 / 0.860
+   LopinavirNMR             BF4h   8 Lopinavir8        11  2.88 / 1.046
+   LopinavirNMR             BF7h   1 Lopinavir1        14  0.34 / 0.117
+   LopinavirNMR             BF7h   2 Lopinavir2        24  0.08 / 0.015
+   LopinavirNMR             BF7h   4 Lopinavir4        12  0.30 / 0.055
+   LopinavirNMR             BF7h   6 Lopinavir6        51  0.04 / 0.021
+   LopinavirNMR             BF7h   7 Lopinavir7        40  0.10 / 0.020
+   LopinavirNMR             BF7h   8 Lopinavir8        11  0.06 / 0.021
+   LopinavirNMR             BF1d   3 Lopinavir3        13  0.43 / 0.148
+   LopinavirNMR             BF4d   1 Lopinavir1        14  5.82 / 1.672
+   LopinavirNMR             BF4d   2 Lopinavir2        24  2.36 / 0.363
+   LopinavirNMR             BF4d   3 Lopinavir3        13  2.59 / 0.758
+   LopinavirNMR             BF4d   4 Lopinavir4        12  3.03 / 0.594
+   LopinavirNMR             BF4d   6 Lopinavir6        51  13.51 / 2.068
+   LopinavirNMR             BF4d   7 Lopinavir7        40  4.05 / 1.245
+   LopinavirNMR             BF4d   8 Lopinavir8        11  2.81 / 1.004
+   LopinavirNMR             BF7d   1 Lopinavir1        14  0.02 / 0.011
+   LopinavirNMR             BF7d   2 Lopinavir2        24  0.08 / 0.025
+   LopinavirNMR             BF7d   3 Lopinavir3        13  0.07 / 0.024
+   LopinavirNMR             BF7d   4 Lopinavir4        12  0.55 / 0.105
+   LopinavirNMR             BF7d   6 Lopinavir6        51  0.02 / 0.010
+   LopinavirNMR             BF7d   7 Lopinavir7        40  0.22 / 0.060
+   LopinavirNMR             BF7d   8 Lopinavir8        11  0.02 / 0.011
+   LopinavirNMR             BF1m   1 Lopinavir1        14  2.52 / 0.559
+   LopinavirNMR             BF1m   2 Lopinavir2        24  0.79 / 0.282
+   LopinavirNMR             BF1m   3 Lopinavir3        13  0.06 / 0.011
+   LopinavirNMR             BF1m   4 Lopinavir4        12  0.01 / 0.010
+   LopinavirNMR             BF1m   5 Lopinavir5         3  1.20 / 0.505
+   LopinavirNMR             BF1m   6 Lopinavir6        51  0.10 / 0.020
+   LopinavirNMR             BF1m   7 Lopinavir7        40  1.47 / 0.207
+   LopinavirNMR             BF1m   8 Lopinavir8        11  2.47 / 0.664
+   LopinavirNMR             BF4m   1 Lopinavir1        13  10.13 / 1.754
+   LopinavirNMR             BF4m   2 Lopinavir2        24  9.77 / 1.664
+   LopinavirNMR             BF4m   3 Lopinavir3        13  7.80 / 1.461
+   LopinavirNMR             BF4m   4 Lopinavir4        11  7.34 / 3.088
+   LopinavirNMR             BF4m   5 Lopinavir5         3  1.21 / 0.562
+   LopinavirNMR             BF4m   6 Lopinavir6        51  5.53 / 2.049
+   LopinavirNMR             BF4m   7 Lopinavir7        40  18.65 / 2.518
+   LopinavirNMR             BF4m   8 Lopinavir8        11  6.46 / 1.812
+   Tanarifuranolol1NMR      BF4h   1 1039A             27  1.06 / 0.125
+   Tanarifuranolol1NMR      BF4h   3 1039C             33  1.46 / 0.169
+   Tanarifuranolol1NMR      BF4h   4 1039D             11  1.13 / 0.093
+   Tanarifuranolol1NMR      BF7h   1 1039A             27  0.14 / 0.034
+   Tanarifuranolol1NMR      BF7h   3 1039C             33  0.15 / 0.026
+   Tanarifuranolol1NMR      BF7h   4 1039D             11  0.33 / 0.038
+   Tanarifuranolol1NMR      BF4d   1 1039A             27  1.09 / 0.117
+   Tanarifuranolol1NMR      BF4d   3 1039C             33  1.90 / 0.190
+   Tanarifuranolol1NMR      BF4d   4 1039D             11  1.12 / 0.095
+   Tanarifuranolol1NMR      BF7d   1 1039A             27  0.09 / 0.032
+   Tanarifuranolol1NMR      BF7d   3 1039C             33  0.07 / 0.016
+   Tanarifuranolol1NMR      BF7d   4 1039D             11  0.01 / 0.010
+   Tanarifuranolol1NMR      BF1m   1 1039A             27  0.03 / 0.009
+   Tanarifuranolol1NMR      BF1m   3 1039C             33  0.08 / 0.030
+   Tanarifuranolol1NMR      BF1m   4 1039D             11  0.03 / 0.009
+   Tanarifuranolol1NMR      BF4m   3 1039C             33  1.81 / 0.275
+   Tanarifuranolol1NMR      BF4m   4 1039D             11  1.50 / 0.220
+   Tanarifuranolol1NMR      BF7m   1 1039A             27  0.01 / 0.008
+   Tanarifuranolol1NMR      BF7m   3 1039C             33  0.09 / 0.029
+   Tanarifuranolol1NMR      BF7m   4 1039D             11  0.04 / 0.012
+   Tanarifuranolol2NMR      BF4h   1 1039A             27  1.06 / 0.125
+   Tanarifuranolol2NMR      BF4h   3 1039C             33  1.46 / 0.169
+   Tanarifuranolol2NMR      BF4h   4 1039D             11  1.13 / 0.093
+   Tanarifuranolol2NMR      BF7h   1 1039A             27  0.14 / 0.034
+   Tanarifuranolol2NMR      BF7h   3 1039C             33  0.15 / 0.026
+   Tanarifuranolol2NMR      BF7h   4 1039D             11  0.33 / 0.038
+   Tanarifuranolol2NMR      BF4d   1 1039A             27  1.09 / 0.117
+   Tanarifuranolol2NMR      BF4d   3 1039C             33  1.90 / 0.190
+   Tanarifuranolol2NMR      BF4d   4 1039D             11  1.12 / 0.095
+   Tanarifuranolol2NMR      BF7d   1 1039A             27  0.09 / 0.032
+   Tanarifuranolol2NMR      BF7d   3 1039C             33  0.07 / 0.016
+   Tanarifuranolol2NMR      BF7d   4 1039D             11  0.01 / 0.010
+   Tanarifuranolol2NMR      BF1m   1 1039A             27  0.03 / 0.009
+   Tanarifuranolol2NMR      BF1m   3 1039C             33  0.08 / 0.030
+   Tanarifuranolol2NMR      BF1m   4 1039D             11  0.03 / 0.009
+   Tanarifuranolol2NMR      BF4m   3 1039C             33  1.81 / 0.275
+   Tanarifuranolol2NMR      BF4m   4 1039D             11  1.50 / 0.220
+   Tanarifuranolol2NMR      BF7m   1 1039A             27  0.01 / 0.008
+   Tanarifuranolol2NMR      BF7m   3 1039C             33  0.09 / 0.029
+   Tanarifuranolol2NMR      BF7m   4 1039D             11  0.04 / 0.012
+   1166ANMR                 BF4h   2 1166B             68  0.61 / 0.049
+   1166ANMR                 BF7h   2 1166B             68  0.20 / 0.014
+   1166ANMR                 BF4d   1 1166A             50  4.09 / 0.352
+   1166ANMR                 BF4d   2 1166B             68  0.61 / 0.034
+   1166ANMR                 BF4d   3 1166C             32  1.55 / 0.175
+   1166ANMR                 BF4d   4 1166D             16  1.28 / 0.144
+   1166ANMR                 BF7d   1 1166A             50  0.14 / 0.018
+   1166ANMR                 BF7d   2 1166B             68  0.42 / 0.025
+   1166ANMR                 BF7d   3 1166C             32  0.36 / 0.052
+   1166ANMR                 BF7d   4 1166D             16  0.18 / 0.020
+   1166ANMR                 BF1m   1 1166A             50  0.02 / 0.009
+   1166ANMR                 BF1m   2 1166B             68  0.03 / 0.007
+   1166ANMR                 BF4m   1 1166A             50  3.18 / 0.374
+   1166ANMR                 BF4m   2 1166B             68  1.38 / 0.151
+   1166ANMR                 BF7m   1 1166A             50  0.06 / 0.009
+   1166ANMR                 BF7m   2 1166B             68  0.18 / 0.017
+   1166BNMR                 BF4h   2 1166B             68  0.61 / 0.049
+   1166BNMR                 BF7h   2 1166B             68  0.20 / 0.014
+   1166BNMR                 BF1d   1 1166A             50  0.20 / 0.028
+   1166BNMR                 BF1d   2 1166B             68  0.47 / 0.057
+   1166BNMR                 BF1d   3 1166C             32  0.29 / 0.045
+   1166BNMR                 BF1d   4 1166D             16  0.81 / 0.095
+   1166BNMR                 BF4d   1 1166A             50  4.09 / 0.352
+   1166BNMR                 BF4d   2 1166B             68  0.61 / 0.034
+   1166BNMR                 BF4d   3 1166C             32  1.55 / 0.175
+   1166BNMR                 BF4d   4 1166D             16  1.28 / 0.144
+   1166BNMR                 BF7d   1 1166A             50  0.14 / 0.015
+   1166BNMR                 BF7d   2 1166B             68  0.42 / 0.025
+   1166BNMR                 BF7d   3 1166C             32  0.36 / 0.052
+   1166BNMR                 BF7d   4 1166D             16  0.18 / 0.020
+   1166BNMR                 BF1m   1 1166A             50  0.02 / 0.007
+   1166BNMR                 BF1m   2 1166B             68  0.03 / 0.008
+   1166BNMR                 BF4m   1 1166A             50  3.18 / 0.374
+   1166BNMR                 BF4m   2 1166B             68  1.38 / 0.151
+   1166BNMR                 BF7m   1 1166A             50  0.06 / 0.008
+   1166BNMR                 BF7m   2 1166B             68  0.18 / 0.017
+   1166CNMR                 BF4h   2 1166B             68  0.61 / 0.070
+   1166CNMR                 BF7h   2 1166B             68  0.20 / 0.037
+   1166CNMR                 BF1d   1 1166A             50  0.20 / 0.028
+   1166CNMR                 BF1d   2 1166B             68  0.47 / 0.057
+   1166CNMR                 BF1d   3 1166C             32  0.29 / 0.048
+   1166CNMR                 BF1d   4 1166D             16  0.81 / 0.095
+   1166CNMR                 BF4d   1 1166A             50  4.09 / 0.356
+   1166CNMR                 BF4d   2 1166B             68  0.61 / 0.143
+   1166CNMR                 BF4d   3 1166C             32  1.55 / 0.175
+   1166CNMR                 BF4d   4 1166D             16  1.28 / 0.144
+   1166CNMR                 BF7d   1 1166A             50  0.14 / 0.019
+   1166CNMR                 BF7d   2 1166B             68  0.42 / 0.025
+   1166CNMR                 BF7d   3 1166C             32  0.36 / 0.057
+   1166CNMR                 BF7d   4 1166D             16  0.18 / 0.024
+   1166CNMR                 BF1m   1 1166A             50  0.02 / 0.007
+   1166CNMR                 BF1m   2 1166B             68  0.03 / 0.009
+   1166CNMR                 BF4m   1 1166A             50  3.18 / 0.477
+   1166CNMR                 BF4m   2 1166B             68  1.38 / 0.239
+   1166CNMR                 BF7m   1 1166A             50  0.06 / 0.009
+   1166CNMR                 BF7m   2 1166B             68  0.18 / 0.031
+   1166DNMR                 BF4h   2 1166B             68  0.61 / 0.070
+   1166DNMR                 BF7h   2 1166B             68  0.20 / 0.037
+   1166DNMR                 BF1d   1 1166A             50  0.20 / 0.032
+   1166DNMR                 BF1d   2 1166B             68  0.47 / 0.057
+   1166DNMR                 BF1d   3 1166C             32  0.29 / 0.048
+   1166DNMR                 BF1d   4 1166D             16  0.81 / 0.095
+   1166DNMR                 BF4d   1 1166A             50  4.09 / 0.356
+   1166DNMR                 BF4d   2 1166B             68  0.61 / 0.143
+   1166DNMR                 BF4d   3 1166C             32  1.55 / 0.175
+   1166DNMR                 BF4d   4 1166D             16  1.28 / 0.144
+   1166DNMR                 BF7d   1 1166A             50  0.14 / 0.019
+   1166DNMR                 BF7d   2 1166B             68  0.42 / 0.025
+   1166DNMR                 BF7d   3 1166C             32  0.36 / 0.057
+   1166DNMR                 BF7d   4 1166D             16  0.18 / 0.024
+   1166DNMR                 BF1m   1 1166A             50  0.02 / 0.009
+   1166DNMR                 BF1m   2 1166B             68  0.03 / 0.009
+   1166DNMR                 BF4m   1 1166A             50  3.18 / 0.477
+   1166DNMR                 BF4m   2 1166B             68  1.38 / 0.239
+   1166DNMR                 BF7m   1 1166A             50  0.06 / 0.009
+   1166DNMR                 BF7m   2 1166B             68  0.18 / 0.031
+   ZidovudineNMR            BF4h   1 Zidovudine1       26  4.27 / 0.318
+   ZidovudineNMR            BF7h   1 Zidovudine1       26  0.16 / 0.021
+   ZidovudineNMR            BF4d   2 Zidovudine2       24  5.69 / 0.362
+   ZidovudineNMR            BF4d   3 Zidovudine3        4  1.36 / 0.163
+   ZidovudineNMR            BF7d   2 Zidovudine2       24  0.15 / 0.011
+   ZidovudineNMR            BF7d   3 Zidovudine3        4  2.22 / 0.309
+   ZidovudineNMR            BF1m   4 Zidovudine4        8  1.06 / 0.138
+   ZidovudineNMR            BF4m   1 Zidovudine1       26  2.51 / 0.307
+   ZidovudineNMR            BF7m   1 Zidovudine1       26  0.05 / 0.009
+   ZidovudineNMR            BF7m   4 Zidovudine4        8  0.01 / 0.008

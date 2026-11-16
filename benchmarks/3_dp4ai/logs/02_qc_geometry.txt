@@ -1,0 +1,28 @@
+Opt      ... and it finished before the optimisation did              193
+Opt      ... and its shieldings equal those in the MM folder          193
+Opt      ... it is on the starting geometry of the optimisation       193
+Opt   NMR job NOT on the final optimised geometry                     214
+Opt   NMR job on the final optimised geometry                        8441
+Opt_E    ... and it finished before the optimisation did              193
+Opt_E    ... and its shieldings equal those in the MM folder          193
+Opt_E    ... it is on the starting geometry of the optimisation       193
+Opt_E NMR job NOT on the final optimised geometry                     215
+Opt_E NMR job on the final optimised geometry                        8456
+Opt_E single point NOT on the geometry of the NMR job                 297
+Opt_E single point not on the final optimised geometry                 87
+Opt_E single point on the geometry of the NMR job                    8374
+
+cases affected (conformers with a problem / conformers):
+   KE2    Opt_E single point on another geometry 1/258
+   NP3A   Opt   NMR not on optimised geometry 66/83
+   NP3A   Opt_E NMR not on optimised geometry 66/83, single point on another geometry 66/83
+   NP3B   Opt   NMR not on optimised geometry 83/83
+   NP3B   Opt_E NMR not on optimised geometry 83/83, single point on another geometry 83/83
+   NP4    Opt   NMR not on optimised geometry 41/47
+   NP4    Opt_E NMR not on optimised geometry 41/47, single point on another geometry 41/47
+   NP5    Opt   NMR not on optimised geometry 3/3
+   NP5    Opt_E NMR not on optimised geometry 3/3, single point on another geometry 3/3
+   OD1    Opt   NMR not on optimised geometry 21/82
+   OD1    Opt_E NMR not on optimised geometry 21/82, single point on another geometry 21/82
+   TP2    Opt_E single point on another geometry 81/675
+   TP3    Opt_E NMR not on optimised geometry 1/587, single point on another geometry 1/587

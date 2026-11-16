@@ -1,0 +1,3 @@
+structures with averaged shieldings: 3066
+   job steps left out (other file name): 2053
+   structures with a job that did not end normally: 1

@@ -1,0 +1,7 @@
+records (experiment x level): 422
+left out, Gaussian outputs missing for at least one candidate: 1 (ArtemisininNMR BF4d)
+pairing of shifts and atoms identical to the deposit output: 332
+deposit output with the same energies and the default error model: 207; my probabilities within 0.1 point of every printed value: 207
+deposit output with the same energies, another error model: 76
+first-ranked isomer the same as in the deposit output: 373 of 422
+deposit output with other energies: default model 38, other model 101

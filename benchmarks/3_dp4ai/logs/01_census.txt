@@ -1,0 +1,57 @@
+job-step records: 53114 | not matching the expected path pattern: 154 | records from multi-step files: 0
+   odd path 75 NPN/Opt/NPN_NginpN.out
+   odd path 75 NPN/Opt_E/NPN_NginpN.out
+   odd path 1 KEN/Opt/KEN_NmanN.out
+   odd path 1 KEN/Opt/KEN_NmanNoN.out
+   odd path 1 KEN/Opt_E/KEN_NmanN.out
+   odd path 1 KEN/Opt_E/KEN_NmanNoN.out
+   538 zip/top/mol differ: NL1A NL1A NL1
+   538 zip/top/mol differ: NL1B NL1B NL1
+level / folder / job / SCF method:
+   MM      nmr  nmr  RmPW1PW91        8562
+   Opt     NL1  nmr  RmPW1PW91         269
+   Opt     NL2  nmr  RmPW1PW91         269
+   Opt     nmr  nmr  RmPW1PW91        8655
+   Opt     opt  opt  RB3LYP           8655
+   Opt_E   NL1  nmr  RmPW1PW91         269
+   Opt_E   NL2  nmr  RmPW1PW91         269
+   Opt_E   e    sp   RM062X           8670
+   Opt_E   nmr  nmr  RmPW1PW91        8671
+   Opt_E   opt  opt  RB3LYP           8671
+file-name suffixes after the conformer number: {'': 52960}
+solvents: {'Chloroform': 44122, 'DiMethylSulfoxide': 402, 'Methanol': 5904, 'Pyridine': 942, 'Benzene': 1590}
+versions: {'09 EM64L-G09RevD.01': 11080, '09 ES64L-G09RevD.01': 39385, '09 ES64L-G09RevE.01': 2493, '16 ES64L-G16RevB.01': 2}
+routes (most common per folder):
+   Opt_E  e      7197  # m062x/def2tzvp int=ultrafine scrf=(solvent=chloroform)
+   MM     nmr    5180  # mpw1pw91/6-311g(d) nmr=giao scrf=(solvent=chloroform)
+   Opt    nmr    4489  # mpw1pw91/6-311g(d) geom=checkpoint nmr=giao scrf=(solvent=chloroform)
+   Opt_E  nmr    4484  # mpw1pw91/6-311g(d) geom=checkpoint nmr=giao scrf=(solvent=chloroform)
+   Opt_E  opt    3083  # b3lyp/6-31g(d,p) opt=(maxcycles=50) scrf=(solvent=chloroform)
+   Opt    opt    3078  # b3lyp/6-31g(d,p) opt=(maxcycles=50) scrf=(solvent=chloroform)
+   Opt    nmr    1498  # mpw1pw91/def2svp geom=checkpoint nmr=giao scrf=(solvent=chloroform)
+   Opt_E  nmr    1498  # mpw1pw91/def2svp geom=checkpoint nmr=giao scrf=(solvent=chloroform)
+   MM     nmr    1494  # mpw1pw91/def2svp nmr=giao scrf=(solvent=chloroform)
+   Opt    opt    1262  # b3lyp/6-31g(d,p) opt=(maxcycles=45) scrf=(solvent=chloroform)
+   Opt_E  opt    1262  # b3lyp/6-31g(d,p) opt=(maxcycles=45) scrf=(solvent=chloroform)
+   Opt_E  nmr    1215  # mpw1pw91/6-311g(d) nmr=giao scrf=(solvent=chloroform)
+   Opt    nmr    1194  # mpw1pw91/6-311g(d) nmr=giao scrf=(solvent=chloroform)
+   MM     nmr     984  # mpw1pw91/6-311g(d) nmr=giao scrf=(solvent=methanol)
+   Opt_E  e       984  # m062x/def2tzvp int=ultrafine scrf=(solvent=methanol)
+   Opt    opt     941  # b3lyp/6-31g(d,p) opt=(maxcycles=50) scrf=(solvent=methanol)
+   Opt_E  opt     941  # b3lyp/6-31g(d,p) opt=(maxcycles=50) scrf=(solvent=methanol)
+   Opt    NL1     269  # mpw1pw91/def2svp nmr=giao scrf=(solvent=chloroform)
+   Opt_E  NL1     269  # mpw1pw91/def2svp nmr=giao scrf=(solvent=chloroform)
+   Opt    NL2     269  # mpw1pw91/def2svp nmr=giao scrf=(solvent=chloroform)
+   Opt_E  NL2     269  # mpw1pw91/def2svp nmr=giao scrf=(solvent=chloroform)
+   Opt_E  e       265  # m062x/def2tzvp int=ultrafine scrf=(solvent=benzene)
+not ended normally: 20
+   2 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   3423 Int=')
+   2 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   3427 Int=')
+   2 ('Opt_E', 'opt', 'err', 'File lengths (MBytes):  RWF=   3423 Int=')
+   2 ('Opt_E', 'opt', 'err', 'File lengths (MBytes):  RWF=   3427 Int=')
+   1 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   1588 Int=')
+   1 ('Opt_E', 'opt', 'err', 'File lengths (MBytes):  RWF=   1588 Int=')
+   1 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   1927 Int=')
+   1 ('Opt_E', 'opt', 'err', 'File lengths (MBytes):  RWF=   1920 Int=')
+   1 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   2388 Int=')
+   1 ('Opt', 'opt', 'err', 'File lengths (MBytes):  RWF=   2374 Int=')

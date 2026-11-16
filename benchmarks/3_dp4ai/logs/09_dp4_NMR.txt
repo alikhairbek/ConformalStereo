@@ -1,0 +1,37 @@
+description file: <case>NMR | cases with results: 46 of 46
+   note JB1 MM             no NMR calculations for the reported structure
+   note JB5                versions differ between level folders (MM; Opt/Opt_E)
+   note NL2A               versions differ between level folders (MM/Opt; Opt_E)
+   note NP4 MM             no NMR calculations for the reported structure
+not clean at a DFT protocol (16): NP3A DFT_EB3LYP (100% of the population); NP3A DFT_EM062X (100% of the population); NP3A DFT_EmPW (100% of the population); NP3B DFT_EB3LYP (100% of the population); NP3B DFT_EM062X (100% of the population); NP3B DFT_EmPW (100% of the population); NP4 DFT_EB3LYP (100% of the population); NP4 DFT_EM062X (100% of the population); NP4 DFT_EmPW (100% of the population); NP5 DFT_EB3LYP (100% of the population); NP5 DFT_EM062X (100% of the population); NP5 DFT_EmPW (100% of the population); OD1 DFT_EB3LYP (89% of the population); OD1 DFT_EM062X (53% of the population); OD1 DFT_EmPW (87% of the population); TP2 DFT_EM062X (96% of the population)
+peaks listed != atoms (7 cases): JB12 (C 31/31, H 39/40); JB5 (C 18/17, H 18/19); JB7 (C 23/23, H 28/31); KE2 (C 16/16, H 33/30); NP2 (C 19/19, H 26/28); OD1 (C 21/21, H 28/27); TS3B (C 26/26, H 32/34)
+
+all cases, as deposited
+protocol    data | cases | top-1 correct | median P(true) | top >= 99%: right/all | true <= 1%
+MM          all  |    44 |  21 (47.7%)   |          0.391 |         15/19        |         11
+MM          C    |    40 |  19 (47.5%)   |          0.329 |          8/11        |          9
+MM          H    |    44 |  16 (36.4%)   |          0.127 |          7/14        |         13
+DFT_EB3LYP  all  |    46 |  23 (50.0%)   |          0.641 |         17/21        |         10
+DFT_EB3LYP  C    |    42 |  19 (45.2%)   |          0.269 |          9/10        |          3
+DFT_EB3LYP  H    |    46 |  22 (47.8%)   |          0.340 |          8/12        |         11
+DFT_EmPW    all  |    46 |  25 (54.3%)   |          0.532 |         17/20        |         10
+DFT_EmPW    C    |    42 |  16 (38.1%)   |          0.294 |          8/8         |          3
+DFT_EmPW    H    |    46 |  21 (45.7%)   |          0.305 |          9/13        |         10
+DFT_EM062X  all  |    46 |  25 (54.3%)   |          0.839 |         19/25        |          9
+DFT_EM062X  C    |    42 |  19 (45.2%)   |          0.238 |          7/9         |          6
+DFT_EM062X  H    |    46 |  19 (41.3%)   |          0.386 |         13/16        |         11
+
+clean cases only (geometry check passed, one experimental value per atom)
+protocol    data | cases | top-1 correct | median P(true) | top >= 99%: right/all | true <= 1%
+MM          all  |    37 |  19 (51.4%)   |          0.813 |         13/16        |          8
+MM          C    |    33 |  17 (51.5%)   |          0.555 |          7/9         |          6
+MM          H    |    37 |  14 (37.8%)   |          0.149 |          6/11        |          9
+DFT_EB3LYP  all  |    35 |  18 (51.4%)   |          0.641 |         12/14        |          5
+DFT_EB3LYP  C    |    31 |  15 (48.4%)   |          0.318 |          7/7         |          1
+DFT_EB3LYP  H    |    35 |  18 (51.4%)   |          0.365 |          5/6         |          6
+DFT_EmPW    all  |    35 |  20 (57.1%)   |          0.532 |         12/14        |          6
+DFT_EmPW    C    |    31 |  13 (41.9%)   |          0.323 |          6/6         |          1
+DFT_EmPW    H    |    35 |  17 (48.6%)   |          0.321 |          5/6         |          6
+DFT_EM062X  all  |    34 |  18 (52.9%)   |          0.727 |         14/19        |          7
+DFT_EM062X  C    |    30 |  14 (46.7%)   |          0.255 |          5/7         |          4
+DFT_EM062X  H    |    34 |  15 (44.1%)   |          0.388 |          9/11        |          8

@@ -1,0 +1,7 @@
+candidate structures of the 42 compounds: 226; conformers per structure: median 11, range 1-215, total 5795 (x 12 levels = 69540 NMR jobs)
+   all twelve levels complete: 226
+   same geometry at all levels (moments within 0.01%): 223
+   with a job that did not end normally: 1
+   with a conformer without shieldings: 0
+   with repeated conformers: 25
+   one conformer only: 32

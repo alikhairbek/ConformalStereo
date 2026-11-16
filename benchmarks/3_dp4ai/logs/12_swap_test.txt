@@ -1,0 +1,13 @@
+A      B      | isomer of A that is the structure reported for B | P(own structure) / P(partner structure) in the analysis of A, per protocol
+JB2    JB3    | isomer 4  | MM   3.6/ 18.2 | EB3LYP   0.0/  0.0 | EmPW   0.0/  0.0 | EM062X   0.0/  0.0
+JB3    JB2    | isomer 4  | MM 100.0/  0.0 | EB3LYP 100.0/  0.0 | EmPW 100.0/  0.0 | EM062X 100.0/  0.0
+JB13A  JB13B  | isomer 4  | MM 100.0/  0.0 | EB3LYP 100.0/  0.0 | EmPW 100.0/  0.0 | EM062X 100.0/  0.0
+JB13B  JB13A  | isomer 4  | MM  99.1/  0.9 | EB3LYP 100.0/  0.0 | EmPW 100.0/  0.0 | EM062X   0.0/100.0
+NL1A   NL1B   | isomer 3  | MM  97.3/  0.0 | EB3LYP  90.1/  0.0 | EmPW  73.0/  0.0 | EM062X  38.6/  0.0
+NL1B   NL1A   | isomer 3  | MM  91.8/  0.0 | EB3LYP  99.5/  0.0 | EmPW  99.4/  0.0 | EM062X 100.0/  0.0
+NL2A   NL2B   | isomer 13 | MM   0.0/  0.0 | EB3LYP  29.3/ 69.6 | EmPW  24.1/ 74.6 | EM062X   2.0/  5.5
+NL2B   NL2A   | isomer 13 | MM  81.3/  0.0 | EB3LYP  87.3/  0.0 | EmPW  89.9/  0.0 | EM062X   0.0/  2.8
+NP3A   NP3B   | isomer 4  | MM   0.1/  0.0 | EB3LYP   0.0/  0.0 | EmPW   0.1/  0.0 | EM062X   0.0/  0.0
+NP3B   NP3A   | isomer 4  | MM   1.4/  0.0 | EB3LYP   0.8/  0.1 | EmPW   1.4/  0.0 | EM062X   4.7/  0.1
+TS3A   TS3B   | isomer 2  | MM   0.0/  0.0 | EB3LYP   0.0/  0.0 | EmPW   0.0/  0.0 | EM062X  31.9/  0.0
+TS3B   TS3A   | isomer 2  | MM  10.2/ 14.2 | EB3LYP  99.1/  0.0 | EmPW  99.5/  0.0 | EM062X 100.0/  0.0

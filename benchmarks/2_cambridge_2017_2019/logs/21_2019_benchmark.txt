@@ -1,0 +1,70 @@
+experiments 25 in 17 families, workflows 30, records 703
+
+by geometry (three NMR levels, energies of the NMR level)
+                                                             n  actual first   99%  of them right  <=1%
+MMFF                                                        66   35 ( 53.0%)   20   14 ( 70.0%)   13
+PM6                                                         66   28 ( 42.4%)   24   13 ( 54.2%)   16
+PM7                                                         66   37 ( 56.1%)   29   24 ( 82.8%)   14
+HF/6-31G(d,p)                                               75   49 ( 65.3%)   31   28 ( 90.3%)   10
+B3LYP/6-31G(d,p)                                            74   51 ( 68.9%)   28   24 ( 85.7%)   10
+M06-2X/6-31G(d,p)                                           75   45 ( 60.0%)   26   20 ( 76.9%)   16
+
+by geometry, NMR level and energies
+                                                             n  actual first   99%  of them right  <=1%
+B3LYP/6-31G(d,p) // MMFF, energies: NMR level               22    9 ( 40.9%)    7    5 ( 71.4%)    5
+B3LYP/6-31G(d,p) // MMFF, energies: M06-2X/6-31G(d,p)       22   10 ( 45.5%)    6    3 ( 50.0%)    5
+mPW1PW91/6-311G(d) // MMFF, energies: NMR level             22   15 ( 68.2%)    8    6 ( 75.0%)    4
+mPW1PW91/6-311G(d) // MMFF, energies: M06-2X/6-31G(d,p)     22   17 ( 77.3%)    5    4 ( 80.0%)    3
+M06-2X/6-31G(d,p) // MMFF, energies: NMR level              22   11 ( 50.0%)    5    3 ( 60.0%)    4
+B3LYP/6-31G(d,p) // PM6, energies: NMR level                22   11 ( 50.0%)    7    3 ( 42.9%)    6
+B3LYP/6-31G(d,p) // PM6, energies: M06-2X/6-31G(d,p)        22    9 ( 40.9%)    8    4 ( 50.0%)    6
+mPW1PW91/6-311G(d) // PM6, energies: NMR level              22    9 ( 40.9%)    8    5 ( 62.5%)    4
+mPW1PW91/6-311G(d) // PM6, energies: M06-2X/6-31G(d,p)      22   10 ( 45.5%)    8    5 ( 62.5%)    4
+M06-2X/6-31G(d,p) // PM6, energies: NMR level               22    8 ( 36.4%)    9    5 ( 55.6%)    6
+B3LYP/6-31G(d,p) // PM7, energies: NMR level                22   12 ( 54.5%)    9    8 ( 88.9%)    4
+B3LYP/6-31G(d,p) // PM7, energies: M06-2X/6-31G(d,p)        22   12 ( 54.5%)    9    6 ( 66.7%)    6
+mPW1PW91/6-311G(d) // PM7, energies: NMR level              22   13 ( 59.1%)   10    9 ( 90.0%)    3
+mPW1PW91/6-311G(d) // PM7, energies: M06-2X/6-31G(d,p)      22   15 ( 68.2%)    8    8 (100.0%)    2
+M06-2X/6-31G(d,p) // PM7, energies: NMR level               22   12 ( 54.5%)   10    7 ( 70.0%)    7
+B3LYP/6-31G(d,p) // HF/6-31G(d,p), energies: NMR level      25   17 ( 68.0%)    8    8 (100.0%)    4
+B3LYP/6-31G(d,p) // HF/6-31G(d,p), energies: M06-2X/6-31G(d,p)  25   18 ( 72.0%)    9    9 (100.0%)    2
+mPW1PW91/6-311G(d) // HF/6-31G(d,p), energies: NMR level    25   17 ( 68.0%)   12   11 ( 91.7%)    3
+mPW1PW91/6-311G(d) // HF/6-31G(d,p), energies: M06-2X/6-31G(d,p)  25   16 ( 64.0%)   12   11 ( 91.7%)    1
+M06-2X/6-31G(d,p) // HF/6-31G(d,p), energies: NMR level     25   15 ( 60.0%)   11    9 ( 81.8%)    3
+B3LYP/6-31G(d,p) // B3LYP/6-31G(d,p), energies: NMR level   25   15 ( 60.0%)    8    7 ( 87.5%)    4
+B3LYP/6-31G(d,p) // B3LYP/6-31G(d,p), energies: M06-2X/6-31G(d,p)  25   17 ( 68.0%)    8    6 ( 75.0%)    3
+mPW1PW91/6-311G(d) // B3LYP/6-31G(d,p), energies: NMR level  24   17 ( 70.8%)    9    8 ( 88.9%)    2
+mPW1PW91/6-311G(d) // B3LYP/6-31G(d,p), energies: M06-2X/6-31G(d,p)  24   19 ( 79.2%)   10    8 ( 80.0%)    2
+M06-2X/6-31G(d,p) // B3LYP/6-31G(d,p), energies: NMR level  25   19 ( 76.0%)   11    9 ( 81.8%)    4
+B3LYP/6-31G(d,p) // M06-2X/6-31G(d,p), energies: NMR level  25   15 ( 60.0%)    9    7 ( 77.8%)    5
+B3LYP/6-31G(d,p) // M06-2X/6-31G(d,p), energies: M06-2X/6-31G(d,p)  25   15 ( 60.0%)   12    7 ( 58.3%)    6
+mPW1PW91/6-311G(d) // M06-2X/6-31G(d,p), energies: NMR level  25   17 ( 68.0%)   10    8 ( 80.0%)    3
+mPW1PW91/6-311G(d) // M06-2X/6-31G(d,p), energies: M06-2X/6-31G(d,p)  25   16 ( 64.0%)   11    9 ( 81.8%)    3
+M06-2X/6-31G(d,p) // M06-2X/6-31G(d,p), energies: NMR level  25   13 ( 52.0%)    7    5 ( 71.4%)    8
+
+the 22 experiments that have every kind of geometry, mPW1PW91 shifts with M06-2X energies:
+                                                             n  actual first   99%  of them right  <=1%
+MMFF                                                        22   17 ( 77.3%)    5    4 ( 80.0%)    3
+PM6                                                         22   10 ( 45.5%)    8    5 ( 62.5%)    4
+PM7                                                         22   15 ( 68.2%)    8    8 (100.0%)    2
+HF/6-31G(d,p)                                               22   13 ( 59.1%)    9    8 ( 88.9%)    1
+B3LYP/6-31G(d,p)                                            22   17 ( 77.3%)    8    6 ( 75.0%)    2
+M06-2X/6-31G(d,p)                                           22   13 ( 59.1%)    8    6 ( 75.0%)    3
+
+sets taken from the DP4 probabilities (smallest set summing to 90%): contain the actual structure in 513 of 703 records (73.0%), mean size 1.47
+split conformal, target 90% (2000 splits by family, one threshold per workflow):
+   MMFF                 coverage  93.6%  mean set size 3.94  single-structure sets   3.8%
+   PM6                  coverage  94.3%  mean set size 4.24  single-structure sets   5.8%
+   PM7                  coverage  93.4%  mean set size 3.96  single-structure sets   8.3%
+   HF/6-31G(d,p)        coverage  92.7%  mean set size 2.86  single-structure sets  22.9%
+   B3LYP/6-31G(d,p)     coverage  92.9%  mean set size 3.31  single-structure sets  15.3%
+   M06-2X/6-31G(d,p)    coverage  93.1%  mean set size 3.87  single-structure sets   8.5%
+   all                  coverage  93.3%  mean set size 3.68  single-structure sets  11.1%
+split conformal, target 80% (2000 splits by family, one threshold per workflow):
+   MMFF                 coverage  84.4%  mean set size 2.73  single-structure sets  20.6%
+   PM6                  coverage  86.2%  mean set size 2.94  single-structure sets  17.9%
+   PM7                  coverage  84.4%  mean set size 2.50  single-structure sets  27.9%
+   HF/6-31G(d,p)        coverage  83.3%  mean set size 1.73  single-structure sets  52.3%
+   B3LYP/6-31G(d,p)     coverage  84.0%  mean set size 1.97  single-structure sets  46.4%
+   M06-2X/6-31G(d,p)    coverage  83.9%  mean set size 2.52  single-structure sets  30.0%
+   all                  coverage  84.3%  mean set size 2.38  single-structure sets  33.2%

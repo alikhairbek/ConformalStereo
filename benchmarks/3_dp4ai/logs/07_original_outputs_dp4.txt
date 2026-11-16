@@ -1,0 +1,16 @@
+files:
+   experimental values from the echoed description                        90
+   pairing identical                                                      107
+   probabilities reproduced within 0.1 point                              107
+   experimental values taken from the tables (2 decimals)                 19
+   ... of which matched to a stored description (full precision)          14
+   shifts not reproduced                                                  22
+   pairing differs                                                        2
+   probabilities differ                                                   2
+largest difference to a printed probability where pairing agrees and experimental values have full precision: {'C': 0.05, 'H': 0.049, 'all': 0.048}
+atom-peak pairs compared in files that agree: 24856
+files that differ (2):
+   JB4/MM/JB4_1NMR.dp4 pairs=False full=False dev={'C': 0.0, 'H': 0.0, 'all': 0.0}
+   TP2/Opt_E/TP2_1NMR.dp4 pairs=False full=False dev={'C': 0.1, 'H': 1.4, 'all': 1.5}
+
+stored outputs as printed, reproduced ones with real experimental data: {'distinct outputs': 66, 'isomer 1 first': 39, 'calls at 99% or more': 34, '... of which isomer 1': 26, 'outputs made with placeholder proton data (left out)': 27}

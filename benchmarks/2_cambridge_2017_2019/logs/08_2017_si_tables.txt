@@ -1,0 +1,6 @@
+shifts B3LYP/6-31G**     energies B3LYP/6-31G**     | six numbers within the printed precision 37/42, within twice that 41/42 | single-Gaussian DP4 within 0.1 point 42/42, same rank 39/42 | actual structure first: SI 24, mine 24
+      further off: Nankakurine (16) (2)
+shifts mPW1PW91/6-311G*  energies mPW1PW91/6-311G*  | six numbers within the printed precision 39/42, within twice that 42/42 | single-Gaussian DP4 within 0.1 point 22/42, same rank 38/42 | actual structure first: SI 31, mine 31
+shifts mPW1PW91/6-311G*  energies B3LYP/6-31G**     | six numbers within the printed precision 36/42, within twice that 42/42 | single-Gaussian DP4 within 0.1 point 19/42, same rank 37/42 | actual structure first: SI 31, mine 30
+shifts mPW1PW91/6-311G*  energies M06-2X/6-31G**    | six numbers within the printed precision 39/42, within twice that 40/42 | single-Gaussian DP4 within 0.1 point 14/42, same rank 36/42 | actual structure first: SI 33, mine 32
+      further off: Callipeltin frag. RRR (19) (2), Callipeltin frag. SRR (20) (3)

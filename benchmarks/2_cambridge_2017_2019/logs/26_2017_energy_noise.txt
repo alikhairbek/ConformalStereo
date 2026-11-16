@@ -1,0 +1,1 @@
+records 504; without noise the log-likelihood differs from the main calculation by at most 5.2e-09

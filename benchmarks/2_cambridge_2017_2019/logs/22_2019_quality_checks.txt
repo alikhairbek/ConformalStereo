@@ -1,0 +1,7 @@
+geometry             structures conformers   three levels  same geometry     opt jobs    not converged    structures affected  distinct minima
+MMFF                         82       1312             82             82            0                0                      0             1177
+PM6                          82       1312             82             82         1312              391                     60             1227
+PM7                          82       1312             82             82            0                0                      0             1307
+HF/6-31G(d,p)               130       1441            128            130         1441                0                      0             1257
+B3LYP/6-31G(d,p)            130       1441            127            130         1441                1                      1             1161
+M06-2X/6-31G(d,p)           130       1441            127            130         1441                1                      1             1297

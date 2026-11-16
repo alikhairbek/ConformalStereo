@@ -1,0 +1,50 @@
+AT1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: 3e_correct
+AT2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: 3aa_correct
+AT3    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: Displayed atoms
+BYH1   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: BYH-02-181-04_correct1
+BYH2   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: BYH-02-168-02Ccorrect1
+IP1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: P_ng_correct1
+IP2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: 103_correct1
+IP3    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: P_YIP_correct1
+IP4    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: 615_correct1
+IP5    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: 508_4
+JB1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: JB1_
+JB2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: JB2_
+JB3    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: JB3_
+JB4    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 2 distinct 2 (deposit inchi distinct 2) | input title: JB4_
+JB5    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: JB5_
+JB6    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: JB6_
+JB7    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: JB7_
+JB8    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: JB8_
+JB9    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Displayed atoms
+JB10   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Displayed atoms
+JB11   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Displayed atoms
+JB12   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Displayed atoms
+JB13A  ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: 
+JB13B  ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Displayed atoms
+KE1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: KE-65-1_correct1
+KE2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: KE-69-1_SRSSScorrect1
+KE3    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: KE-80b-1_SRRSRcorrect1
+NL1A   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: NL1_
+NL1B   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: NL2_
+NL2A   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: NL3B_
+NL2B   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 16 distinct 16 (deposit inchi distinct 16) | input title: 
+NP1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 32 distinct 32 (deposit inchi distinct 32) | input title: Displayed atoms
+NP2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 32 distinct 32 (deposit inchi distinct 32) | input title: Displayed atoms
+NP3A   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: 
+NP3B   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: 
+NP4    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Displayed atoms
+       NP5: no input structure file; candidates have {2: 8, 1: 15} distinct carbons by symmetry, the spectrum lists 15 distinct 13C shifts -> reported structure = isomer 1
+NP5    CHECK true isomer per folder:  | candidates None distinct None (deposit inchi distinct None) | input title: 
+OD1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Displayed atoms
+TP1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: TP1_
+TP2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Displayed atoms
+TP3    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: TP3_
+TS1    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Structure2
+TS2    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 4 distinct 4 (deposit inchi distinct 4) | input title: Structure2
+TS3A   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Structure2
+TS3B   ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Structure2
+TS4    ok    true isomer per folder: MM=1 Opt=1 Opt_E=1 | candidates 8 distinct 8 (deposit inchi distinct 8) | input title: Structure1
+input structure file identifies the reported structure: {'ok': 45, 'CHECK': 1}
+reported structure is isomer 1 in 46 of 46 cases
+constitutions: 40 for 46 cases | cases sharing one candidate set: [['JB2', 'JB3'], ['JB13A', 'JB13B'], ['NL1A', 'NL1B'], ['NL2A', 'NL2B'], ['NP3A', 'NP3B'], ['TS3A', 'TS3B']]

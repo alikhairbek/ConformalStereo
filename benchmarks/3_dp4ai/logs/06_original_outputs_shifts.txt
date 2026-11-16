@@ -1,0 +1,37 @@
+.dp4 files: 131 | calc column reproduced within 0.01 ppm by some (shieldings, energies) choice: 109 | values in those: 25492
+how they were made (shieldings level, energies from) -> files:
+   folder MM    shieldings MM    energies nmr      63
+   folder Opt_E shieldings Opt   energies nmr      12
+   folder Opt   shieldings Opt   energies nmr      12
+   folder Opt   shieldings MM    energies nmr      10
+   folder Opt_E shieldings MM    energies nmr       8
+   folder Opt   shieldings Opt   energies opt       1
+   folder Opt   shieldings Opt_E energies nmr       1
+   folder Opt_E shieldings Opt_E energies nmr       1
+   folder Opt_E shieldings Opt_E energies e         1
+reference constants implied (C, H) -> files: [((188.453, 32.1245), 7), ((188.453, 32.124), 7), ((188.454, 32.1246), 5), ((188.455, 32.1246), 5), ((188.452, 32.1242), 5), ((188.452, 32.1244), 5), ((188.452, 32.124), 4), ((188.452, 32.1241), 4), ((188.452, 32.1243), 4), ((188.453, 32.1234), 3), ((188.452, 32.1247), 3), ((188.452, 32.1237), 3)]
+not reproduced: 22
+   BYH1   Opt   NMRold.dp4       iso  7 | best: labels do not fit any level
+   BYH1   Opt_E NMRold.dp4       iso  7 | best: labels do not fit any level
+   BYH2   Opt   NMRold.dp4       iso  4 | best: MM/nmr residual 5.25
+   BYH2   Opt_E NMRold.dp4       iso  4 | best: MM/nmr residual 5.25
+   IP4    Opt   IP4NMR.dp4       iso  2 | best: Opt/opt residual 1.19
+   IP5    MM    IP5_1NMR.dp4     iso  4 | best: MM/nmr residual 2.67
+   IP5    MM    NMRold.dp4       iso  4 | best: MM/nmr residual 2.67
+   IP5    Opt   NMRold.dp4       iso  4 | best: MM/nmr residual 2.67
+   IP5    Opt_E NMRold.dp4       iso  4 | best: MM/nmr residual 2.67
+   JB1    Opt   JB1NMRold.dp4    iso  4 | best: Opt_E/e residual 9.35
+   JB1    Opt_E JB1NMRold.dp4    iso  4 | best: Opt_E/e residual 9.35
+   JB8    Opt   JB8NMRold.dp4    iso  8 | best: labels do not fit any level
+   JB8    Opt_E JB8NMRold.dp4    iso  8 | best: labels do not fit any level
+   KE2    MM    KE2_1NMR.dp4     iso 16 | best: MM/uniform residual 9.29
+   KE2    MM    NMRold.dp4       iso  8 | best: MM/nmr residual 7.26
+   KE2    Opt   NMR.dp4          iso  8 | best: MM/nmr residual 7.26
+   KE2    Opt_E NMR.dp4          iso  8 | best: MM/nmr residual 7.26
+   KE3    MM    NMRold.dp4       iso  4 | best: MM/uniform residual 5.37
+   KE3    Opt   NMR.dp4          iso  4 | best: MM/uniform residual 5.37
+   KE3    Opt_E NMR.dp4          iso  4 | best: MM/uniform residual 5.37
+   NP1    MM    NP1_NMR.dp4      iso 32 | best: Opt/opt residual 12.39
+   NP1    Opt   NP1_NMR.dp4      iso 32 | best: Opt/opt residual 12.39
+reproduced outputs that use DFT-geometry shieldings: 28 | conformer energies that reproduce them: {'opt': 1, 'nmr': 26, 'e': 1}
+outputs stored in an Opt or Opt_E folder that hold MM-level results: 18

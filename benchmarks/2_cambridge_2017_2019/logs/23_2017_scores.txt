@@ -1,0 +1,32 @@
+records 504, workflows 12, experiments 42, families 30; candidates per record 6.52 on average
+temperature that maximises the likelihood of the actual structures: 8.37 (all records)
+
+target 90%  score                  | matched coverage: size, single, single and right | split conformal: coverage, size, single, single and right
+            probability            |  2.72   25.4%   22.0% |  91.5%   3.75   17.0%   14.1%
+            tempered T=2           |  2.75   24.4%   21.2% |  91.4%   3.51   16.7%   14.0%
+            tempered T=3           |  2.82   21.8%   18.8% |  91.4%   3.52   15.6%   12.9%
+            tempered T=5           |  2.91   17.5%   15.3% |  91.4%   3.51   13.0%   10.7%
+            tempered T=10          |  2.81   11.5%   10.7% |  91.5%   3.40    7.4%    6.1%
+            log ratio              |  2.70   26.8%   23.4% |  91.4%   3.51   17.6%   14.6%
+            log ratio / N          |  2.62   27.8%   24.2% |  91.4%   3.35   19.6%   16.4%
+            log ratio / sqrt(N)    |  2.55   29.2%   25.6% |  91.4%   3.39   18.5%   15.6%
+            cumulative T=1         |  6.52    0.0%    0.0% |  98.6%   6.30    1.5%    1.0%
+            cumulative T=3         |  5.27   18.5%   14.9% |  95.1%   5.86    8.5%    6.0%
+            rank                   |  3.29    0.0%    0.0% |  93.2%   3.66    0.0%    0.0%
+            carbon only            |  2.89   21.0%   17.1% |  91.6%   4.03   12.8%    8.9%
+            proton only            |  3.19   14.1%   12.9% |  91.5%   4.12    6.8%    5.7%
+
+target 80%  score                  | matched coverage: size, single, single and right | split conformal: coverage, size, single, single and right
+            probability            |  1.72   51.6%   42.5% |  82.2%   2.07   44.5%   35.4%
+            tempered T=2           |  1.72   49.2%   40.9% |  82.2%   2.08   43.0%   34.2%
+            tempered T=3           |  1.72   47.6%   39.9% |  82.2%   2.09   40.8%   32.3%
+            tempered T=5           |  1.72   45.0%   37.7% |  82.1%   2.10   36.7%   29.2%
+            tempered T=10          |  1.85   30.6%   25.2% |  82.4%   2.17   25.0%   19.9%
+            log ratio              |  1.71   52.8%   43.3% |  82.2%   2.07   45.4%   35.9%
+            log ratio / N          |  1.83   48.8%   41.3% |  82.0%   2.03   45.5%   36.6%
+            log ratio / sqrt(N)    |  1.78   50.0%   41.7% |  82.2%   2.06   45.0%   36.1%
+            cumulative T=1         |  3.67   26.2%   20.0% |  86.4%   4.76   14.4%   10.0%
+            cumulative T=3         |  3.46   29.4%   22.4% |  81.6%   3.92   25.3%   18.7%
+            rank                   |  2.31    0.0%    0.0% |  85.4%   2.68    1.4%    0.7%
+            carbon only            |  2.01   40.7%   28.2% |  82.0%   2.35   35.3%   24.0%
+            proton only            |  2.16   29.2%   23.6% |  82.6%   2.54   25.7%   19.7%

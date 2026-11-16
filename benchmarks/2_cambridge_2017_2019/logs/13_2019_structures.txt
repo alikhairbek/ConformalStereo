@@ -1,0 +1,4 @@
+structures with averaged shieldings: 1915
+   job steps left out (other file name): 9890
+   structures with more than one route: 17
+   structures without shieldings: 1

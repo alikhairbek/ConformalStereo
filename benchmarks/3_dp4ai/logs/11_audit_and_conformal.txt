@@ -1,0 +1,39 @@
+=== 1. Stated confidence against outcome (combined 13C + 1H where both exist; description <case>NMR) ===
+protocol    subset | cases | top-1 right | top prob >= 99%: right/all | 90-99%: right/all | < 90%: right/all | true isomer <= 1% | nominal 90% set: covers truth, mean size
+MM          all    |    44 |  21 (48%)   |             15/19         |         3/9       |        3/16      |                11 |           28/44 (64%), 1.43
+MM          clean  |    37 |  19 (51%)   |             13/16         |         3/8       |        3/13      |                 8 |           25/37 (68%), 1.38
+DFT_EB3LYP  all    |    46 |  23 (50%)   |             17/21         |         3/9       |        3/16      |                10 |           32/46 (70%), 1.46
+DFT_EB3LYP  clean  |    35 |  18 (51%)   |             12/14         |         3/8       |        3/13      |                 5 |           26/35 (74%), 1.51
+DFT_EmPW    all    |    46 |  25 (54%)   |             17/20         |         2/7       |        6/19      |                10 |           34/46 (74%), 1.52
+DFT_EmPW    clean  |    35 |  20 (57%)   |             12/14         |         2/4       |        6/17      |                 6 |           28/35 (80%), 1.63
+DFT_EM062X  all    |    46 |  25 (54%)   |             19/25         |         2/4       |        4/17      |                 9 |           34/46 (74%), 1.46
+DFT_EM062X  clean  |    34 |  18 (53%)   |             14/19         |         0/2       |        4/13      |                 7 |           25/34 (74%), 1.47
+pooled over the four protocols, clean cases: calls at >= 99% right in 51 of 63 (81.0%); true isomer <= 1% in 26 of 141 case-protocol pairs (18.4%); nominal 90% sets cover 104 of 141 (73.8%)
+
+=== 2. One molecule, eight versions of the same analysis (4 protocols x 2 description files) ===
+molecules: 46, analyses: 337
+reported structure ranked first in every version: 13 | in no version: 8 | in some but not all: 25
+molecules where at least one version puts >= 99% on a wrong isomer: 13
+molecules where two versions each put >= 99% on a different isomer: 7 -> BYH1 (isomer 1, isomer 2); BYH2 (isomer 1, isomer 3); JB2 (isomer 2, isomer 4); JB7 (isomer 1, isomer 4, isomer 15); JB11 (isomer 1, isomer 6); JB13B (isomer 1, isomer 4); TS3B (isomer 1, isomer 7)
+molecules where P(reported structure) is >= 99% in one version and <= 1% in another: 9 -> BYH1 BYH2 JB7 JB10 JB11 JB13B TP3 TS3B TS4
+same description file, protocols only: two protocols each >= 99% on different isomers in 4 of 46 molecules (NMR) and 4 of 39 (NMRold)
+
+=== 3. Conformal preview (score = 1 - P(reported structure); 2000 random half/half splits by candidate-set family) ===
+target coverage 80% | columns: coverage %, mean set size, share of candidates kept %, one candidate left and right %, one left and wrong %, all candidates kept %, none kept %
+   MM          all    n=44 fam=38 |  82.2   2.22   45.3   23.7    8.6   11.3    0.0
+   MM          clean  n=37 fam=32 |  81.6   2.10   46.5   25.3    9.6   12.4    0.0
+   DFT_EB3LYP  all    n=46 fam=40 |  81.7   2.27   44.9   25.6    8.6   13.3    0.0
+   DFT_EB3LYP  clean  n=35 fam=31 |  82.9   2.28   48.6   25.3   10.2   15.8    0.0
+   DFT_EmPW    all    n=46 fam=40 |  81.9   2.33   46.0   25.3    8.3   14.3    0.0
+   DFT_EmPW    clean  n=35 fam=31 |  83.2   2.20   48.0   25.5    8.3   15.5    0.0
+   DFT_EM062X  all    n=46 fam=40 |  82.0   2.62   47.0   31.1   11.6   19.8    0.0
+   DFT_EM062X  clean  n=34 fam=30 |  83.9   3.19   59.6   24.0   10.9   37.6    0.0
+target coverage 90% | columns: coverage %, mean set size, share of candidates kept %, one candidate left and right %, one left and wrong %, all candidates kept %, none kept %
+   MM          all    n=44 fam=38 |  91.2   3.91   64.1   11.8    2.3   35.7    0.0
+   MM          clean  n=37 fam=32 |  92.8   3.93   69.6   11.2    2.3   43.0    0.0
+   DFT_EB3LYP  all    n=46 fam=40 |  92.8   5.20   75.9    9.2    2.0   57.0    0.0
+   DFT_EB3LYP  clean  n=35 fam=31 |  95.9   5.62   88.3    4.7    1.7   77.6    0.0
+   DFT_EmPW    all    n=46 fam=40 |  92.9   5.18   76.2    9.0    3.0   58.0    0.0
+   DFT_EmPW    clean  n=35 fam=31 |  95.5   5.45   86.7    5.0    1.9   75.9    0.0
+   DFT_EM062X  all    n=46 fam=40 |  96.3   6.63   90.8    4.4    1.7   85.2    0.0
+   DFT_EM062X  clean  n=34 fam=30 |  98.6   6.29   97.2    1.4    0.8   95.6    0.0

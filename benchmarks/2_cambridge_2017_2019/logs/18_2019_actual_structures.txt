@@ -1,0 +1,27 @@
+CallipeltinRRRNMR          isomer  1 of  4 (1012L         ) names same | MMFF level: 80 atoms, largest difference 0.0000 ppm
+CallipeltinRRSNMR          isomer  4 of  4 (1012O         ) names same | MMFF level: 80 atoms, largest difference 0.0000 ppm
+CallipeltinSRRNMR          isomer  2 of  4 (1012M         ) names same | MMFF level: 80 atoms, largest difference 0.0000 ppm
+CallipeltinSRSNMR          isomer  3 of  4 (1012N         ) names same | MMFF level: 80 atoms, largest difference 0.0000 ppm
+ArtemisininNMR             isomer  1 of 32 (Artemisinin1  ) names same | MMFF level: not in the 2019 deposit
+AspergillideBC6D6NMR       isomer  1 of  8 (1036A         ) names same | MMFF level: not in the 2019 deposit
+AspergillideACDCl3NMR      isomer  3 of  8 (1036C         ) names same | MMFF level: not in the 2019 deposit
+CitrinadinBNMR             isomer  1 of 32 (CitrinadinB1  ) names same | MMFF level: 1664 atoms, largest difference 0.0000 ppm
+DidanosineNMR              isomer  1 of  2 (Didanosine1   ) names same | MMFF level: 40 atoms, largest difference 0.0000 ppm
+EntecavirNMR               isomer  1 of  4 (Entecavir1    ) names same | MMFF level: 88 atoms, largest difference 0.0000 ppm
+EzetimibeNMR               isomer  1 of  4 (Ezetimibe1    ) names same | MMFF level: 124 atoms, largest difference 0.0948 ppm
+FormoterolNMR              isomer  1 of  2 (Formoterol1   ) names same | MMFF level: 62 atoms, largest difference 0.0000 ppm
+LopinavirNMR               isomer  1 of  8 (Lopinavir1    ) names same | MMFF level: 512 atoms, largest difference 0.0000 ppm
+OseltamivirNMR             isomer  1 of  4 (Oseltamivir1  ) names same | MMFF level: 132 atoms, largest difference 0.0000 ppm
+RosuvastatinNMR            isomer  1 of  2 (Rosuvastatin1 ) names same | MMFF level: 66 atoms, largest difference 0.4774 ppm
+SolifenacinNMR             isomer  1 of  2 (Solifenacin1  ) names same | MMFF level: 94 atoms, largest difference 0.0000 ppm
+TadalafilNMR               isomer  1 of  2 (Tadalafil1    ) names same | MMFF level: 76 atoms, largest difference 0.0000 ppm
+Tanarifuranolol1NMR        isomer  1 of  4 (1039A         ) names same | MMFF level: 112 atoms, largest difference 0.0000 ppm
+Tanarifuranolol2NMR        isomer  2 of  4 (1039B         ) names same | MMFF level: 112 atoms, largest difference 0.0000 ppm
+1166ANMR                   isomer  1 of  4 (1166A         ) names same | MMFF level: 84 atoms, largest difference 0.0000 ppm
+1166BNMR                   isomer  2 of  4 (1166B         ) names same | MMFF level: 76 atoms, largest difference 0.0000 ppm
+1166CNMR                   isomer  3 of  4 (1166C         ) names same | MMFF level: 88 atoms, largest difference 0.0000 ppm
+1166DNMR                   isomer  4 of  4 (1166D         ) names same | MMFF level: 96 atoms, largest difference 0.0000 ppm
+Tiotropium1NMR             isomer  1 of  4 (Tiotropium1   ) names same | MMFF level: 88 atoms, largest difference 0.0000 ppm
+ZidovudineNMR              isomer  1 of  4 (Zidovudine1   ) names same | MMFF level: 76 atoms, largest difference 0.0000 ppm
+
+experiments 25: actual structure taken over for 25; same structure names in the same order 25; averaged MMFF-level shieldings identical in both deposits 20

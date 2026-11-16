@@ -1,0 +1,6 @@
+records (experiment x level): 528
+pairing of shifts and atoms identical to the deposit output: 508
+deposit output with the same energies and the default error model: 455; my probabilities within 0.1 point of every printed value: 455
+deposit output with the same energies, another error model: 39
+first-ranked isomer the same as in the deposit output: 506 of 528
+deposit output with other energies: default model 6, other model 28

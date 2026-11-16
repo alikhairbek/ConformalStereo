@@ -1,0 +1,3 @@
+files: 131 | compared (C, H, combined): {'C': 123, 'H': 98, 'all': 90, 'H not comparable': 33, 'all not comparable': 41, 'C not comparable': 8}
+largest difference to a printed probability, in percentage points: {'C': 0.58, 'H': 7.17, 'all': 7.37}
+files with a difference above 1 point: 48 [('BYH1/Opt/NMRold.dp4', 'H', 3.3), ('BYH1/Opt_E/NMRold.dp4', 'H', 3.3), ('IP1/MM/IP1NMRold.dp4', 'all', 2.4), ('IP1/MM/IP1_1NMR.dp4', 'all', 2.4), ('IP1/Opt/IP1NMRold.dp4', 'H', 2.6), ('IP1/Opt/IP1NMRold.dp4', 'all', 2.3), ('IP1/Opt_E/IP1NMRold.dp4', 'H', 2.6), ('IP1/Opt_E/IP1NMRold.dp4', 'all', 2.3), ('IP2/MM/IP2NMRold.dp4', 'H', 1.1), ('IP2/MM/IP2_1NMR.dp4', 'all', 7.4), ('IP3/MM/IP3NMRold.dp4', 'all', 5.7), ('IP3/MM/IP3_1NMR.dp4', 'all', 5.7)]

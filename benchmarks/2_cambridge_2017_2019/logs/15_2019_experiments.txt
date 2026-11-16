@@ -1,0 +1,4 @@
+PyDP4 outputs 576; left out: in a sub-folder 1, second output of the same run under another name 110, test folder 1, with J couplings 41
+experiments 25, records 423 (experiment x level); experiments with all 18 levels 22
+isomer numbers without a structure: 0; isomer numbers matched by different structures at different levels: 0
+candidates per experiment: 5 x 2, 15 x 4, 3 x 8, 2 x 32
