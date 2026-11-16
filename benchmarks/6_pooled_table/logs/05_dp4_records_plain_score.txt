@@ -1,0 +1,49 @@
+records 1108, families 70, score column log_ratio
+
+benchmark group                            records families    actual first   calls >=99%: right  temperature
+DP4-AI    DP4, HF or DFT geometries            138       40    74 ( 53.6%)       50 / 62   ( 80.6%)      7.11
+DP4-AI    DP4, MMFF geometries                  44       38    22 ( 50.0%)       15 / 19   ( 78.9%)      5.96
+Cam2017   DP4, MMFF geometries                 504       30   326 ( 64.7%)      215 / 258  ( 83.3%)      8.37
+Cam2019   DP4, HF or DFT geometries            224       17   145 ( 64.7%)       72 / 85   ( 84.7%)      5.42
+Cam2019   DP4, MMFF geometries                  66       15    35 ( 53.0%)       14 / 20   ( 70.0%)      9.45
+Cam2019   DP4, semi-empirical geometries       132       15    65 ( 49.2%)       37 / 53   ( 69.8%)     14.24
+all       DP4, HF or DFT geometries            362       57   219 ( 60.5%)      122 / 147  ( 83.0%)      6.10
+all       DP4, MMFF geometries                 614       68   383 ( 62.4%)      244 / 297  ( 82.2%)      8.22
+
+how often the top candidate is the actual structure, by its stated probability
+group                                        0-0.5           0.5-0.9          0.9-0.99        0.99-0.999           0.999-1
+DP4, HF or DFT geometries           4/10   ( 40.0%)   59/130  ( 45.4%)   34/75   ( 45.3%)   30/37   ( 81.1%)   92/110  ( 83.6%)
+DP4, MMFF geometries                0/12   (  0.0%)   66/182  ( 36.3%)   73/123  ( 59.3%)   59/87   ( 67.8%)  185/210  ( 88.1%)
+DP4, semi-empirical geometries      0/4    (  0.0%)   17/47   ( 36.2%)   11/28   ( 39.3%)   19/26   ( 73.1%)   18/27   ( 66.7%)
+
+target 90%: coverage / mean set size / share of single-structure sets (300 random halves of the families)
+                                 own level              by benchmark           by group               one for all           
+DP4-AI                            92.8%  3.63  20.1%     93.0%  3.29  20.8%     93.6%  3.33  20.6%     94.5%  3.56  18.4%   
+Cam2017                           93.9%  5.56   7.7%     94.8%  5.75   5.9%     88.1%  3.12  20.5%     88.2%  3.10  20.4%   
+Cam2019                           97.8%  6.11   3.5%     98.6%  6.87   0.5%     93.8%  3.66   8.1%     92.0%  3.11  10.0%   
+DP4, HF or DFT geometries         94.1%  4.40  15.6%     94.9%  4.41  15.3%     92.7%  3.20  19.3%     93.9%  3.48  16.7%   
+DP4, MMFF geometries              93.1%  4.28  14.1%     93.8%  4.35  11.8%     91.8%  3.35  17.3%     91.8%  3.31  16.9%   
+DP4, semi-empirical geometries    98.4%  5.25   1.4%     97.3%  5.12   0.8%     98.7%  5.32   0.6%     90.2%  2.93  12.5%   
+all                               93.6%  4.51  14.8%     94.1%  4.46  14.2%     91.8%  3.32  20.5%     92.1%  3.36  19.6%   
+
+target 90%, transfer: threshold from the other benchmarks, families of the test benchmark left out
+test on   | from every other record: coverage, set size | from the same groups only: coverage, set size
+DP4-AI    |  97.5%   4.37  (182 records)               |  96.9%   4.17  (182 records)
+Cam2017   |  85.0%   2.48  (504 records)               |  85.0%   2.48  (504 records)
+Cam2019   |  90.8%   2.87  (422 records)               |  89.5%   2.77  (290 records)
+
+target 80%: coverage / mean set size / share of single-structure sets (300 random halves of the families)
+                                 own level              by benchmark           by group               one for all           
+DP4-AI                            82.7%  2.02  44.0%     83.4%  2.02  42.7%     83.8%  2.01  42.8%     84.5%  2.06  41.2%   
+Cam2017                           84.4%  2.75  30.8%     84.9%  2.74  28.6%     79.8%  1.95  43.1%     79.3%  1.89  45.5%   
+Cam2019                           87.6%  3.04  22.6%     89.0%  2.97  16.3%     84.0%  2.37  33.7%     81.3%  1.92  39.7%   
+DP4, HF or DFT geometries         83.8%  2.22  39.9%     85.7%  2.34  34.9%     82.8%  1.96  43.5%     84.2%  2.04  40.8%   
+DP4, MMFF geometries              83.5%  2.41  35.0%     82.7%  2.34  35.0%     81.9%  2.05  39.9%     81.0%  1.97  41.8%   
+DP4, semi-empirical geometries    87.0%  3.47  16.3%     87.3%  2.74  17.6%     89.4%  3.55  11.5%     77.6%  1.88  37.1%   
+all                               83.9%  2.37  38.6%     84.6%  2.35  36.5%     82.8%  2.04  43.0%     82.6%  1.98  43.7%   
+
+target 80%, transfer: threshold from the other benchmarks, families of the test benchmark left out
+test on   | from every other record: coverage, set size | from the same groups only: coverage, set size
+DP4-AI    |  86.9%   2.21  (182 records)               |  87.5%   2.24  (182 records)
+Cam2017   |  75.8%   1.65  (504 records)               |  76.7%   1.74  (504 records)
+Cam2019   |  77.1%   1.72  (422 records)               |  77.2%   1.74  (290 records)

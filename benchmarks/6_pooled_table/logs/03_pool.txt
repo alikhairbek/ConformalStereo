@@ -1,0 +1,7 @@
+candidates 14437, records 3100, records without exactly one actual structure 0
+JOC2015  records 1152  cases  48  families  18  levels 24  candidates per record 3.96
+STX150   records  559  cases 107  families  80  levels  6  candidates per record 2.27
+DP4-AI   records  182  cases  46  families  40  levels  4  candidates per record 7.49
+Cam2017  records  504  cases  42  families  30  levels 12  candidates per record 6.52
+Cam2019  records  703  cases  25  families  17  levels 30  candidates per record 5.63
+families in all: 152

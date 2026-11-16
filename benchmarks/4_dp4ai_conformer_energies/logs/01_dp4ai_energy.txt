@@ -1,0 +1,34 @@
+molecules 46, records (molecule x protocol) 182, of them clean with one value per atom 141
+descriptions with one value per atom: without noise the log-likelihood differs from the 2020 rule by at most 2.5e-09
+
+descriptions with fewer or more values than atoms: the reported structure under the 2020 rule and under the optimal pairing
+case   protocol     2020 rule: rank, probability   optimal pairing: rank, probability
+JB5    MM                    1        100.0%                      1        100.0%
+JB5    DFT_EB3LYP            1        100.0%                      1        100.0%
+JB5    DFT_EmPW              1        100.0%                      1        100.0%
+JB5    DFT_EM062X            1        100.0%                      1        100.0%
+JB7    MM                    7          0.0%                      1         73.3%
+JB7    DFT_EB3LYP           12          0.0%                      3          6.2%
+JB7    DFT_EmPW             14          0.0%                      1         76.8%
+JB7    DFT_EM062X           14          0.0%                      1         57.4%
+JB12   MM                    5          0.0%                      3          7.1%
+JB12   DFT_EB3LYP            2          0.8%                      3          2.0%
+JB12   DFT_EmPW              4          0.1%                      4          0.1%
+JB12   DFT_EM062X            1         91.6%                      1         97.5%
+KE2    MM                    3          0.1%                      3         13.7%
+KE2    DFT_EB3LYP            2         31.1%                      2         10.6%
+KE2    DFT_EmPW              2         11.0%                      2         33.6%
+KE2    DFT_EM062X            2         16.3%                      1         54.2%
+NP2    MM                    1        100.0%                      1        100.0%
+NP2    DFT_EB3LYP            1         99.9%                      1        100.0%
+NP2    DFT_EmPW              1         99.9%                      1        100.0%
+NP2    DFT_EM062X            1         99.9%                      1        100.0%
+OD1    MM                    2          1.2%                      2          1.2%
+OD1    DFT_EB3LYP            2          0.0%                      2          0.0%
+OD1    DFT_EmPW              2          0.0%                      2          0.0%
+OD1    DFT_EM062X            1         97.4%                      1         97.4%
+TS3B   MM                    3         10.2%                      3          0.0%
+TS3B   DFT_EB3LYP            1         99.1%                      2          0.6%
+TS3B   DFT_EmPW              1         99.5%                      2          1.7%
+TS3B   DFT_EM062X            1        100.0%                      1         55.1%
+reported structure first: 13 of 28 records under the 2020 rule, 15 under the optimal pairing

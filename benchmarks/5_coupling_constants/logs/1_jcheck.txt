@@ -1,0 +1,19 @@
+proton-proton couplings read: 1444853 pairs in 3797 conformers
+total J (Hz): min -22.84, 1% -14.73, median -0.071, 99% 13.15, max 17.73 | pairs above 1 Hz in size: 11.6% (167384)
+total minus Fermi contact (Hz): min -1.32, 1% -0.780, median -0.0802, 99% 0.940, max 2.24
+pairs above 1 Hz: mean |total - FC| 0.380 Hz, largest 2.24 Hz | total = 0.9829 x FC -0.075 Hz by least squares
+archives: 24 | folders: 25 | conformers per folder: 5 to 1005
+ok   outputs with coupling matrices: 3797
+ok   the same 3797 outputs that run 2 recorded as spin-spin jobs
+ok   every output: step 1 with the Fermi-contact matrix, step 2 with Fermi-contact and total (ten titles)
+ok   no matrix flagged for its layout
+ok   titles of the matrices as expected
+ok   row numbers run over every atom of the molecule in all 11391 matrices
+ok   rows and columns of atoms other than hydrogen hold only zeros (12 to 39 hydrogen atoms per molecule)
+ok   step 2: diagonals are zero in both matrices
+ok   step 1: the diagonal holds one constant on the hydrogen atoms (385 GHz) and zero elsewhere
+ok   off the diagonal, the Fermi-contact matrix of step 2 repeats that of step 1 (largest difference 0 Hz, 0 outputs differ)
+ok   SCF energies equal to those recorded in run 2 (largest difference 0.0e+00 hartree)
+ok   both steps ended normally in 3797 of 3797 outputs
+ok   150 matrices kept as printed text (two outputs in each of 25 folders): the reader of PyDP4 gives the stored numbers for 150
+13 checks, 0 failed

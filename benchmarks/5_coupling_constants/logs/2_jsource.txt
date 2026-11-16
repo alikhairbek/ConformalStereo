@@ -1,0 +1,5 @@
+outputs with couplings: 35 | isomer blocks: 212 | reproduced from raw data: 212
+     212  ('one structure', 'own shieldings and energies')
+   SwerilactoneANMRj          isomers  8 | not reproduced: [] | order as in the shift-only output: False | [(1, [1]), (2, [2]), (3, [4]), (4, [4]), (5, [5]), (6, [6]), (7, [7]), (8, [8])]
+   SwerilactoneBNMRj          isomers  8 | not reproduced: [] | order as in the shift-only output: False | [(1, [1]), (2, [2]), (3, [4]), (4, [4]), (5, [5]), (6, [6]), (7, [7]), (8, [8])]
+outputs whose candidates stand in the order of the shift-only output: {True: 33, False: 2}

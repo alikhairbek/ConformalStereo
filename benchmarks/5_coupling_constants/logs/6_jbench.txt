@@ -1,0 +1,5 @@
+  208  candidates
+   33  experiments
+shift terms against the deposit outputs (206 candidate blocks): largest difference of log(term) 0.0035 for carbon, 0.0047 for hydrogen
+signals with a shift equal to an earlier one but other couplings (where PyDP4 used the couplings of the first): 3
+energy noise: 2, 4, 8 kJ/mol, 500 draws, seed 20261114

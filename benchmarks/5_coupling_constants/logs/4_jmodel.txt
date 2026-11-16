@@ -1,0 +1,12 @@
+outputs reproduced by the Gaussian of the source: 6 (RosuvastatinNMRj, RosuvastatinNMRjb, SwerilactoneANMRj, SwerilactoneBNMRj, Testosterone1NMRj, Testosterone1NMRjb)
+other outputs: 29, with 182 candidate blocks and 1621 couplings used (all couplings as printed)
+all outputs together: slope 1.0554, intercept -0.6514 Hz | residual of log(term): rms 0.0013, largest 0.0040 | blocks within 0.006: 182 of 182
+   with 20 knots: slope 1.0554, intercept -0.6516 | rms 0.0038
+   with 45 knots: slope 1.0554, intercept -0.6514 | rms 0.0013
+leave one output out: 181 blocks predicted from the other outputs (1 more have an error outside the range seen in training)
+   residual of log(term): rms 0.4294, median absolute 0.0011, largest 5.7649 | within 0.006: 161, within 0.02: 161, within 0.1: 178
+   slope between 1.0554 and 1.0554, intercept between -0.6515 and -0.6514 over the 29 fits
+   largest: ArtemisininNMRj isomer 9 6.421 (outside); 1109ENMRj isomer 3 5.765; CitrinadinBNMRj isomer 11 -0.110; CitrinadinBNMRj isomer 22 -0.109
+recovered density f (per Hz) at absolute corrected errors of 0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10 Hz:
+   0.2145, 0.1789, 0.1436, 0.1127, 0.0886, 0.0604, 0.0507, 0.0492, 0.0511, 0.0507, 0.0430, 0.0233, 0.0138, 0.0091, 0.0071, 0.0025, 0.0015
+   couplings behind it: 1621, largest error 12.64 Hz, 30 above 8 Hz

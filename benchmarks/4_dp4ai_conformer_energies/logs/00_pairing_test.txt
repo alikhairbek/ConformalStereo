@@ -1,0 +1,5 @@
+as many values as atoms: every atom kept: True
+one signal removed (atom 5): atom left out [5]
+two signals added (77.0, 128.3): signals left out [77.0, 128.3]
+dynamic programme equals exhaustive search in 300 of 300 random problems
+30 protons, 1 to 3 signals missing: the atoms left out are exactly the right ones in 148 of 376; the others are neighbours in shift, which the shifts alone cannot tell apart

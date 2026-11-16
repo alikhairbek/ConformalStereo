@@ -1,0 +1,24 @@
+all records (182)
+   likelihood                   reported first calls >=99%: right/all  reported <=1%
+   sorted from the top (2020)      94 (51.6%)           68 / 85  ( 80.0%)       40
+   optimal pairing, no noise       96 (52.7%)           65 / 81  ( 80.2%)       35
+   noise 2 kJ/mol                 103 (56.6%)           63 / 77  ( 81.8%)       33
+   noise 4 kJ/mol                 109 (59.9%)           62 / 73  ( 84.9%)       30
+   noise 8 kJ/mol                 110 (60.4%)           67 / 76  ( 88.2%)       30
+   noise 16 kJ/mol                106 (58.2%)           65 / 72  ( 90.3%)       27
+clean records with one value per atom (141)
+   likelihood                   reported first calls >=99%: right/all  reported <=1%
+   sorted from the top (2020)      75 (53.2%)           51 / 63  ( 81.0%)       26
+   optimal pairing, no noise       75 (53.2%)           51 / 63  ( 81.0%)       26
+   noise 2 kJ/mol                  82 (58.2%)           49 / 61  ( 80.3%)       28
+   noise 4 kJ/mol                  86 (61.0%)           48 / 57  ( 84.2%)       25
+   noise 8 kJ/mol                  84 (59.6%)           53 / 61  ( 86.9%)       24
+   noise 16 kJ/mol                 84 (59.6%)           51 / 57  ( 89.5%)       23
+records with fewer or more values than atoms (28)
+   likelihood                   reported first calls >=99%: right/all  reported <=1%
+   sorted from the top (2020)      13 (46.4%)           11 / 16  ( 68.8%)       10
+   optimal pairing, no noise       15 (53.6%)            8 / 12  ( 66.7%)        5
+   noise 2 kJ/mol                  14 (50.0%)            8 / 10  ( 80.0%)        2
+   noise 4 kJ/mol                  16 (57.1%)            8 / 10  ( 80.0%)        2
+   noise 8 kJ/mol                  17 (60.7%)            8 / 9   ( 88.9%)        3
+   noise 16 kJ/mol                 13 (46.4%)            8 / 9   ( 88.9%)        1

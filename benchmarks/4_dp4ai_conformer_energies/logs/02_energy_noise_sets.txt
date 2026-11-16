@@ -1,0 +1,14 @@
+== all records
+noise on the energies  actual first            T | 90% target: matched size (probability, per-nucleus log ratio), conformal coverage and size | 80%: conformal size
+0 kJ/mol                96 of 182  52.7%   6.80 |  2.78   2.95  |  91.5%   3.56   3.37 |  2.13   2.13
+2 kJ/mol               103 of 182  56.6%   5.78 |  2.73   2.85  |  91.6%   3.50   3.47 |  2.08   2.10
+4 kJ/mol               109 of 182  59.9%   4.98 |  2.60   2.63  |  91.4%   3.41   3.45 |  1.96   2.00
+8 kJ/mol               110 of 182  60.4%   4.68 |  2.59   2.80  |  91.4%   3.45   3.57 |  1.96   2.01
+16 kJ/mol              106 of 182  58.2%   4.60 |  2.75   2.77  |  91.4%   3.53   3.53 |  2.10   2.19
+== clean records with one value per atom
+noise on the energies  actual first            T | 90% target: matched size (probability, per-nucleus log ratio), conformal coverage and size | 80%: conformal size
+0 kJ/mol                75 of 141  53.2%   7.65 |  2.94   2.94  |  94.0%   4.57   4.26 |  2.23   2.24
+2 kJ/mol                82 of 141  58.2%   6.53 |  2.83   3.05  |  93.7%   4.40   4.13 |  2.24   2.26
+4 kJ/mol                86 of 141  61.0%   5.61 |  2.76   2.94  |  93.7%   4.17   4.05 |  2.12   2.18
+8 kJ/mol                84 of 141  59.6%   5.29 |  2.74   2.82  |  93.7%   4.13   4.07 |  2.12   2.21
+16 kJ/mol               84 of 141  59.6%   5.18 |  3.11   3.09  |  93.6%   3.95   4.00 |  2.27   2.31

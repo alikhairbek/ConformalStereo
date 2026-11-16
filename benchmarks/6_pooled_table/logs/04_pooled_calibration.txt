@@ -1,0 +1,71 @@
+records 3100, families 152, score column log_ratio
+
+benchmark group                            records families    actual first   calls >=99%: right  temperature
+JOC2015   DP4+, B3LYP geometries              1152       18   857 ( 74.4%)      613 / 698  ( 87.8%)      5.50
+STX150    DP4+, B3LYP geometries               193       78   187 ( 96.9%)      171 / 174  ( 98.3%)      2.68
+STX150    MM-DP4+, MMFF geometries              77       63    66 ( 85.7%)       61 / 65   ( 93.8%)      4.98
+STX150    xTB-DP4+, xTB geometries             289       79   264 ( 91.3%)      238 / 251  ( 94.8%)      4.22
+DP4-AI    DP4, HF or DFT geometries            138       40    74 ( 53.6%)       50 / 62   ( 80.6%)      7.11
+DP4-AI    DP4, MMFF geometries                  44       38    22 ( 50.0%)       15 / 19   ( 78.9%)      5.96
+Cam2017   DP4, MMFF geometries                 504       30   326 ( 64.7%)      215 / 258  ( 83.3%)      8.37
+Cam2019   DP4, HF or DFT geometries            373       17   246 ( 66.0%)      122 / 147  ( 83.0%)      5.11
+Cam2019   DP4, MMFF geometries                 110       15    62 ( 56.4%)       21 / 31   ( 67.7%)      9.63
+Cam2019   DP4, semi-empirical geometries       220       15   111 ( 50.5%)       60 / 86   ( 69.8%)     19.56
+all       DP4+, B3LYP geometries              1345       80  1044 ( 77.6%)      784 / 872  ( 89.9%)      5.29
+all       DP4, HF or DFT geometries            511       57   320 ( 62.6%)      172 / 209  ( 82.3%)      5.68
+all       DP4, MMFF geometries                 658       68   410 ( 62.3%)      251 / 308  ( 81.5%)      8.28
+
+how often the top candidate is the actual structure, by its stated probability
+group                                        0-0.5           0.5-0.9          0.9-0.99        0.99-0.999           0.999-1
+DP4+, B3LYP geometries              3/15   ( 20.0%)  122/261  ( 46.7%)  135/197  ( 68.5%)  133/169  ( 78.7%)  651/703  ( 92.6%)
+DP4, HF or DFT geometries           7/13   ( 53.8%)   81/183  ( 44.3%)   60/106  ( 56.6%)   45/58   ( 77.6%)  127/151  ( 84.1%)
+DP4, MMFF geometries                1/13   (  7.7%)   77/204  ( 37.7%)   81/133  ( 60.9%)   63/93   ( 67.7%)  188/215  ( 87.4%)
+DP4, semi-empirical geometries      1/7    ( 14.3%)   31/83   ( 37.3%)   19/44   ( 43.2%)   28/37   ( 75.7%)   32/49   ( 65.3%)
+MM-DP4+, MMFF geometries                         -    2/4    ( 50.0%)    3/8    ( 37.5%)    8/9    ( 88.9%)   53/56   ( 94.6%)
+xTB-DP4+, xTB geometries                         -    7/13   ( 53.8%)   19/25   ( 76.0%)   38/40   ( 95.0%)  200/211  ( 94.8%)
+
+target 90%: coverage / mean set size / share of single-structure sets (300 random halves of the families)
+                                 own level              by benchmark           by group               one for all           
+JOC2015                           98.3%  2.48  15.4%     98.9%  2.65   9.0%     83.0%  1.04  89.9%     93.9%  1.52  56.2%   
+STX150                            90.5%  1.01  91.9%     91.8%  1.02  95.4%     93.3%  1.07  91.8%     96.7%  1.25  75.7%   
+DP4-AI                            92.7%  3.64  19.1%     93.0%  3.35  19.9%     93.1%  3.28  20.3%     86.3%  2.25  35.7%   
+Cam2017                           92.2%  5.14   9.3%     93.1%  5.24   7.0%     86.5%  3.02  20.7%     80.1%  2.05  39.3%   
+Cam2019                           97.4%  5.88   3.9%     98.6%  6.83   0.6%     93.2%  3.68   8.5%     83.4%  2.10  31.9%   
+DP4+, B3LYP geometries            91.4%  1.26  76.2%     95.7%  1.37  77.4%     92.2%  1.02  95.3%     97.1%  1.28  74.6%   
+DP4, HF or DFT geometries         93.6%  4.29  15.6%     94.7%  4.42  14.8%     92.0%  3.16  19.3%     85.9%  2.23  35.3%   
+DP4, MMFF geometries              93.0%  4.20  13.3%     93.3%  4.19  11.6%     90.9%  3.27  17.1%     83.2%  2.16  34.8%   
+DP4, semi-empirical geometries    98.2%  5.28   1.5%     97.8%  5.25   1.1%     99.0%  5.42   0.7%     79.9%  2.04  29.8%   
+MM-DP4+, MMFF geometries          91.7%  1.12  87.0%     88.0%  1.02  96.3%     91.7%  1.12  87.0%     95.4%  1.25  74.7%   
+xTB-DP4+, xTB geometries          89.6%  1.03  92.6%     89.9%  1.03  94.8%     91.6%  1.09  89.7%     95.5%  1.28  72.7%   
+all                               92.2%  2.73  48.3%     93.1%  2.75  48.9%     90.9%  2.09  58.4%     90.5%  1.70  56.1%   
+
+target 90%, transfer: threshold from the other benchmarks, families of the test benchmark left out
+test on   | from every other record: coverage, set size | from the same groups only: coverage, set size
+JOC2015   |  94.4%   1.57  (1152 records)              |  72.7%   0.84  (1152 records)
+STX150    |  98.7%   1.46  (559 records)               | 100.0%   2.14  (193 records)
+DP4-AI    |  85.0%   1.98  (182 records)               |  96.9%   4.19  (182 records)
+Cam2017   |  76.2%   1.66  (504 records)               |  85.0%   2.48  (504 records)
+Cam2019   |  81.1%   1.85  (703 records)               |  89.6%   2.76  (483 records)
+
+target 80%: coverage / mean set size / share of single-structure sets (300 random halves of the families)
+                                 own level              by benchmark           by group               one for all           
+JOC2015                           87.8%  1.28  72.7%     89.3%  1.30  74.4%     64.1%  0.71  71.1%     86.7%  1.13  87.5%   
+STX150                            79.4%  0.84  84.1%     82.2%  0.86  86.5%     84.1%  0.89  88.9%     92.7%  1.04  96.1%   
+DP4-AI                            81.6%  2.00  44.7%     82.4%  1.99  43.4%     82.0%  1.94  44.8%     67.4%  1.34  71.0%   
+Cam2017                           82.3%  2.56  34.0%     82.8%  2.54  32.0%     78.2%  1.89  45.1%     68.4%  1.21  81.4%   
+Cam2019                           86.1%  2.92  25.4%     88.3%  3.03  17.5%     83.4%  2.35  35.0%     66.5%  1.26  76.6%   
+DP4+, B3LYP geometries            79.4%  0.90  77.8%     87.1%  0.97  85.7%     82.2%  0.86  85.6%     93.9%  1.06  94.3%   
+DP4, HF or DFT geometries         82.4%  2.16  41.8%     84.9%  2.33  36.0%     81.2%  1.88  46.3%     68.8%  1.33  72.2%   
+DP4, MMFF geometries              82.3%  2.33  36.1%     81.3%  2.25  36.5%     80.7%  2.00  40.9%     65.0%  1.27  76.1%   
+DP4, semi-empirical geometries    86.1%  3.42  17.9%     86.4%  2.78  19.3%     89.0%  3.58  12.1%     58.4%  1.26  76.7%   
+MM-DP4+, MMFF geometries          81.8%  0.90  88.8%     80.5%  0.87  87.4%     81.8%  0.90  88.8%     88.7%  1.04  96.3%   
+xTB-DP4+, xTB geometries          79.8%  0.86  86.3%     78.7%  0.85  84.5%     81.8%  0.88  88.5%     90.8%  1.04  95.8%   
+all                               81.2%  1.56  62.4%     83.2%  1.57  62.6%     80.4%  1.38  66.5%     80.5%  1.16  85.5%   
+
+target 80%, transfer: threshold from the other benchmarks, families of the test benchmark left out
+test on   | from every other record: coverage, set size | from the same groups only: coverage, set size
+JOC2015   |  86.7%   1.14  (1152 records)              |  54.4%   0.59  (1152 records)
+STX150    |  95.9%   1.14  (559 records)               | 100.0%   2.14  (193 records)
+DP4-AI    |  49.9%   0.84  (182 records)               |  86.9%   2.15  (182 records)
+Cam2017   |  66.1%   1.10  (504 records)               |  76.7%   1.74  (504 records)
+Cam2019   |  64.4%   1.17  (703 records)               |  79.0%   1.74  (483 records)

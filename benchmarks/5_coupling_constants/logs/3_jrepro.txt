@@ -1,0 +1,23 @@
+conformers with both coupling matrices: 3797
+   112  calculated couplings as printed (FC)
+  1462  calculated couplings as printed (total)
+   212  experimental couplings as printed
+   212  isomer blocks compared
+    19  isomer blocks whose printed couplings follow only from the atom numbers of the last candidate
+   206  isomer blocks with every calculated coupling as printed (total)
+   212  proton assignment as printed
+  1468  protons with couplings (FC)
+  1468  protons with couplings (total)
+  1468  protons with experimental couplings matched
+   118  protons with several equally good matchings
+protons whose calculated couplings differ from the printed ones: 6, of which ties in the matching (same values, other order, same summed error): 6
+   AspergillideBC6D6NMRj isomer  3 H36  exp 13.3,10.8, 4.9, 1.9 | printed 17.4,13.9, 0.8, 1.0 | here 17.4,13.9, 1.0, 0.8
+   AspergillideBC6D6NMRj isomer  4 H11  exp 13.9, 4.9, 2.7, 1.2 | printed 12.5, 6.7, 0.9, 0.5 | here 12.5, 6.7, 0.5, 0.9
+   1109ENMRj            isomer  2 H9   exp 14.0,13.0,13.0, 4.0 | printed 15.3, 3.5, 4.8, 1.7 | here 15.3, 1.7, 4.8, 3.5
+   NeopeltolidePropNMRj isomer  4 H36  exp  4.9, 2.5,11.5 | printed  0.6, 0.7,11.7 | here  0.7, 0.6,11.7
+   1166BNMRj            isomer  3 H5   exp  2.4, 5.4, 7.8 | printed  1.4, 3.2, 5.0 | here  1.4, 5.0, 3.2
+   1166DNMRj            isomer  4 H5   exp  9.6, 7.2, 9.6 | printed  3.9, 1.0, 5.8 | here  5.8, 1.0, 3.9
+outputs with such blocks: 9 (AspergillideACDCl3NMRj, AspergillideBC6D6NMRj, CallipeltinFRRRNMRj, CallipeltinRRSNMRj, CallipeltinSRRNMRj, CallipeltinSRSNMRj, Nankakurine1NMRjreal, NeopeltolideNMRj, NeopeltolidePropNMRj)
+where several matchings are equally good, the Gaussian coupling term of the source changes with the choice by a factor of e^x: median x 2.2, largest 26.5, above 2.3 (a factor of ten) in 58 protons
+coupling term as the Gaussian of the PyDP4 source with the total matrix: equal to the printed value (three digits) in 24 of 212 blocks (RosuvastatinNMRj 2, RosuvastatinNMRjb 2, SwerilactoneANMRj 8, SwerilactoneBNMRj 8, Testosterone1NMRj 2, Testosterone1NMRjb 2)
+coupling term as the Gaussian of the PyDP4 source with the FC matrix: equal to the printed value (three digits) in 0 of 212 blocks

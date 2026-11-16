@@ -1,0 +1,1 @@
+records 1152 (cases 48, levels 24); every candidate within 0.5 point of the published DP4+ probability in 1040 records; largest difference 99.7 points; cases with a difference above 10 points at some level: 74b, 75a, 77d, 78c, 87c, 87d, 88b

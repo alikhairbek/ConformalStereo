@@ -1,0 +1,24 @@
+PyDP4 outputs in the _J folders: 54 | with experimental couplings: 35 | tied to one of the 42 compounds: 35
+printed probabilities reproduced from the per-candidate terms (within 0.25 point): 35 of 35
+candidates in the same order as in the shift-only output: 33 of 35 | matched by label 26, by sorted shifts 9
+match of the actual structure: largest distance 0.740 ppm, smallest margin to the next candidate 0.079 ppm
+experiments used: 33 of 33 with a coupling output (2 outputs are second versions of the same experiment)
+  shifts only (C and H)    actual structure first: 21 of 33 | calls at 99% or more: 17, right 16 | actual at 1% or less:  6 | mean probability of the actual 63.9%
+  shifts and couplings     actual structure first: 25 of 33 | calls at 99% or more: 20, right 18 | actual at 1% or less:  6 | mean probability of the actual 70.9%
+  couplings only           actual structure first: 13 of 33 | calls at 99% or more:  2, right  2 | actual at 1% or less:  3 | mean probability of the actual 31.1%
+place of the actual structure once couplings are added: better in 5, worse in 0, same in 28
+   better Callipeltin frag. SRR (20)    4 candidates | place 2 -> 1 | probability  22.3% ->  65.6% | 2 couplings on 2 protons
+   better Oseltamivir (15)              4 candidates | place 3 -> 2 | probability   0.1% ->   0.0% | 15 couplings on 11 protons
+   better Rosuvastatin (40)             2 candidates | place 2 -> 1 | probability   1.2% -> 100.0% | 11 couplings on 7 protons
+   better Tetrahydrofuran 2 (33)        4 candidates | place 2 -> 1 | probability  38.0% ->  72.5% | 10 couplings on 5 protons
+   better Tetrahydrofuran 3 (34)        4 candidates | place 2 -> 1 | probability   4.3% ->  41.2% | 12 couplings on 6 protons
+actual structure not first even with couplings (8): Callipeltin frag. RRR (19) place 4 of 4; Callipeltin frag. RRS (22) place 3 of 4; CitrinadinB (30) place 7 of 32; Darunavir (38) place 6 of 16; Ezetimibe (10) place 2 of 4; Oseltamivir (15) place 2 of 4; Tiotropium (9) place 2 of 4; Zidovudine (36) place 4 of 4
+calls at 99% or more that are wrong with couplings: Ezetimibe (10) (0.586% for the actual); Oseltamivir (15) (0.010% for the actual)
+couplings alone put the actual structure first where the shifts do not: CitrinadinB (30) (32 candidates); Rosuvastatin (40) (2 candidates); Tetrahydrofuran 2 (33) (4 candidates); Tiotropium (9) (4 candidates)
+probability of the actual structure: up in 10, down in 6, unchanged (within 0.05 point) in 17
+   down by more than 5 points: Didanosine (37)             89.0% ->  79.3% (place 1 -> 1)
+   down by more than 5 points: Tetrahydrofuran 4 (35)      99.1% ->  75.0% (place 1 -> 1)
+couplings per experiment: median 10 (from 2 to 76)
+same 33 compounds in the shift-only benchmark at B3LYP/6-31G(d,p): actual structure first in 20
+compounds without a coupling output (9): 11a-hydroxycurvularin (26); 11b-hydroxycurvularin (25); Caesaljapin (24); Canagliflozin (28); Capecitabine (31); Lopinavir (39); Phomolide G (29); Similanamide (41); Solifenacin (5)
+skipped: 11 without a coupling term, 8 without experimental couplings
