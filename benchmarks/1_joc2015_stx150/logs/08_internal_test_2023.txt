@@ -1,0 +1,10 @@
+2023 SI, section 9: difference between two printed candidates at two of the three MMFF levels, r(13C)/r(1H)
+  table at line 27303 (first 13C value 78.4) candidates 1-2: B3L~MPW 0.92/0.56 | B3L~WB9 0.87/0.41 | MPW~WB9 0.97/0.80
+  table at line 27503 (first 13C value 67.5) candidates 1-2: B3L~MPW 0.30/0.53 | B3L~WB9 0.47/0.55 | MPW~WB9 0.97/0.93
+  table at line 27641 (first 13C value 169.6) candidates 1-2: B3L~MPW -0.29/-0.90 | B3L~WB9 -0.05/-0.77 | MPW~WB9 0.96/0.94
+  table at line 27823 (first 13C value 28.9) candidates 1-2: B3L~MPW 0.65/0.49 | B3L~WB9 0.61/0.71 | MPW~WB9 0.93/0.63
+  table at line 28023 (first 13C value 82.1) candidates 1-2: B3L~MPW 0.95/0.80 | B3L~WB9 0.46/0.67 | MPW~WB9 0.40/0.58
+  table at line 28119 (first 13C value 154.4) candidates 1-2: B3L~MPW -0.18/0.20 | B3L~WB9 -0.18/0.07 | MPW~WB9 0.29/0.91
+  table at line 28424 (first 13C value 171.0) candidates 1-2: B3L~MPW 0.63/0.33 | B3L~WB9 0.66/0.17 | MPW~WB9 0.91/0.85
+  table at line 28424 (first 13C value 171.0) candidates 1-3: B3L~MPW 0.39/0.05 | B3L~WB9 0.31/0.00 | MPW~WB9 0.80/0.62
+candidate pairs tested: 46 | with r below 0.5 for some pair of levels: 8

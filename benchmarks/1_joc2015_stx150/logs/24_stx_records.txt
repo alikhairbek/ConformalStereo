@@ -1,0 +1,26 @@
+records (case, level): 660 | rounding draws 200
+level       verified      close  corrected unverified   excluded
+MMFF_PBE          67          8          2         17         16
+xTB_PBE           82          9          2         12          5
+xTB_mPW           88         10          2          6          4
+xTB_wB9           87          7          2          9          5
+B3L_PBE           92          2          2         10          4
+B3L_wB9           89          6          2          9          4
+all              505         42         12         63         38
+verified: reproduced within 1 point 481 | inside the rounding range 24 | of these with recovered inputs 66 records in 12 cases
+   inputs recovered for 77d   C1 class changed H5/H7 exchangeable (3.12, 3.05 ppm)
+   inputs recovered for 82a   H3/H7s exchangeable (2.61, 2.76 ppm) C4a/C7 exchangeable (51.0, 50.1 ppm)
+   inputs recovered for 86c   H3/H4 exchangeable (1.62, 1.11 ppm)
+   inputs recovered for 87c   H3/H4 exchangeable (1.61, 1.17 ppm)
+   inputs recovered for 89a   H5/H6 exchangeable (2.05, 1.74 ppm)
+   inputs recovered for 103a  H27/H30 exchangeable (1.75, 1.6 ppm)
+   inputs recovered for 106a  H11/H21 exchangeable (4.04, 4.39 ppm)
+   inputs recovered for 117a  H4/H8 exchangeable (2.18, 2.11 ppm)
+   inputs recovered for 130a  H8/H9 exchangeable (6.19, 6.48 ppm)
+   inputs recovered for 143a  C6/C7 exchangeable (30.1, 28.2 ppm)
+   inputs recovered for 145a  H2a/H2b exchangeable (1.9, 2.3 ppm)
+   inputs recovered for 158a  H2a/H7 exchangeable (3.3, 3.54 ppm)
+cases verified at all six levels: 47 | verified, close or corrected at all six: 58 | excluded at every level: 3
+reasons for exclusion: {'two candidates share a column': 3, 'candidate without a credible fit': 10, 'copied column': 12, 'copied column; candidate without a credible fit': 1, 'no experimental data printed': 6, 'isomers exchanged between levels, not resolved': 6}
+unverified: {'recomputed and published differ, no explanation': 50, 'fewer candidates printed than the source paper used': 13}
+unverified without explanation: 10 to 50 points 37 | above 50 13 | cases: 105a 108a 109a 111a 128a 129a 134a 139a 142a 148a 155a 157a 159a 73b 76a 77a 78b 78c 80b 81a 84a 86b 86d 87a 87b 87d 92a 94a 98b 99a

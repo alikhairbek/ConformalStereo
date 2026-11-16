@@ -1,0 +1,22 @@
+correct isomers  candidate-level entries  654 | 13C RMS: median 1.88, 90% 3.17, 99% 6.18, largest 55.45 | 1H RMS: median 0.148, 90% 0.264, 99% 1.179, largest 2.008
+alternatives     candidate-level entries  840 | 13C RMS: median 2.06, 90% 3.75, 99% 5.86, largest 55.41 | 1H RMS: median 0.219, 90% 0.415, 99% 1.172, largest 2.046
+candidates with a 13C RMS error above 6 ppm or a 1H RMS error above 0.6 ppm at some level: 19
+  case 86c   candidate 86b        xTBwB9 1.9/0.61
+  case 106a  candidate 106_alt1   B3LPBE 34.8/1.17 | B3LwB9 34.7/1.17
+  case 115a  candidate 115_alt1   MMFFPBE 1.4/0.93 | xTBPBE 1.3/0.94 | xTBmPW 1.5/0.92 | xTBwB9 1.5/0.90 | B3LPBE 1.2/0.96 | B3LwB9 1.4/0.93
+  case 117a  candidate 117b       MMFFPBE 55.4/2.03
+  case 117b  candidate 117b (correct) MMFFPBE 55.4/2.01
+  case 118a  candidate 118a (correct) xTBmPW 6.4/0.42
+  case 118a  candidate 118_alt1   xTBmPW 6.4/0.42
+  case 120a  candidate 120a (correct) MMFFPBE 6.1/0.16 | xTBPBE 6.2/0.20 | xTBmPW 6.2/0.20 | xTBwB9 6.3/0.18 | B3LPBE 6.1/0.16 | B3LwB9 6.2/0.15
+  case 120a  candidate 120_alt1   xTBwB9 6.1/0.49
+  case 137a  candidate 137a (correct) MMFFPBE 2.4/0.95 | xTBPBE 1.7/1.00 | xTBmPW 1.9/0.99 | xTBwB9 1.7/0.98 | B3LPBE 1.3/1.00 | B3LwB9 1.4/1.01
+  case 137a  candidate 137_alt1   MMFFPBE 3.1/1.04 | xTBPBE 1.6/1.13 | xTBmPW 2.0/1.17 | xTBwB9 1.9/1.13 | B3LPBE 1.4/0.92 | B3LwB9 1.8/0.91
+  case 138a  candidate 138_alt1   MMFFPBE 2.4/0.62 | xTBPBE 2.5/0.74 | xTBmPW 2.3/0.74 | xTBwB9 2.4/0.70
+  case 142a  candidate 142_alt1   xTBmPW 19.6/2.04 | xTBwB9 19.5/2.05
+  case 143a  candidate 143a (correct) MMFFPBE 6.2/0.12 | B3LwB9 6.1/0.10
+  case 143a  candidate 143_alt1   B3LwB9 6.1/0.12
+  case 150a  candidate 150a (correct) B3LwB9 1.5/1.18
+  case 150a  candidate 151a       B3LwB9 2.3/1.17
+  case 151a  candidate 150a       MMFFPBE 2.4/1.27 | xTBPBE 1.5/1.30 | xTBmPW 1.9/1.30 | xTBwB9 1.4/1.29 | B3LPBE 1.6/1.27
+  case 151a  candidate 151a (correct) MMFFPBE 2.7/1.29 | xTBPBE 1.5/1.30 | xTBmPW 1.8/1.31 | xTBwB9 1.5/1.31 | B3LPBE 1.9/1.27

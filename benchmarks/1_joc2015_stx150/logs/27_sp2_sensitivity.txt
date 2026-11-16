@@ -1,0 +1,25 @@
+case 89a, candidates 89a 89b | carbons at 85 ppm or above: [('3', 118.2)]
+   threshold rule          : MMFF_PBE=99 xTB_PBE=95 xTB_mPW=2 xTB_wB9=0 B3L_PBE=100 B3L_wB9=100
+   carbon 3   as sp3        : MMFF_PBE=99 xTB_PBE=95 xTB_mPW=2 xTB_wB9=0 B3L_PBE=100 B3L_wB9=99
+case 111a, candidates 111a 111_alt1 | carbons at 85 ppm or above: [('6', 85.5)]
+   threshold rule          : MMFF_PBE=100 xTB_PBE=99 xTB_mPW=100 xTB_wB9=100 B3L_PBE=15 B3L_wB9=100
+   carbon 6   as sp2        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=1 B3L_wB9=100
+case 115a, candidates 115a 115_alt1 | carbons at 85 ppm or above: [('5', 136.6), ('6', 137.0), ('7', 124.2), ('8', 132.2), ('9', 131.1), ('10', 138.4), ('12', 85.0), ('14', 107.3), ('15', 172.2)]
+   threshold rule          : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 5   as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 6   as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 7   as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 8   as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 9   as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 10  as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 12  as sp2        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 14  as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 15  as sp3        : MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+case 106a, candidates 106a 106_alt1 | carbons at 85 ppm or above: [('14', 101.8), ('15', 146.9), ('16', 107.6), ('21', 175.1), ('26', 171.1), ('28', 170.1)]
+   threshold rule          : MMFF_PBE=0 xTB_PBE=96 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 14  as sp3        : MMFF_PBE=0 xTB_PBE=97 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 15  as sp3        : MMFF_PBE=0 xTB_PBE=96 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 16  as sp3        : MMFF_PBE=0 xTB_PBE=96 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 21  as sp3        : MMFF_PBE=0 xTB_PBE=20 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 26  as sp3        : MMFF_PBE=0 xTB_PBE=88 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+   carbon 28  as sp3        : MMFF_PBE=0 xTB_PBE=96 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100

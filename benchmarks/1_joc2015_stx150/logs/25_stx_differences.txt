@@ -1,0 +1,31 @@
+records with both values: 654
+           exchanged isomers | copied column | shared column | candidate without credible fit | fewer candidates | unprinted input recovered | rounding of printed shieldings | no cause found  all
+within 1                   9 |             6 |             0 |                              7 |               38 |                        47 |                              0 |            380  487
+1 to 10                    2 |             1 |             0 |                              0 |                4 |                         7 |                             19 |             36  69
+10 to 50                   0 |             0 |             3 |                              2 |                5 |                         3 |                              1 |             37  51
+above 50                   7 |             6 |             0 |                              1 |                8 |                        12 |                              0 |             13  47
+cases touched by a defect of the printed data (first five columns): 29 of 109
+published 0-1%, recomputed 95% or more: 13 records, 12 with a cause found
+   89a   MMFF_PBE  published   0 recomputed  99.2 | unprinted input recovered
+   106a  xTB_PBE   published   0 recomputed  95.9 | unprinted input recovered
+   111a  MMFF_PBE  published   0 recomputed 100.0 | copied column
+   111a  xTB_PBE   published   0 recomputed  99.4 | no cause found
+   114i  MMFF_PBE  published   0 recomputed 100.0 | copied column
+   115a  xTB_wB9   published   0 recomputed 100.0 | candidate without credible fit
+   121a  MMFF_PBE  published   0 recomputed 100.0 | fewer candidates
+   121a  xTB_PBE   published   0 recomputed  99.9 | fewer candidates
+   121a  xTB_wB9   published   0 recomputed 100.0 | fewer candidates
+   121a  B3L_wB9   published   0 recomputed 100.0 | fewer candidates
+   127a  B3L_PBE   published   0 recomputed 100.0 | exchanged isomers
+   127a  B3L_wB9   published   0 recomputed 100.0 | exchanged isomers
+   146a  xTB_mPW   published   1 recomputed  96.8 | fewer candidates
+published 99-100%, recomputed 5% or less: 9 records, 7 with a cause found
+   86c   B3L_wB9   published 100 recomputed   1.3 | unprinted input recovered
+   105a  xTB_mPW   published 100 recomputed   0.0 | no cause found
+   105a  xTB_wB9   published 100 recomputed   0.3 | no cause found
+   117b  MMFF_PBE  published 100 recomputed   0.0 | copied column
+   127a  MMFF_PBE  published 100 recomputed   0.0 | exchanged isomers
+   127a  xTB_PBE   published 100 recomputed   0.0 | exchanged isomers
+   127a  xTB_mPW   published 100 recomputed   0.0 | exchanged isomers
+   127a  xTB_wB9   published 100 recomputed   0.0 | exchanged isomers
+   152a  MMFF_PBE  published 100 recomputed   0.3 | copied column

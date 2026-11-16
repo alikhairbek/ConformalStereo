@@ -1,0 +1,7 @@
+difference between isomers a and b at two levels, r(13C)/r(1H); compounds with a correlation below -0.5:
+  compound  9: A~B 0.97/0.75 | A~C -0.95/-0.89 | A~D -0.86/-0.60 | B~C -0.91/-0.52 | B~D -0.89/-0.83 | C~D 0.82/0.38
+  compound 12: A~B -0.51/-0.26 | A~C -0.07/-0.45 | A~D -0.32/0.04 | B~C 0.85/0.78 | B~D 0.96/0.94 | C~D 0.94/0.74
+  compound 32 (pair with 33): A~B -0.17/-0.39 | A~C -0.51/-0.54 | B~C 0.34/0.83
+  compound 33 (pair with 32): A~B -0.17/-0.60 | A~C -0.51/-0.62 | B~C 0.34/0.79
+  compound 34: A~B 0.86/0.14 | A~C -0.97/-0.99 | B~C -0.93/-0.23
+compounds tested: 39 | with a correlation below -0.5: 5 ['9', '12', '32', '33', '34'] | below -0.8 for 13C and 1H at some pair of levels: ['9', '34']

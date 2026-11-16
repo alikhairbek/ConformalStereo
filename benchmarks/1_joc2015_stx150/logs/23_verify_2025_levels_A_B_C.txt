@@ -1,0 +1,62 @@
+compounds: 39 | records (compound, level): 117
+level           verified  partly verified       unverified       misprinted
+A                     19                3               14                3
+B                     21                5                9                4
+C                     25                4                6                4
+all                   65               12               29               11
+printed values: 1053 | reproduced 836 | consistent within rounding 0 | not reproduced 217
+compounds verified at all three levels: 17 | at two: 4
+blocks exchanged (the correct isomer is not the first printed block): [(3, 'C', 'c', 'verified'), (5, 'A', 'b', 'unverified'), (9, 'A', 'b', 'unverified'), (9, 'B', 'b', 'unverified'), (12, 'C', 'b', 'verified'), (31, 'A', 'b', 'misprinted')]
+inputs recovered for 12 compounds: 4:  H1/H11 H6b/H9a H6a/H9b C2/C13; 5:  C4/C13 H4/H2 H1/H11 H6a/H9b H10b/H5a HMe/H5b; 7: C4->sp3 ; 8: C6->sp3 ; 25: C10->sp3 ; 26: C13->sp3 ; 32:  H1/H6b H2a/H5a; 33:  H6b/H8a H2b/H5a C8/C15 H1/H8b C1/C12 C19,21/C20 H15a/H15b; 35: C5->sp3 ; 36: C5->sp3 ; 38:  C6/C7 H1a/H1b C1/CMe-8 H6a/H6b; 39:  H3a/H3b CMe-6/CMe-7
+  compound  1 level A partly verified  values not reproduced 2 of 9 | all data: printed 0.04 recomputed 0.05 | misprinted cells 0
+  compound  1 level C partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound  4 level A partly verified  values not reproduced 2 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound  4 level B partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound  4 level C partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound  5 level A unverified       values not reproduced 8 of 9 | all data: printed 21.59 recomputed 0.00 | misprinted cells 0
+  compound  5 level B unverified       values not reproduced 5 of 9 | all data: printed 100.00 recomputed 98.95 | misprinted cells 0
+  compound  5 level C unverified       values not reproduced 8 of 9 | all data: printed 99.64 recomputed 100.00 | misprinted cells 0
+  compound  7 level A unverified       values not reproduced 3 of 9 | all data: printed 21.76 recomputed 21.59 | misprinted cells 0
+  compound  8 level A unverified       values not reproduced 4 of 9 | all data: printed 0.45 recomputed 0.45 | misprinted cells 0
+  compound  8 level B unverified       values not reproduced 3 of 9 | all data: printed 93.12 recomputed 93.12 | misprinted cells 0
+  compound  8 level C unverified       values not reproduced 5 of 9 | all data: printed 1.36 recomputed 1.36 | misprinted cells 0
+  compound  9 level A unverified       values not reproduced 3 of 9 | all data: printed 97.63 recomputed 98.47 | misprinted cells 0
+  compound  9 level B unverified       values not reproduced 3 of 9 | all data: printed 99.97 recomputed 99.99 | misprinted cells 0
+  compound  9 level C unverified       values not reproduced 4 of 9 | all data: printed 50.17 recomputed 72.53 | misprinted cells 0
+  compound 12 level B partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 18 level A partly verified  values not reproduced 1 of 9 | all data: printed 18.28 recomputed 20.19 | misprinted cells 0
+  compound 23 level A misprinted       values not reproduced 2 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 4
+  compound 23 level B misprinted       values not reproduced 4 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 4
+  compound 23 level C misprinted       values not reproduced 2 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 4
+  compound 24 level A unverified       values not reproduced 3 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 24 level B unverified       values not reproduced 5 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 24 level C unverified       values not reproduced 3 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 27 level A unverified       values not reproduced 7 of 9 | all data: printed 99.18 recomputed 99.99 | misprinted cells 0
+  compound 27 level B partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 27 level C unverified       values not reproduced 4 of 9 | all data: printed 99.99 recomputed 100.00 | misprinted cells 0
+  compound 28 level A unverified       values not reproduced 9 of 9 | all data: printed 80.25 recomputed 0.00 | misprinted cells 0
+  compound 28 level B unverified       values not reproduced 8 of 9 | all data: printed 91.36 recomputed 93.23 | misprinted cells 0
+  compound 28 level C partly verified  values not reproduced 1 of 9 | all data: printed 0.10 recomputed 0.10 | misprinted cells 0
+  compound 29 level A unverified       values not reproduced 3 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 29 level B partly verified  values not reproduced 1 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 30 level A unverified       values not reproduced 7 of 9 | all data: printed 100.00 recomputed 64.97 | misprinted cells 0
+  compound 30 level B misprinted       values not reproduced 4 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 3
+  compound 31 level A misprinted       values not reproduced 5 of 9 | all data: printed 99.92 recomputed 100.00 | misprinted cells 3
+  compound 31 level B misprinted       values not reproduced 5 of 9 | all data: printed 99.98 recomputed 0.00 | misprinted cells 2
+  compound 31 level C misprinted       values not reproduced 6 of 9 | all data: printed 96.77 recomputed 99.11 | misprinted cells 4
+  compound 32 level A unverified       values not reproduced 5 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 32 level B unverified       values not reproduced 5 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 32 level C misprinted       values not reproduced 7 of 9 | all data: printed 100.00 recomputed 93.79 | misprinted cells 21
+  compound 33 level A misprinted       values not reproduced 8 of 9 | all data: printed 83.90 recomputed 99.01 | misprinted cells 5
+  compound 33 level B misprinted       values not reproduced 5 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 4
+  compound 33 level C misprinted       values not reproduced 6 of 9 | all data: printed 99.99 recomputed 52.51 | misprinted cells 19
+  compound 34 level A unverified       values not reproduced 8 of 9 | all data: printed 99.96 recomputed 0.00 | misprinted cells 0
+  compound 34 level B unverified       values not reproduced 4 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 35 level A unverified       values not reproduced 7 of 9 | all data: printed 99.06 recomputed 99.62 | misprinted cells 0
+  compound 35 level B unverified       values not reproduced 3 of 9 | all data: printed 98.45 recomputed 98.84 | misprinted cells 0
+  compound 36 level A unverified       values not reproduced 9 of 9 | all data: printed 99.29 recomputed 96.95 | misprinted cells 0
+  compound 36 level B unverified       values not reproduced 3 of 9 | all data: printed 99.98 recomputed 99.97 | misprinted cells 0
+  compound 38 level C partly verified  values not reproduced 2 of 9 | all data: printed 100.00 recomputed 100.00 | misprinted cells 0
+  compound 39 level A unverified       values not reproduced 3 of 9 | all data: printed 0.00 recomputed 0.00 | misprinted cells 0
+  compound 39 level B partly verified  values not reproduced 2 of 9 | all data: printed 99.90 recomputed 99.96 | misprinted cells 0
+  compound 39 level C unverified       values not reproduced 5 of 9 | all data: printed 11.13 recomputed 9.99 | misprinted cells 0

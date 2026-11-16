@@ -1,0 +1,27 @@
+cases of compounds 101-121: 25 | {'excluded': 9, 'verified': 11, 'partly verified': 5}
+printed values of the cases that are not excluded (two formulations, three levels): 96 | reproduced 82 | consistent within rounding 6 | not reproduced 8
+  101a  K=2 excluded         reproduced 0, consistent 0, not 6 | largest difference  99.9 | by rule | candidate 1, 2 does not fit the experimental column (13C/1H error 14.8/0.82; 15.0/0.80 ppm)
+  102a  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   0.1 | by rule
+  103a  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   0.4 | by rule
+  104a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2 does not fit the experimental column (13C/1H error 25.9/1.37 ppm)
+  105a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2 does not fit the experimental column (13C/1H error 23.8/0.15 ppm)
+  106a  K=4 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2, 3, 4 does not fit the experimental column (13C/1H error 42.0/1.55; 38.7/1.49; 45.0/1.56 ppm)
+  107a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2 does not fit the experimental column (13C/1H error 40.4/1.52 ppm)
+  108a  K=2 verified         reproduced 2, consistent 4, not 0 | largest difference  10.9 | by rule
+  109a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2 does not fit the experimental column (13C/1H error 23.6/1.04 ppm)
+  110a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule | candidate 2 does not fit the experimental column (13C/1H error 22.7/0.59 ppm)
+  111a  K=2 partly verified  reproduced 5, consistent 0, not 1 | largest difference   2.0 | recovered from the printed probabilities | pairs: H3/H3
+  112a  K=2 partly verified  reproduced 4, consistent 0, not 2 | largest difference  14.3 | by rule
+  112b  K=2 partly verified  reproduced 4, consistent 0, not 2 | largest difference  81.0 | by rule
+  113a  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   0.1 | recovered from the printed probabilities | pairs: C5/C10
+  114a  K=4 verified         reproduced 6, consistent 0, not 0 | largest difference   0.6 | by rule
+  115a  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   0.3 | by rule
+  116a  K=4 verified         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule
+  117a  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   1.0 | recovered from the printed probabilities | classes: C4a->sp3 C29->sp3
+  117b  K=2 verified         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule
+  118a  K=2 excluded         reproduced 0, consistent 2, not 4 | largest difference  83.2 | by rule | candidate 1, 2 does not fit the experimental column (13C/1H error 59.9/1.69; 59.9/1.69 ppm)
+  119a  K=4 verified         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule
+  119b  K=4 verified         reproduced 6, consistent 0, not 0 | largest difference   0.0 | by rule
+  120a  K=2 excluded         reproduced 6, consistent 0, not 0 | largest difference   1.0 | by rule | candidate 1, 2 does not fit the experimental column (13C/1H error 11.7/1.14; 10.2/1.14 ppm)
+  121a  K=4 partly verified  reproduced 4, consistent 1, not 1 | largest difference   8.1 | recovered from the printed probabilities | pairs: H6/H12 H10/H12 H3/H5 C6/C10 H16/H17 | four of the eight candidates (the table of 121e-h is not usable)
+  121b  K=4 partly verified  reproduced 3, consistent 1, not 2 | largest difference  42.6 | recovered from the printed probabilities | pairs: H4/H14 H8/H14 C4/C10 C12/C14 H3/H5 H4/H8 | four of the eight candidates (the table of 121e-h is not usable)

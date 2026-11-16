@@ -1,0 +1,18 @@
+candidate blocks: 167
+columns that are exact copies of another column of the same candidate (all nuclei, as printed):
+  110a       MMFF_PBE = B3L_PBE for 30 of 30 nuclei | candidate set: 110a 110_alt1 | SI page 1848
+  111a       MMFF_PBE = B3L_PBE for 27 of 27 nuclei | candidate set: 111a 111_alt1 | SI page 1849
+  112a       MMFF_PBE = B3L_PBE for 33 of 33 nuclei | candidate set: 112a 112b | SI page 1850
+  112b       MMFF_PBE = B3L_PBE for 33 of 33 nuclei | candidate set: 112a 112b | SI page 1850
+  113a       MMFF_PBE = B3L_PBE for 30 of 30 nuclei | candidate set: 113a 113_alt1 | SI page 1851
+  114i       MMFF_PBE = B3L_PBE for 43 of 43 nuclei | candidate set: 114i 114_alt1 | SI page 1852
+  117a       MMFF_PBE = B3L_PBE for 56 of 56 nuclei | candidate set: 117a 117b | SI page 1855
+  118a       MMFF_PBE = B3L_PBE for 40 of 40 nuclei | candidate set: 118a 118_alt1 | SI page 1857
+  119c       MMFF_PBE = B3L_PBE for 53 of 53 nuclei | candidate set: 119c 119d | SI page 1858
+  119d       MMFF_PBE = B3L_PBE for 53 of 53 nuclei | candidate set: 119c 119d | SI page 1858
+  120a       MMFF_PBE = B3L_PBE for 35 of 35 nuclei | candidate set: 120a 120_alt1 | SI page 1859
+  153a       MMFF_PBE = xTB_PBE for 27 of 27 nuclei | candidate set: 152a 153a | SI page 1882
+total 12
+same column printed for two candidates of one set:
+  90_alt1 / 90b identical at xTB_wB9
+  150a / 151a identical at xTB_PBE

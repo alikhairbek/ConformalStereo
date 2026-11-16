@@ -1,0 +1,11 @@
+compounds with probabilities at Levels A, B, C: {'A': 39, 'B': 39, 'C': 39}
+STX cases above 121: 38 (122a to 159a). Numbering: STX = 2025 compound + 121 below a split point, + 120 from there on
+  cases that agree at Levels A and B: 29 of 38 with one offset of 121; 38 of 38 with the split anywhere from 140 to 146
+  split used: 144 | MMFF_mPW cases that differ from Level C, for every admissible split: [16]
+  STX column MMFF_wB9 equals the 2025 value within 1 point in 38 of 38 cases
+  STX column B3L_mPW  equals the 2025 value within 1 point in 38 of 38 cases
+  STX column MMFF_mPW equals the 2025 value within 1 point in 22 of 38 cases
+  in the STX table the MMFF_mPW value equals the MMFF_wB9 value in 38 of 38 rows above 121 (16 of them not 100/100)
+  for comparison, rows up to 121 where the two are not both 100: equal in 4 of 33
+  MMFF_mPW (STX table) against Level C (2025 SI): different in 16 of 38 cases; correct isomer above 50%: 30 against 30
+  on different sides of 50%% (case table/Level C/Level A): 122a 0/100.0/0.0 124a 100/0.0/100.0 126a 22/99.6/21.6 134a 99/14.7/99.4 139a 18/96.8/18.3 146a 17/53.3/17.3 148a 80/0.1/80.2 155a 99/16.1/99.1

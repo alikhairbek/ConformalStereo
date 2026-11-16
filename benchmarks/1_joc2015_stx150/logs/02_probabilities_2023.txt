@@ -1,0 +1,2 @@
+cases: 84 | compounds 73 to 121 | cases with all three levels: 84 | with DP4: 84 | with DP4+: 82
+first and last: 73a 121b | example 121a: {'MMFF_B3L|ScTMS+Uns': 0.0, 'MMFF_mPW|ScTMS+Uns': 0.0, 'MMFF_wB9|ScTMS+Uns': 71.33, 'DP4': 0.0, 'DP4+': 100.0}

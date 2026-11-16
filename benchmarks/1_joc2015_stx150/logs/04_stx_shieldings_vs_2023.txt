@@ -1,0 +1,1 @@
+{'no table': 58, 'matched': 52, 'nucleus order differs': 6, 'row count differs': 6} | rows written 6000

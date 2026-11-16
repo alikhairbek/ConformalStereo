@@ -1,0 +1,29 @@
+compounds: 39 | sp2 threshold 100 ppm | nine printed probabilities: {'reproduced': 19, 'close': 6, 'not reproduced': 14}
+reproduced (all nine within 1 point): with the first printed block as the correct isomer 19 | with another block 0 [] | after leaving out rows with a misprinted cell 0
+degrees of freedom as integers (the Excel sheet) reproduces better in 19 compounds, as printed in 20
+  compound  4 (2 isomers, 15 C, 16 H): close | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 3.42 at H uns | misprinted cells at Level B: 0
+  compound  5 (2 isomers, 15 C, 16 H): not reproduced | best block a, all rows | all data: published 100.00, best 83.51, first block 83.51 | largest difference 99.99 at C full | misprinted cells at Level B: 0
+  compound  8 (2 isomers, 7 C, 7 H): not reproduced | best block a, all rows | all data: published 93.12, best 90.67, first block 90.67 | largest difference 46.19 at C sca | misprinted cells at Level B: 0
+  compound  9 (2 isomers, 11 C, 13 H): not reproduced | best block b, all rows | all data: published 99.97, best 99.99, first block 0.01 | largest difference 18.42 at C uns | misprinted cells at Level B: 0
+  compound 12 (2 isomers, 6 C, 6 H): not reproduced | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 10.46 at C uns | misprinted cells at Level B: 0
+  compound 23 (2 isomers, 2 C, 6 H): not reproduced | best block a, rows with a misprinted cell left out | all data: published 100.00, best 100.00, first block 100.00 | largest difference 25.64 at C full | misprinted cells at Level B: 4
+  compound 24 (2 isomers, 26 C, 21 H): not reproduced | best block a, all rows | all data: published 100.00, best 99.99, first block 99.99 | largest difference 40.20 at H sca | misprinted cells at Level B: 0
+  compound 26 (4 isomers, 13 C, 14 H): close | best block a, all rows | all data: published 94.09, best 94.88, first block 94.88 | largest difference 4.35 at H uns | misprinted cells at Level B: 0
+  compound 27 (2 isomers, 8 C, 8 H): close | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 2.41 at C sca | misprinted cells at Level B: 0
+  compound 28 (2 isomers, 14 C, 18 H): close | best block a, all rows | all data: published 91.36, best 94.49, first block 94.49 | largest difference 5.69 at All sca | misprinted cells at Level B: 0
+  compound 29 (4 isomers, 12 C, 13 H): not reproduced | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 23.87 at C sca | misprinted cells at Level B: 0
+  compound 30 (2 isomers, 14 C, 13 H): close | best block a, rows with a misprinted cell left out | all data: published 100.00, best 100.00, first block 100.00 | largest difference 5.31 at H sca | misprinted cells at Level B: 3
+  compound 31 (2 isomers, 14 C, 14 H): not reproduced | best block a, rows with a misprinted cell left out | all data: published 99.98, best 100.00, first block 100.00 | largest difference 82.99 at All sca | misprinted cells at Level B: 2
+  compound 32 (2 isomers, 14 C, 16 H): not reproduced | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 52.06 at C uns | misprinted cells at Level B: 0
+  compound 33 (2 isomers, 15 C, 15 H): not reproduced | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 49.75 at C sca | misprinted cells at Level B: 4
+  compound 34 (2 isomers, 7 C, 11 H): not reproduced | best block a, all rows | all data: published 100.00, best 100.00, first block 100.00 | largest difference 76.09 at C sca | misprinted cells at Level B: 0
+  compound 35 (2 isomers, 10 C, 9 H): close | best block a, all rows | all data: published 98.45, best 97.56, first block 97.56 | largest difference 3.01 at C uns | misprinted cells at Level B: 0
+  compound 36 (2 isomers, 10 C, 9 H): not reproduced | best block a, all rows | all data: published 99.98, best 99.98, first block 99.98 | largest difference 10.96 at C uns | misprinted cells at Level B: 0
+  compound 38 (2 isomers, 9 C, 9 H): not reproduced | best block a, all rows | all data: published 100.00, best 99.99, first block 99.99 | largest difference 25.56 at C sca | misprinted cells at Level B: 0
+  compound 39 (2 isomers, 10 C, 9 H): not reproduced | best block a, all rows | all data: published 99.90, best 100.00, first block 100.00 | largest difference 14.57 at All uns | misprinted cells at Level B: 0
+compounds with four isomers, probability of the correct isomer (all data) with all four and with the first two only (what the STX150 SI prints for 141a, 146a and 149a):
+  compound  3: published 100.00 | four isomers 100.00 | first two isomers only 100.00
+  compound 18: published 99.94 | four isomers 99.94 | first two isomers only 99.95
+  compound 20: published 100.00 | four isomers 100.00 | first two isomers only 100.00
+  compound 26: published 94.09 | four isomers 94.88 | first two isomers only 98.21
+  compound 29: published 100.00 | four isomers 100.00 | first two isomers only 100.00

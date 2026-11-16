@@ -1,0 +1,17 @@
+compounds: 167 | pairs of columns that are identical for a compound: 12 [('110a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('111a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('112a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('112b', 'MMFF_PBE', 'B3L_PBE', 0.0), ('113a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('114i', 'MMFF_PBE', 'B3L_PBE', 0.0), ('117a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('118a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('119c', 'MMFF_PBE', 'B3L_PBE', 0.0), ('119d', 'MMFF_PBE', 'B3L_PBE', 0.0), ('120a', 'MMFF_PBE', 'B3L_PBE', 0.0), ('153a', 'MMFF_PBE', 'xTB_PBE', 0.0)]
+typical distance between two columns of one compound (13C, RMS in ppm; median over compounds):
+   MMFF_PBE  vs xTB_PBE   median  3.10 | smallest  0.00 | largest 71.30
+   MMFF_PBE  vs xTB_mPW   median  2.60 | smallest  0.99 | largest 70.78
+   MMFF_PBE  vs xTB_wB9   median  2.73 | smallest  1.11 | largest 71.50
+   MMFF_PBE  vs B3L_PBE   median  2.01 | smallest  0.00 | largest 71.02
+   MMFF_PBE  vs B3L_wB9   median  2.00 | smallest  0.83 | largest 71.20
+   xTB_PBE   vs xTB_mPW   median  1.25 | smallest  0.81 | largest 27.11
+   xTB_PBE   vs xTB_wB9   median  1.29 | smallest  0.35 | largest 27.44
+   xTB_PBE   vs B3L_PBE   median  2.42 | smallest  1.09 | largest 40.45
+   xTB_PBE   vs B3L_wB9   median  3.14 | smallest  1.10 | largest 40.70
+   xTB_mPW   vs xTB_wB9   median  1.11 | smallest  0.71 | largest  5.90
+   xTB_mPW   vs B3L_PBE   median  1.82 | smallest  0.52 | largest 40.55
+   xTB_mPW   vs B3L_wB9   median  2.30 | smallest  0.75 | largest 40.79
+   xTB_wB9   vs B3L_PBE   median  2.26 | smallest  1.12 | largest 40.85
+   xTB_wB9   vs B3L_wB9   median  2.46 | smallest  1.04 | largest 41.07
+   B3L_PBE   vs B3L_wB9   median  1.28 | smallest  0.36 | largest  2.56

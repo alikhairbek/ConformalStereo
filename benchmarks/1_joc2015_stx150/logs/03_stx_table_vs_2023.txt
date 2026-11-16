@@ -1,0 +1,26 @@
+STX150 validation cases: 110 | cases of the 2023 paper: 84 | in both, by name: 69 | STX150 cases numbered above 121: 38 | numbered up to 121 under a name the 2023 SI does not use: 114i 119c 119d
+STX150 column MMFF_mPW  against the 2023 values, cases within 1 point: ScTMS 36/69 | ScTMS+Uns 66/69 | ScMSTD 21/69 | ScMSTD+Uns 44/69 | ScTMS+ScMSTD 41/69 | ScTMS+ScMSTD+Uns 50/69
+STX150 column MMFF_wB9  against the 2023 values, cases within 1 point: ScTMS 32/69 | ScTMS+Uns 58/69 | ScMSTD 35/69 | ScMSTD+Uns 52/69 | ScTMS+ScMSTD 48/69 | ScTMS+ScMSTD+Uns 53/69
+STX150 column B3L_mPW against DP4+ of the 2023 SI: within 1 point in 54 of 67 | differing: 73b 100/97 78b 90/95 79b 100/92 80b 100/98 86a 100/75 87a 98/75 92b 100/99 94b 100/99 98b 93/98 100a 100/92 117a 100/67 118a 100/99 121a 96/100
+
+MMFF_mPW, formulation ScTMS+Uns: 3 of 69 cases differ by more than 1 point (STX150 / 2023): 94b 88/86 101a 100/0 118a 88/81
+MMFF_wB9, formulation ScTMS+Uns: 11 of 69 cases differ by more than 1 point (STX150 / 2023): 80b 92/97 82a 95/97 94a 95/98 100a 97/95 106a 92/100 108a 80/83 109a 16/100 111a 0/100 112a 33/31 117a 97/95 121a 2/71
+
+contradicted cases (STX150 table says <= 1%, its printed shieldings say >= 95%) and what the 2023 paper gives for the same case:
+case  | STX150 table: MMFF_PBE MMFF_mPW MMFF_wB9 | xTB_PBE xTB_mPW xTB_wB9 | B3L_PBE B3L_mPW B3L_wB9 || 2023 paper: MMFF_B3L MMFF_mPW MMFF_wB9 | DP4+ (DFT)
+89a   |        0        0        0 |      93       1       0 |     100     100      98 ||       41        0        0 | 99.81
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=99 xTB_PBE=95 xTB_mPW=2 xTB_wB9=0 B3L_PBE=100 B3L_wB9=100
+106a  |        0      100       92 |       0     100     100 |      77     100      50 ||      100      100      100 | 100.0
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=0 xTB_PBE=96 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+111a  |        0       84        0 |       0     100     100 |      23     100     100 ||       99       84      100 | 100.0
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=100 xTB_PBE=99 xTB_mPW=100 xTB_wB9=100 B3L_PBE=15 B3L_wB9=100
+114i  |        0      100      100 |     100     100     100 |     100     100     100 || not in the 2023 paper
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+115a  |      100      100      100 |     100     100       0 |     100     100     100 ||      100      100      100 | 
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100
+121a  |        0        0        2 |       0      96       0 |       0      96       0 ||        0        0       71 | 100.0
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=100 xTB_PBE=100 xTB_mPW=100 xTB_wB9=100 B3L_PBE=90 B3L_wB9=100
+127a  |      100      100      100 |     100     100     100 |       0     100       0 || not in the 2023 paper
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=0 xTB_PBE=0 xTB_mPW=0 xTB_wB9=0 B3L_PBE=100 B3L_wB9=100
+146a  |       13       17       17 |      39       1      79 |      57      94     100 || not in the 2023 paper
+      | recomputed from the printed STX150 shieldings: MMFF_PBE=99 xTB_PBE=81 xTB_mPW=97 xTB_wB9=100 B3L_PBE=100 B3L_wB9=100

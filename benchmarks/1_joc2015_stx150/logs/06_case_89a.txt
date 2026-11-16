@@ -1,0 +1,16 @@
+rows: STX 89a 27, 89b 27 | 2023 SI 89a 27, 89b 27 | atom labels of the two 2023 tables equal: True
+[STX 89a - STX 89b] against [2023 89a - 2023 89b] (MMFF geometries), r(13C)/r(1H):
+  2023 level MPW_B_PCM: MMFF_PBE 0.98/0.99 | xTB_PBE 0.69/0.64 | xTB_mPW 0.96/0.55 | xTB_wB9 0.93/0.21 | B3L_PBE 0.85/0.69 | B3L_wB9 0.98/0.68
+  2023 level B3L_B_PCM: MMFF_PBE 0.98/0.98 | xTB_PBE 0.69/0.64 | xTB_mPW 0.97/0.56 | xTB_wB9 0.94/0.25 | B3L_PBE 0.85/0.67 | B3L_wB9 0.98/0.65
+  2023 level WB9_B_PCM: MMFF_PBE 0.99/0.98 | xTB_PBE 0.70/0.65 | xTB_mPW 0.94/0.55 | xTB_wB9 0.90/0.20 | B3L_PBE 0.89/0.70 | B3L_wB9 0.97/0.69
+fit of each STX block (MMFF_PBE) against each 2023 isomer (MPW_B_PCM), RMS of the residuals, 13C / 1H (ppm):
+  STX block 89a -> 2023 89a: 0.33 / 0.043 | 2023 89b: 2.23 / 0.227
+  STX block 89b -> 2023 89a: 2.05 / 0.271 | 2023 89b: 0.56 / 0.058
+experimental data of 89a: error of each candidate after linear scaling, RMS (largest), ppm:
+  STX  MMFF_PBE   89a C 2.35 (4.37) | 89a H 0.20 (0.40) | 89b C 1.89 (5.31) | 89b H 0.24 (0.42)
+  STX  xTB_PBE    89a C 1.97 (4.58) | 89a H 0.16 (0.33) | 89b C 1.86 (4.58) | 89b H 0.18 (0.35)
+  STX  xTB_mPW    89a C 2.32 (4.66) | 89a H 0.14 (0.31) | 89b C 1.99 (5.35) | 89b H 0.14 (0.34)
+  STX  B3L_PBE    89a C 1.58 (4.30) | 89a H 0.12 (0.28) | 89b C 0.88 (1.91) | 89b H 0.23 (0.38)
+  2023 MPW_B_PCM  89a C 2.45 (5.15) | 89a H 0.21 (0.42) | 89b C 2.22 (5.90) | 89b H 0.22 (0.42)
+  2023 WB9_C_SMD  89a C 2.53 (4.68) | 89a H 0.20 (0.34) | 89b C 2.31 (5.92) | 89b H 0.24 (0.46)
+  2023 B3L_A_GAS  89a C 2.64 (5.11) | 89a H 0.23 (0.52) | 89b C 2.09 (6.03) | 89b H 0.29 (0.44)

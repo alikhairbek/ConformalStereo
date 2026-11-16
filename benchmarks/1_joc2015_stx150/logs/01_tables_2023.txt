@@ -1,0 +1,3 @@
+fragments: 122 | joined over a page break: 0 | tables: 122 | lines 17247 to 28609
+numeric columns per row -> tables: {7: 14, 8: 2, 12: 1, 13: 103, 14: 2} | tables whose rows differ in length: 0
+rows: 3423 (C 1779, H 1644, N 0) | tables without proton rows: 0 | without carbon rows: 0

@@ -1,0 +1,28 @@
+table fragments: 39 {'standard': 29, 'continuation': 5, 'side by side': 1, 'pair': 4} -> compounds: 39
+isomers per compound: {2: 34, 4: 5} | with Level D: [1, 4, 5, 9, 12, 16, 18, 21, 23, 27, 35, 36, 39]
+pairs (each compound is the alternative of the other): [(4, 5), (30, 31), (32, 33), (35, 36), (37, 38)]
+rows: 852 (13C 431, 1H 421) | nucleus column corrected in 15 rows of compounds [9, 13, 14, 15, 22, 27, 32, 33, 37, 38]
+   compound  9 row 1      printed C, taken as H (experimental 2.3)
+   compound  9 row 2      printed C, taken as H (experimental 2.18)
+   compound  9 row 3a     printed C, taken as H (experimental 1.8)
+   compound  9 row 3b     printed C, taken as H (experimental 1.41)
+   compound 13 row Ar     printed C, taken as H (experimental 7.31)
+   compound 14 row 7      printed H, taken as C (experimental 62.1)
+   compound 15 row 2      printed C, taken as H (experimental 2.86)
+   compound 22 row 12     printed H, taken as C (experimental 174.0)
+   compound 27 row 1a     printed C, taken as H (experimental 2.04)
+   compound 27 row 1b     printed C, taken as H (experimental 2.38)
+   compound 32 row 20     printed H, taken as C (experimental 127.9)
+   compound 33 row 20     printed H, taken as C (experimental 127.8)
+   compound 33 row 20     printed H, taken as C (experimental 61.1)
+   compound 37 row 1a     printed C, taken as H (experimental 2.1)
+   compound 38 row 1a     printed C, taken as H (experimental 2.23)
+shielding columns (compound, isomer, level): 292 | with cells that cannot be the shielding of their nucleus: 32 (123 cells)
+   compound  3: a/C b/C | e.g. C8 exp 79.5 cell 159.361 (a/C); C9 exp 32.2 cell 53.402 (a/C); C10 exp 139.1 cell 210.641 (a/C); C11 exp 38.8 
+   compound 21: b/A b/B b/C b/D | e.g. C5 exp 70.4 cell 72.544 (b/A); C10 exp 78.8 cell 167.111 (b/A); C11 exp 30.0 cell 201.923 (b/A); H2 exp 7.31 c
+   compound 22: b/A b/B b/C | e.g. H11 exp 1.38 cell 61.459 (b/A); H11 exp 1.38 cell 58.865 (b/B); H11 exp 1.38 cell 58.62 (b/C)
+   compound 23: a/A a/B a/C a/D b/A b/B b/C b/D | e.g. C5 exp 101.7 cell 26.286 (a/A); C5 exp 101.7 cell 26.654 (a/B); C5 exp 101.7 cell 26.311 (a/C); C5 exp 101.7 c
+   compound 30: b/B | e.g. HMe-13 exp 1.28 cell 26.882 (b/B); H15b exp 4.58 cell 23.782 (b/B); H20 exp 7.28 cell 132.291 (b/B)
+   compound 31: a/A a/B a/C b/A b/B b/C | e.g. H12 exp 1.32 cell 27.415 (a/A); HMe-13 exp 4.55 cell 30.416 (a/A); H20 exp 7.32 cell 132.291 (a/B); H12 exp 1.
+   compound 32: a/C b/C | e.g. C5 exp 39.0 cell 16.731 (a/C); C9 exp 172.9 cell 125.876 (a/C); CMe-13 exp 14.2 cell 122.503 (a/C); C15 exp 72
+   compound 33: a/A a/B a/C b/A b/B b/C | e.g. HMe-13 exp 4.55 cell 30.882 (a/A); C20 exp 61.1 cell 23.835 (a/A); H12 exp 1.32 cell 27.316 (a/B); C20 exp 61.

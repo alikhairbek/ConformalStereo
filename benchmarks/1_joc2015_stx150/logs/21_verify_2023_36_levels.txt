@@ -1,0 +1,11 @@
+molecules in section 7: 34 | single molecules, alternative isomer not printed: 81a 82a 83a 84a 91a 93a | cases from pairs of isomers: 28
+cases: {'partly verified': 3, 'unverified': 2, 'verified': 21, 'excluded': 2} | inputs: {'recovered from the printed probabilities': 5, 'by rule': 21, '-': 2}
+records (case, level): 936 | reproduced within 1 point 802 (85.7%) | consistent within the rounding of the printed shieldings 108 | not reproduced 26 (2.8%)
+  74a   partly verified  reproduced 30, consistent  4, not  2 | largest difference   5.9 | recovered from the printed probabilities | pairs: C6/C9
+  74b   unverified       reproduced 21, consistent  5, not 10 | largest difference  26.2 | recovered from the printed probabilities | pairs: H4/H5
+  89a   partly verified  reproduced 30, consistent  5, not  1 | largest difference  10.4 | recovered from the printed probabilities | pairs: H8a/H8b
+  90a   unverified       reproduced 21, consistent  4, not 11 | largest difference  33.2 | recovered from the printed probabilities | pairs: H4a/H7b C3/C1
+  90b   partly verified  reproduced 30, consistent  4, not  2 | largest difference   3.3 | by rule
+  95a   excluded         reproduced  0, consistent  0, not  0 | largest difference       |  | the SI prints the same shieldings and experimental values for both isomers
+  95b   excluded         reproduced  0, consistent  0, not  0 | largest difference       |  | the SI prints the same shieldings and experimental values for both isomers
+  100b  verified         reproduced 31, consistent  5, not  0 | largest difference   6.4 | recovered from the printed probabilities | pairs: CAr/CAr

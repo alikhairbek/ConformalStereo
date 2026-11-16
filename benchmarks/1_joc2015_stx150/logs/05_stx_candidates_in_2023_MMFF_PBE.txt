@@ -1,0 +1,25 @@
+cases of the STX150 set found in section 9 of the 2023 SI: 24 | STX level MMFF_PBE against 2023 level MPW_B_PCM
+101a  2023 candidates 2 | rows paired 14 of 31 | H_101_alt1: best 1-2 r=0.16; next 2-1 r=-0.16
+102a  2023 candidates 2 | rows paired 30 of 30 | C_102_alt1: best 1-2 r=0.99; next 2-1 r=-0.99 | H_102_alt1: best 1-2 r=0.98; next 2-1 r=-0.98
+103a  2023 candidates 2 | rows paired 55 of 55 | C_103_alt1: best 1-2 r=0.88; next 2-1 r=-0.88 | H_103_alt1: best 1-2 r=0.94; next 2-1 r=-0.94
+104a  2023 candidates 2 | rows paired 32 of 32 | C_104_alt1: best 2-1 r=0.72; next 1-2 r=-0.72 | H_104_alt1: best 2-1 r=0.73; next 1-2 r=-0.73
+105a  2023 candidates 2 | rows paired 44 of 44 | C_105_alt1: best 2-1 r=0.37; next 1-2 r=-0.37 | H_105_alt1: best 1-2 r=0.59; next 2-1 r=-0.59
+106a  2023 candidates 4 | rows paired 59 of 59 | C_106_alt1: best 2-3 r=0.30; next 2-1 r=0.26 | H_106_alt1: best 4-1 r=0.23; next 2-1 r=0.21
+107a  2023 candidates 2 | rows paired 23 of 23 | C_107_alt1: best 2-1 r=0.28; next 1-2 r=-0.28 | H_107_alt1: best 2-1 r=0.01; next 1-2 r=-0.01
+108a  2023 candidates 2 | rows paired 25 of 34 | C_108_alt1: best 1-2 r=0.92; next 2-1 r=-0.92 | H_108_alt1: best 1-2 r=0.98; next 2-1 r=-0.98
+109a  2023 candidates 2 | rows paired 30 of 30 | C_109_alt1: best 2-1 r=0.67; next 1-2 r=-0.67 | H_109_alt1: best 2-1 r=0.10; next 1-2 r=-0.10
+110a  2023 candidates 2 | rows paired 29 of 30 | C_110_alt1: best 2-1 r=0.08; next 1-2 r=-0.08 | H_110_alt1: best 1-2 r=0.19; next 2-1 r=-0.19
+111a  2023 candidates 2 | rows paired 25 of 25 | C_111_alt1: best 2-1 r=0.34; next 1-2 r=-0.34 | H_111_alt1: best 2-1 r=0.14; next 1-2 r=-0.14
+112a  2023 candidates 2 | rows paired 33 of 33 | C_112b: best 1-2 r=0.75; next 2-1 r=-0.75 | H_112b: best 1-2 r=0.61; next 2-1 r=-0.61
+112b  2023 candidates 2 | rows paired 33 of 33 | C_112a: best 2-1 r=0.75; next 1-2 r=-0.75 | H_112a: best 2-1 r=0.61; next 1-2 r=-0.61
+113a  2023 candidates 2 | rows paired 30 of 30 | C_113_alt1: best 1-2 r=0.89; next 2-1 r=-0.89 | H_113_alt1: best 1-2 r=0.63; next 2-1 r=-0.63
+114i  2023 candidates 4 | rows paired 43 of 43 | C_114_alt1: best 2-3 r=0.85; next 4-3 r=0.74 | H_114_alt1: best 4-3 r=0.18; next 1-3 r=0.13
+115a  2023 candidates 2 | rows paired 52 of 52 | C_115_alt1: best 2-1 r=0.08; next 1-2 r=-0.08 | H_115_alt1: best 2-1 r=0.14; next 1-2 r=-0.14
+116a  2023 candidates 4 | rows paired 39 of 39 | C_116_alt1: best 1-2 r=0.96; next 1-3 r=0.59 | H_116_alt1: best 1-2 r=0.73; next 4-2 r=0.61
+117a  2023 candidates 2 | rows paired 56 of 56 | C_117b: best 2-1 r=0.04; next 1-2 r=-0.04 | H_117b: best 1-2 r=0.27; next 2-1 r=-0.27
+117b  2023 candidates 2 | rows paired 56 of 56 | C_117a: best 1-2 r=0.04; next 2-1 r=-0.04 | H_117a: best 2-1 r=0.27; next 1-2 r=-0.27
+118a  2023 candidates 2 | rows paired 40 of 40 | C_118_alt1: best 1-2 r=0.18; next 2-1 r=-0.18 | H_118_alt1: best 2-1 r=0.15; next 1-2 r=-0.15
+119c  2023 candidates 4 | rows paired 53 of 53 | C_119d: best 1-2 r=0.98; next 3-4 r=0.88 | H_119d: best 1-2 r=0.88; next 3-2 r=0.78
+119d  2023 candidates 4 | rows paired 53 of 53 | C_119c: best 2-1 r=0.98; next 4-3 r=0.88 | H_119c: best 2-1 r=0.88; next 2-3 r=0.78
+120a  2023 candidates 2 | rows paired 34 of 35 | C_120_alt1: best 1-2 r=0.92; next 2-1 r=-0.92 | H_120_alt1: best 1-2 r=0.50; next 2-1 r=-0.50
+121a  2023 candidates 4 | rows paired 41 of 42 | C_121_alt1: best 1-2 r=0.89; next 3-2 r=0.85 | H_121_alt1: best 1-2 r=0.70; next 3-2 r=0.55
