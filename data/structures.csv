@@ -1,0 +1,10 @@
+structure,figure,smiles,source
+87a,Figure 1,CC(=O)O[C@H](C(=O)O[C@@H]1C[C@@H]2C=C[C@H]1C2)c1ccccc1,drawing in the Supporting Information of the DP4+ paper
+87b,Figure 1,CC(=O)O[C@H](C(=O)O[C@H]1C[C@H]2C=C[C@@H]1C2)c1ccccc1,drawing in the Supporting Information of the DP4+ paper
+87c,Figure 1,CC(=O)O[C@H](C(=O)O[C@@H]1C[C@H]2C=C[C@@H]1C2)c1ccccc1,drawing in the Supporting Information of the DP4+ paper
+87d,Figure 1,CC(=O)O[C@H](C(=O)O[C@H]1C[C@@H]2C=C[C@H]1C2)c1ccccc1,drawing in the Supporting Information of the DP4+ paper
+Zidovudine,Figure 6,Cc1cn([C@H]2C[C@H](N=[N+]=[N-])[C@@H](CO)O2)c(=O)[nH]c1=O,geometry Zidovudine1 of the deposit
+Similanamide,Figure 6,CC(C)C[C@@H]1NC(=O)[C@@H](C)NC(=O)[C@H](CC(C)C)N(C)C(=O)[C@@H]2CCCCN2C(=O)c2ccccc2NC(=O)[C@@H](C(C)C)NC1=O,mirror image of geometry Similanamide3 of the deposit (natural enantiomer)
+"Hydroxycurvularin (11R,15S)",Figure 6,C[C@H]1CCC[C@@H](O)CC(=O)c2c(O)cc(O)cc2CC(=O)O1,geometry hydroxycurvularin1 of the deposit
+"Hydroxycurvularin (11S,15S)",Figure 6,C[C@H]1CCC[C@H](O)CC(=O)c2c(O)cc(O)cc2CC(=O)O1,geometry hydroxycurvularin2 of the deposit
+Lopinavir,Figure 6,Cc1cccc(C)c1OCC(=O)N[C@@H](Cc1ccccc1)[C@@H](O)C[C@H](Cc1ccccc1)NC(=O)[C@H](C(C)C)N1CCCNC1=O,geometry Lopinavir1 of the deposit

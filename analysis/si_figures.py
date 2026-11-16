@@ -11,7 +11,8 @@ import cslib as cs
 
 final, pooled, out = sys.argv[1:4]
 os.makedirs(out, exist_ok=True)
-SANS = 'Liberation Sans' if any(f.name == 'Liberation Sans' for f in font_manager.fontManager.ttflist) else 'DejaVu Sans'
+_HAVE = {f.name for f in font_manager.fontManager.ttflist}
+SANS = next(f for f in ('Liberation Sans', 'Arial', 'Helvetica', 'DejaVu Sans') if f in _HAVE)      # Arial has the same metrics as Liberation Sans
 plt.rcParams.update({'font.family': SANS, 'font.size': 8, 'axes.titlesize': 8.5, 'axes.labelsize': 8, 'xtick.labelsize': 7.5, 'ytick.labelsize': 7.5, 'legend.fontsize': 7.5,
                      'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False, 'axes.edgecolor': '#8a8a8a', 'axes.linewidth': 0.7,
                      'xtick.color': '#8a8a8a', 'ytick.color': '#8a8a8a', 'xtick.labelcolor': 'black', 'ytick.labelcolor': 'black', 'xtick.major.width': 0.7, 'ytick.major.width': 0.7,

@@ -1,8 +1,10 @@
-"""ConformalStereo: draft figures 1 to 7 of the paper.
+"""ConformalStereo: figures 1 to 7 of the paper.
 Usage: figures.py <folder with the final tables> <folder with the exhibit tables> <out folder>
 
 Conventions: Wong palette, PNG and PDF at 300 dpi, no black bars, markers or curves, no error bars on bars and no
-whiskers on points (intervals are in the tables), text in black. Width 7.0 in (two columns).
+whiskers on points (intervals are in the tables), text and chemical structures in black. Width 7.0 in (two columns).
+The structures of Figures 1 and 6 are drawn with RDKit from structures.py; without RDKit these two figures are
+drawn without their structures.
 """
 import sys, os, csv
 import numpy as np
@@ -10,10 +12,19 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
+from matplotlib.patches import FancyBboxPatch
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import structures, moldraw
+except ImportError as err:
+    structures = moldraw = None
+    print('Figures 1 and 6 are drawn without their structures: %s (pip install rdkit)' % err)
 
 final, exhibit, out = sys.argv[1:4]
 os.makedirs(out, exist_ok=True)
-SANS = 'Liberation Sans' if any(f.name == 'Liberation Sans' for f in font_manager.fontManager.ttflist) else 'DejaVu Sans'
+_HAVE = {f.name for f in font_manager.fontManager.ttflist}
+SANS = next(f for f in ('Liberation Sans', 'Arial', 'Helvetica', 'DejaVu Sans') if f in _HAVE)      # Arial has the same metrics as Liberation Sans
 plt.rcParams.update({'font.family': SANS, 'font.size': 8, 'axes.titlesize': 8.5, 'axes.labelsize': 8, 'xtick.labelsize': 7.5, 'ytick.labelsize': 7.5, 'legend.fontsize': 7.5,
                      'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False, 'axes.edgecolor': '#8a8a8a', 'axes.linewidth': 0.7,
                      'xtick.color': '#8a8a8a', 'ytick.color': '#8a8a8a', 'xtick.labelcolor': 'black', 'ytick.labelcolor': 'black', 'xtick.major.width': 0.7, 'ytick.major.width': 0.7,
@@ -23,6 +34,8 @@ GREY, LIGHT = '#8a8a8a', '#e3e3e3'
 DASH = (0, (4, 2))
 BENCH = ['JOC2015', 'STX150', 'DP4-AI', 'Cam2017', 'Cam2019']
 W = 7.0
+FONT_FILE = font_manager.findfont(SANS)
+MARK = PURPLE      # discs behind the stereocentres of the drawn structures
 
 
 def read(folder, name):
@@ -47,46 +60,67 @@ p = [100 * float(r['stated_probability']) for r in ex]
 s = [float(r['distance_per_shift']) for r in ex]
 c90, c80, nsh = float(ex[0]['cutoff_90']), float(ex[0]['cutoff_80']), int(ex[0]['shifts'])
 actual = [int(r['is_actual']) for r in ex].index(1)
-fig, axs = plt.subplots(1, 3, figsize=(W, 2.45), gridspec_kw={'width_ratios': [1.0, 1.5, 1.05]})
+fig = plt.figure(figsize=(W, 4.42))
+gs = fig.add_gridspec(2, 2, width_ratios=[1.0, 1.55], height_ratios=[1.0, 0.86])
 y = np.arange(len(names))[::-1]
-ax = axs[0]
+ax = fig.add_subplot(gs[0, 0])
 ax.barh(y, p, height=0.55, color=SKY)
 for yi, v in zip(y, p):
     ax.text(v - 3 if v >= 60 else v + 3, yi, ('%.2f%%' % v) if v >= 0.005 else 'below 0.01%', va='center', ha='right' if v >= 60 else 'left')
 ax.set_yticks(y)
 ax.set_yticklabels(['%s%s' % (n, '\n(actual)' if i == actual else '') for i, n in enumerate(names)])
 ax.set_xlim(0, 100)
-ax.set_ylim(-0.6, len(names) - 0.2)
+ax.set_ylim(-0.6, len(names) + 0.1)
 ax.set_xlabel('probability stated by DP4+ (%)')
 panel(ax, 'a', 'What DP4+ states')
-ax = axs[1]
+ax = fig.add_subplot(gs[0, 1])
 ax.axvspan(0, c90, color=GREEN, alpha=0.14, lw=0)
 ax.axvspan(0, c80, color=GREEN, alpha=0.22, lw=0)
 for c, lab in ((c80, '80%'), (c90, '90%')):
-    ax.axvline(c, color=GREEN, lw=1.0, ls=DASH)
+    ax.plot([c, c], [-0.6, len(names) - 0.5], color=GREEN, lw=1.0, ls=DASH)      # the line ends below its label
     ax.text(c, len(names) - 0.42, lab, ha='center', va='bottom', fontsize=7.3)
 ax.text(c90 + 0.22, len(names) - 0.42, 'cut-offs: %.2f and %.2f' % (c80, c90), ha='left', va='bottom', fontsize=7.3)
 ax.scatter(s, y, s=46, color=[VERM if i == actual else BLUE for i in range(len(names))], zorder=3, edgecolor='white', linewidth=1.0)
 for i, (yi, v) in enumerate(zip(y, s)):
-    ax.text(v + 0.09, yi, '%.2f%s' % (v, '  (actual)' if i == actual else ''), va='center', ha='left')
+    ax.text(v, yi + 0.17, '%.2f' % v, va='bottom', ha='center')        # above the point: clear of the two cut-off lines
+ax.text(c90 + 0.05, y[actual], '(actual)', va='center', ha='left')
 ax.set_yticks(y)
 ax.set_yticklabels([])
 ax.set_ylim(-0.6, len(names) + 0.1)
-axs[0].set_ylim(-0.6, len(names) + 0.1)
-ax.set_xlim(-0.08, 2.45)
+ax.set_xlim(-0.1, 2.2)
 ax.set_xlabel('log-likelihood below the best candidate, per shift')
 panel(ax, 'b', 'Distance of every candidate (%d shifts)' % nsh)
-ax = axs[2]
+ax = fig.add_subplot(gs[1, :])
 ax.axis('off')
 panel(ax, 'c', 'Calibrated sets')
-in90 = [r['candidate'] for r in ex if r['in_90_set'] == '1']
-in80 = [r['candidate'] for r in ex if r['in_80_set'] == '1']
-ax.text(0.0, 0.86, '80% set', fontweight='bold', transform=ax.transAxes)
-ax.text(0.0, 0.72, ', '.join(in80), transform=ax.transAxes)
-ax.text(0.0, 0.58, 'one structure;\nthe actual one is missed', transform=ax.transAxes, fontsize=7.3, va='center')
-ax.text(0.0, 0.34, '90% set', fontweight='bold', transform=ax.transAxes)
-ax.text(0.0, 0.20, ', '.join(in90), transform=ax.transAxes)
-ax.text(0.0, 0.06, 'two structures;\nthe actual one is kept', transform=ax.transAxes, fontsize=7.3, va='center')
+if structures:
+    # the four candidates from the nearest to the farthest; the sets are drawn as frames around their members
+    w, h = moldraw.point_axes(fig, ax)
+    scale, pad = 0.8, 11.0
+    draw = {n: moldraw.Drawing(structures.compound_87(n), wedging='molblock', chiral_hs=False, font_file=FONT_FILE) for n in names}
+    sw, sh = draw[names[0]].size(scale)
+    n80, n90 = sum(r['in_80_set'] == '1' for r in ex), sum(r['in_90_set'] == '1' for r in ex)
+    assert [r['in_90_set'] for r in ex] == ['1'] * n90 + ['0'] * (len(ex) - n90) and [r['in_80_set'] for r in ex] == ['1'] * n80 + ['0'] * (len(ex) - n80)
+    slot = sw + 2 * pad
+    in_l, out_l = 7.0, 1.0                                           # left edges of the 80% and the 90% frame
+    in_r = in_l + n80 * slot
+    out_r = in_r + (n90 - n80) * slot + 6.0
+    rest = (w - out_r - (len(names) - n90) * sw) / (len(names) - n90 + 1)
+    xc = []
+    for i in range(len(names)):
+        xc.append(in_l + i * slot + slot / 2 if i < n90 else out_r + (i - n90 + 1) * rest + (i - n90 + 0.5) * sw)
+    for x0, x1, y0, y1, al in ((out_l, out_r, 1.0, h - 1.0, 0.14), (in_l, in_r, 7.0, h - 7.0, 0.22)):
+        ax.add_patch(FancyBboxPatch((x0, y0), x1 - x0, y1 - y0, boxstyle='round,pad=0,rounding_size=7', facecolor=GREEN, alpha=al, edgecolor='none', zorder=0))
+        ax.add_patch(FancyBboxPatch((x0, y0), x1 - x0, y1 - y0, boxstyle='round,pad=0,rounding_size=7', facecolor='none', edgecolor=GREEN, lw=0.9, zorder=1))
+    ytitle = h - 13.0
+    ax.text(in_l + 9, ytitle, '80% set', fontweight='bold', va='top', ha='left')
+    ax.text(in_r + 9, ytitle, '90% set', fontweight='bold', va='top', ha='left')
+    ax.text(xc[n90] - sw / 2, ytitle, 'in neither set', va='top', ha='left')
+    for i, n in enumerate(names):
+        mol = structures.compound_87(n)
+        draw[n].draw(ax, xc[i], 34.0, scale=scale, align=(0.5, 0.0), marks=structures.stereocentres(mol), mark_color=MARK)
+        ax.text(xc[i], 25.0, '%s%s' % (n, ' (actual)' if i == actual else ''), fontweight='bold', ha='center', va='center')
+        ax.text(xc[i], 14.5, '%s ester' % structures.EXPECTED_87[n][0], ha='center', va='center', fontsize=7.3)
 save(fig, 'Figure1_worked_example')
 
 # ------------------------------------------------------------------ Figure 2: reliability
@@ -242,9 +276,9 @@ save(fig, 'Figure5_transfer')
 # ------------------------------------------------------------------ Figure 6: stress tests and misses
 st = [r for r in read(final, 'final_stress.csv') if r['test'] in ('size', 'candidates')]
 fm = read(exhibit, 'exhibit_family_misses.csv')
-fig = plt.figure(figsize=(W, 3.6))
-gs = fig.add_gridspec(2, 2, width_ratios=[1.3, 1.0], height_ratios=[1.25, 1.0])
-ax = fig.add_subplot(gs[:, 0])
+fig = plt.figure(figsize=(W, 5.7))
+gs = fig.add_gridspec(3, 2, width_ratios=[1.3, 1.0], height_ratios=[1.25, 1.0, 1.42])
+ax = fig.add_subplot(gs[:2, 0])
 pairs = [('the half with fewer shifts', 'fewer shifts →\nmore shifts'), ('the half with more shifts', 'more shifts →\nfewer shifts'),
          ('at most four candidates', 'at most 4 candidates →\n5 or more'), ('five or more candidates', '5 or more candidates →\nat most 4')]
 yv, ypos, labels, done = 0.0, [], [], False
@@ -292,6 +326,28 @@ for k, (b, letter) in enumerate((('Cam2017', 'b'), ('Cam2019', 'c'))):
         ax.set_xlabel('records missed by the 90% set (%)')
     ax.text(124, -0.3, '%d of %d families\nnever missed' % (len(allr) - len(rows), len(allr)), ha='right', va='bottom', fontsize=7.3)
     panel(ax, letter, 'Misses in %s' % b)
+ax = fig.add_subplot(gs[2, :])
+ax.axis('off')
+panel(ax, 'd', 'The four families missed most often')
+if structures:
+    top = sorted([r for r in fm if r['benchmark'] == 'Cam2017'], key=lambda r: -float(r['share_missed_90']))[:4]
+    fam = [r['family'].split(':')[-1] for r in top]
+    w, h = moldraw.point_axes(fig, ax, full_width=True)
+    scale = 0.7
+    draw = {}
+    for f in fam:
+        mol = structures.FIGURE_6[f]()
+        draw[f] = (mol, moldraw.Drawing(mol, wedge_at=structures.LOPINAVIR_WEDGES if f == 'Lopinavir' else None, open_stereo=(f == 'Hydroxycurvularin'), font_file=FONT_FILE))
+    gap = (w - sum(draw[f][1].size(scale)[0] for f in fam)) / len(fam)
+    x = gap / 2
+    for f, r in zip(fam, top):
+        mol, d = draw[f]
+        sw, sh = d.size(scale)
+        assert len(structures.stereocentres(mol)) > 0 and 2 ** (len(structures.stereocentres(mol)) - 1) == int(r['candidates'])
+        d.draw(ax, x + sw / 2, 27.0 + (h - 29.0) / 2, scale=scale, align=(0.5, 0.5), marks=structures.stereocentres(mol), mark_color=MARK)
+        ax.text(x + sw / 2, 18.0, f, fontweight='bold', ha='center', va='center')
+        ax.text(x + sw / 2, 7.5, '%s candidates%s' % (r['candidates'], ' (the two epimers)' if f == 'Hydroxycurvularin' else ''), ha='center', va='center', fontsize=7.3)
+        x += sw + gap
 save(fig, 'Figure6_stress_and_misses')
 
 # ------------------------------------------------------------------ Figure 7: set size ranks workflows

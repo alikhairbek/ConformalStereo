@@ -41,15 +41,16 @@ described in [`ConformalStereo_App/app/README.md`](ConformalStereo_App/app/READM
 | Folder | Content |
 |---|---|
 | `ConformalStereo_App/` | the program: one folder, one file to start it |
-| `data/` | the pooled table of all 14,437 candidates with their log-likelihoods (3,100 assignments, 152 families, 76 workflows), and the 33 compounds with coupling constants |
+| `data/` | the pooled table of all 14,437 candidates with their log-likelihoods (3,100 assignments, 152 families, 76 workflows), the 33 compounds with coupling constants, and the SMILES of the structures drawn in the paper |
 | `analysis/` | the scripts that produce every table and figure of the paper from the pooled table, with their tables and logs |
 | `benchmarks/` | the code that built the pooled table from the public deposits and from the Supporting Information of the source papers, with its logs |
 
-No figure of the paper is stored here; `python analysis/run_all.py --figures` draws them.
+No figure of the paper is stored here; `python analysis/run_all.py --figures` draws them, with the chemical structures
+of Figures 1 and 6 and the graphic for the table of contents (these need Matplotlib and RDKit).
 
 ## Reproducing the paper
 
-    pip install numpy scipy matplotlib
+    pip install numpy scipy
     python analysis/run_all.py
 
 This rebuilds all tables in about two minutes and gives the same files on every run. Which file stands behind which

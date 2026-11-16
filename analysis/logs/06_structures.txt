@@ -1,0 +1,24 @@
+ok      87a  C17H18O4, endo ester, C1 C2 C4 C9 = R R R S   CC(=O)O[C@H](C(=O)O[C@@H]1C[C@@H]2C=C[C@H]1C2)c1ccccc1
+ok      87b  C17H18O4, endo ester, C1 C2 C4 C9 = S S S S   CC(=O)O[C@H](C(=O)O[C@H]1C[C@H]2C=C[C@@H]1C2)c1ccccc1
+ok      87c  C17H18O4, exo ester, C1 C2 C4 C9 = S R S S   CC(=O)O[C@H](C(=O)O[C@@H]1C[C@H]2C=C[C@@H]1C2)c1ccccc1
+ok      87d  C17H18O4, exo ester, C1 C2 C4 C9 = R S R S   CC(=O)O[C@H](C(=O)O[C@H]1C[C@@H]2C=C[C@H]1C2)c1ccccc1
+ok      compound 87: four stereoisomers of one constitution
+ok      compound 87: no two candidates are mirror images (four diastereomers)
+ok      Zidovudine: geometry of the deposit = known structure of the drug
+ok      Lopinavir: geometry of the deposit = known structure of the drug
+ok      Similanamide: the deposit holds L-Val, D-Leu, L-Ala, N-Me-D-Leu, D-Pip, the mirror image of PF1171C
+ok      Similanamide: drawn as D-Val, L-Leu, D-Ala, N-Me-L-Leu, L-Pip
+ok      Hydroxycurvularin: two epimers at the carbinol carbon, (11R,15S) and (11S,15S); the drawing leaves this carbon open
+ok      Zidovudine: 3 stereocentres, 4 diastereomers
+ok      Similanamide: 5 stereocentres, 16 diastereomers
+ok      Hydroxycurvularin: 2 stereocentres, 2 diastereomers
+ok      Lopinavir: 4 stereocentres, 8 diastereomers
+ok      87a: the drawing shows this stereoisomer
+ok      87b: the drawing shows this stereoisomer
+ok      87c: the drawing shows this stereoisomer
+ok      87d: the drawing shows this stereoisomer
+ok      Zidovudine: the drawing shows this stereoisomer
+ok      Similanamide: the drawing shows this stereoisomer
+ok      Hydroxycurvularin: the drawing shows this stereoisomer
+ok      Lopinavir: the drawing shows this stereoisomer
+written structures.csv

@@ -2,11 +2,14 @@
 
 Every table and figure of the paper is produced from one input, `data/pooled_candidates.csv`.
 
-    pip install numpy scipy matplotlib
+    pip install numpy scipy
     python analysis/run_all.py              # tables and logs, about two minutes
-    python analysis/run_all.py --figures    # also draws Figures 1 to 7 and S1 to S4 into analysis/figures
 
-Python 3.9 or newer. The seeds are fixed, so a rerun gives the same files. The tables carry eight decimals; every
+    pip install matplotlib rdkit pillow
+    python analysis/run_all.py --figures    # also draws Figures 1 to 7, S1 to S4 and the graphic for the table of contents into analysis/figures
+
+Python 3.9 or newer; for the figures Matplotlib 3.6 or newer, and RDKit 2022.09 or newer for the chemical structures
+(without RDKit, Figures 1 and 6 are drawn without their structures). The seeds are fixed, so a rerun gives the same files. The tables carry eight decimals; every
 number in the paper is rounded once, from these values.
 
 ## Scripts
@@ -23,6 +26,9 @@ number in the paper is rounded once, from these values.
 | `make_cutoffs.py` | the cut-offs of the 76 workflows for the companion program, computed with the program's own functions and compared with `final_workflows.csv` | `ConformalStereo_App/app/cutoffs.csv` |
 | `make_examples.py` | the example files of the companion program | `ConformalStereo_App/app/examples/` |
 | `figures.py`, `si_figures.py` | the figures | `figures/` (not stored in the repository) |
+| `toc_graphic.py` | the graphic for the table of contents (3.25 in × 1.75 in; PNG and TIFF at 600 dpi, PDF) | `figures/` |
+| `structures.py` | the chemical structures drawn in Figures 1 and 6 and in the graphic, with their checks | `data/structures.csv`, `logs/06_structures.txt` |
+| `moldraw.py` | places the drawings of RDKit (ACS 1996 settings) in the figures as vector outlines | (library) |
 
 ## Where each table of the paper comes from
 
@@ -54,17 +60,37 @@ repeats this list with titles, captions and notes.
 
 | Figure | Built from |
 |---|---|
-| Figure 1 | `exhibit_example.csv` |
+| Figure 1 | `exhibit_example.csv`; structures of 87a to 87d from `structures.py` |
 | Figure 2 | `final_reliability.csv` |
 | Figure 3 | `exhibit_temperature_bins.csv`, `final_temperature_size.csv` |
 | Figure 4 | `exhibit_set_kinds.csv` |
 | Figure 5 | `exhibit_workflow_coverage.csv` |
-| Figure 6 | `final_stress.csv`, `exhibit_family_misses.csv` |
+| Figure 6 | `final_stress.csv`, `exhibit_family_misses.csv`; structures from `structures.py` |
 | Figure 7 | `final_workflows.csv` |
 | Figure S1 | `final_records.csv` |
 | Figure S2 | `final_workflows.csv` |
 | Figure S3 | `data/pooled_candidates.csv` (one curve per workflow) |
 | Figure S4 | `data/pooled_candidates.csv` (columns `log_ratio` and `log_ratio_energy_4`) |
+| Graphic for the table of contents | `exhibit_example.csv`; structures of 87a and 87b from `structures.py` |
+
+## The chemical structures
+
+No structure is stored as a picture; `structures.py` holds them as data and RDKit draws them.
+
+- **Compound 87** (worked example). The four candidates 87a to 87d share one drawing in the Supporting Information
+  of the DP4+ paper (pages S218 to S222) and differ in its wedges. The script repeats that drawing as a mol block
+  with the four wedge patterns and checks what they mean: 87a and 87b are the *endo* esters, 87c and 87d the *exo*
+  esters of (*S*)-*O*-acetylmandelic acid with the two enantiomers of bicyclo[2.2.1]hept-5-en-2-ol.
+- **Zidovudine, hydroxycurvularin, lopinavir** (Figure 6). Isomeric SMILES read from the stored geometry of the
+  actual candidate of the Cambridge deposits; zidovudine and lopinavir agree with the known structures of the drugs.
+  The two epimers of hydroxycurvularin are both in the benchmark and share one drawing with a wavy bond.
+- **Similanamide** (Figure 6). The stored geometry of the actual candidate is the mirror image of the natural
+  product. NMR shifts are the same for both, so the benchmark is not affected; the figure shows the natural
+  enantiomer, cyclo(Ant-D-Val-L-Leu-D-Ala-N-Me-L-Leu-L-Pip), the structure of PF1171C to which similanamide was
+  revised (Masuda et al., *J. Nat. Prod.* 2015, 78, 2286).
+
+Every drawing is read back before use: the chirality is worked out again from the drawn positions and wedges alone
+and compared with the structure it is meant to show (`logs/06_structures.txt`).
 
 Other tables in `tables/`: `final_records.csv` lists every one of the 3,100 assignments with its sets;
 `final_confident_calls.csv` and `final_scores_paired.csv` hold numbers quoted in the text.

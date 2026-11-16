@@ -4,9 +4,11 @@
     python analysis/run_all.py              tables and logs
     python analysis/run_all.py --figures    also draws the figures into analysis/figures (not part of the repository)
 
-Needs Python 3.9 or newer with NumPy and SciPy (Matplotlib for the figures):  pip install numpy scipy matplotlib
+Needs Python 3.9 or newer with NumPy and SciPy:  pip install numpy scipy
+The figures need Matplotlib 3.6 or newer, and the chemical structures in Figures 1 and 6 and in the graphic for the
+table of contents need RDKit 2022.09 or newer (Pillow for the TIFF file):  pip install matplotlib rdkit pillow
 The results are the files in analysis/tables and analysis/logs; a rerun gives the same files."""
-import sys, os, subprocess, time
+import sys, os, subprocess, time, importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -46,8 +48,15 @@ def main():
         fig = os.path.join(HERE, 'figures')
         if not os.path.isdir(fig):
             os.makedirs(fig)
+        rdkit = importlib.util.find_spec('rdkit') is not None
+        if rdkit:
+            step('    structures: checks and table of SMILES', 'structures.py', [os.path.join(REPO, 'data', 'structures.csv')], '06_structures.txt')
+        else:
+            print('    RDKit is not installed: Figures 1 and 6 are drawn without structures, no graphic for the table of contents')
         step('    figures 1 to 7', 'figures.py', [TABLES, TABLES, fig])
         step('    figures S1 to S4', 'si_figures.py', [TABLES, POOLED, fig])
+        if rdkit:
+            step('    graphic for the table of contents', 'toc_graphic.py', [TABLES, fig])
     print('Tables: %s' % TABLES)
 
 

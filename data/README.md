@@ -37,6 +37,12 @@ under three error models (`logL_J_gauss`, the Gaussian of the PyDP4 source; `log
 Fermi-contact part; `logL_J_rec`, the density recovered from the deposited outputs), and the likelihoods averaged
 over noise of 2, 4 and 8 kJ/mol on the conformer energies (`E2_...`, `E4_...`, `E8_...`). Used for Table S12.
 
+## `structures.csv`
+
+Isomeric SMILES of the structures drawn in the paper: the four candidates 87a to 87d of the worked example
+(Figure 1) and the actual structures of zidovudine, similanamide, the two epimers of hydroxycurvularin and lopinavir
+(Figure 6), each with its source. Written by `analysis/structures.py`, which also explains and checks them.
+
 ## Sources and terms
 
 The three Cambridge deposits are published under CC BY 4.0 (identifiers in the main README). The shieldings of
