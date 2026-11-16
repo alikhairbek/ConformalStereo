@@ -1,0 +1,13 @@
+exponent b of T = T30 * (N/30)^b: estimate, 95% interval from resampling families (2000 resamples), log-likelihood gained over b = 0 (family-weighted)
+   JOC2015                          workflows 24 families  18 | b = +2.25 (+1.00 to +3.00), above zero in  99.9% | gain over b=0: best  23.82, b=1/2   9.13, b=1  16.17
+   STX150                           workflows  6 families  80 | b = +1.05 (+0.50 to +1.75), above zero in  99.8% | gain over b=0: best   7.32, b=1/2   5.43, b=1   7.30
+   DP4-AI                           workflows  4 families  40 | b = +1.05 (+0.30 to +2.60), above zero in  99.8% | gain over b=0: best   4.19, b=1/2   3.06, b=1   4.19
+   Cam2017                          workflows 12 families  30 | b = +1.00 (-0.75 to +2.50), above zero in  90.8% | gain over b=0: best  21.02, b=1/2  15.29, b=1  21.02
+   Cam2019                          workflows 30 families  17 | b = +0.50 (-1.00 to +2.75), above zero in  65.6% | gain over b=0: best   3.42, b=1/2   3.42, b=1   0.41
+   DP4+, B3LYP geometries           workflows 26 families  80 | b = +2.35 (+1.30 to +3.00), above zero in 100.0% | gain over b=0: best  29.91, b=1/2  11.54, b=1  20.18
+   MM-DP4+, MMFF geometries         workflows  1 families  63 | b = +1.00 (-0.75 to +2.85), above zero in  87.9% | gain over b=0: best   1.36, b=1/2   1.03, b=1   1.36
+   xTB-DP4+, xTB geometries         workflows  3 families  79 | b = +0.75 (-0.05 to +1.50), above zero in  96.2% | gain over b=0: best   2.19, b=1/2   1.98, b=1   1.93
+   DP4, MMFF geometries             workflows 18 families  68 | b = +1.00 (-0.70 to +2.55), above zero in  91.5% | gain over b=0: best  23.02, b=1/2  17.09, b=1  23.02
+   DP4, HF or DFT geometries        workflows 18 families  57 | b = +0.10 (-1.00 to +1.80), above zero in  56.5% | gain over b=0: best   0.10, b=1/2  -2.40, b=1 -11.82
+   DP4, semi-empirical geometries   workflows 10 families  15 | b = +2.90 (-0.30 to +3.00), above zero in  95.8% | gain over b=0: best  26.43, b=1/2   7.07, b=1  14.43
+   all workflows                    workflows 76 families 152 | b = +1.00 (+0.00 to +2.15), above zero in  97.1% | gain over b=0: best  49.09, b=1/2  36.32, b=1  49.09

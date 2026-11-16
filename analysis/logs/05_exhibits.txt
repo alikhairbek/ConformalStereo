@@ -1,0 +1,51 @@
+1. WORKED EXAMPLE: JOC2015, case 87a, DP4+ at B3LYP/6-31G*/gas
+   shifts 23 | cut-off at 90% 0.5127, at 80% 0.2081 (calibrated on the other 17 families of the level)
+   87b         stated 99.9782% | log-likelihood below best    0.00 | per shift 0.0000 | in the 90% set: yes, in the 80% set: yes
+   87a  actual stated 0.0218% | log-likelihood below best    8.43 | per shift 0.3665 | in the 90% set: yes, in the 80% set: no
+   87d         stated 0.0000% | log-likelihood below best   39.11 | per shift 1.7002 | in the 90% set: no, in the 80% set: no
+   87c         stated 0.0000% | log-likelihood below best   44.50 | per shift 1.9349 | in the 90% set: no, in the 80% set: no
+
+2. TEMPERATURE BY NUMBER OF SHIFTS: families of a benchmark in three groups of equal size by their number of shifts
+   JOC2015  T of all  5.19 |  6 families,   16 shifts (10 to 19): T   2.41 |  6 families,   20 shifts (20 to 23): T   2.90 |  6 families,   29 shifts (24 to 31): T   8.52
+   STX150   T of all  4.28 | 26 families,   17 shifts ( 8 to 20): T   3.54 | 27 families,   27 shifts (20 to 30): T   3.39 | 27 families,   35 shifts (30 to 59): T   5.97
+   DP4-AI   T of all  6.08 | 13 families,   32 shifts (16 to 38): T   2.75 | 13 families,   44 shifts (39 to 46): T   5.47 | 14 families,   54 shifts (46 to 73): T   9.53
+   Cam2017  T of all  9.47 | 10 families,   22 shifts (19 to 31): T   4.87 | 10 families,   33 shifts (31 to 39): T   5.82 | 10 families,   46 shifts (42 to 66): T  16.64
+   Cam2019  T of all  9.00 |  5 families,   20 shifts (19 to 22): T  10.15 |  6 families,   31 shifts (22 to 33): T   3.64 |  6 families,   42 shifts (33 to 64): T  21.67
+
+3. COVERAGE OF EVERY WORKFLOW BY ORIGIN OF THE CUT-OFF (the family of the record always left out)
+   90% own workflow               workflows 76 | lowest 90.0%, median 93.3%, highest 97.4% | more than 5 points below target: 0
+   90% same kind of calculation   workflows 76 | lowest 67.6%, median 87.2%, highest 97.4% | more than 5 points below target: 30
+   90% other benchmarks           workflows 76 | lowest 63.3%, median 86.2%, highest 100.0% | more than 5 points below target: 35
+   80% own workflow               workflows 76 | lowest 80.0%, median 83.4%, highest 97.4% | more than 5 points below target: 0
+   80% same kind of calculation   workflows 76 | lowest 54.4%, median 80.5%, highest 97.4% | more than 5 points below target: 19
+   80% other benchmarks           workflows 76 | lowest 40.0%, median 71.7%, highest 98.7% | more than 5 points below target: 44
+
+4. MISSES PER FAMILY (sets with one family left out)
+   JOC2015  families 18 | never missed at 80%:  5 | missed in half their records or more at 80%:  1
+   STX150   families 80 | never missed at 80%: 56 | missed in half their records or more at 80%:  6
+   DP4-AI   families 40 | never missed at 80%: 22 | missed in half their records or more at 80%:  7
+   Cam2017  families 30 | never missed at 80%: 17 | missed in half their records or more at 80%:  5
+   Cam2019  families 17 | never missed at 80%:  6 | missed in half their records or more at 80%:  2
+
+5. PROTON-PROTON COUPLINGS WITH THE FINAL SCORE (33 compounds of the 2017 deposit, 22 families, one level)
+   shifts                                               actual first 21 of 33 | 90%: 3.03 (2.10 to 4.38), single 15%, against the same without couplings +0.00 (+0.00 to +0.00) | 80%: 2.10 (1.55 to 2.78), single 41%, against the same without couplings +0.00 (+0.00 to +0.00)
+   shifts and couplings, Gaussian of the PyDP4 source   actual first 22 of 33 | 90%: 5.43 (3.25 to 8.05), single  5%, against the same without couplings +2.40 (+0.93 to +4.12) | 80%: 1.76 (1.32 to 2.40), single 59%, against the same without couplings -0.34 (-0.72 to +0.00)
+   shifts and couplings, Fermi-contact part             actual first 22 of 33 | 90%: 5.25 (3.18 to 7.80), single  5%, against the same without couplings +2.22 (+0.90 to +3.77) | 80%: 1.67 (1.27 to 2.22), single 62%, against the same without couplings -0.43 (-0.76 to -0.16)
+   shifts and couplings, recovered density              actual first 22 of 33 | 90%: 2.74 (2.01 to 3.67), single 16%, against the same without couplings -0.30 (-0.82 to +0.05) | 80%: 1.99 (1.48 to 2.65), single 47%, against the same without couplings -0.11 (-0.36 to +0.11)
+   shifts, energies averaged                            actual first 23 of 33 | 90%: 2.18 (1.72 to 2.72), single 34%, against plain shifts -0.85 (-1.84 to -0.14) | 80%: 1.61 (1.30 to 1.98), single 57%, against plain shifts -0.49 (-1.09 to -0.07)
+   shifts and couplings (Gaussian), energies averaged   actual first 22 of 33 | 90%: 3.86 (2.73 to 5.18), single  9%, against the same without couplings +1.68 (+0.66 to +2.90) | 80%: 1.73 (1.36 to 2.18), single 55%, against the same without couplings +0.11 (-0.32 to +0.62)
+   shifts and couplings (recovered), energies averaged  actual first 22 of 33 | 90%: 2.28 (1.77 to 2.95), single 27%, against the same without couplings +0.10 (-0.18 to +0.40) | 80%: 1.35 (1.14 to 1.59), single 70%, against the same without couplings -0.26 (-0.52 to -0.03)
+
+6. SOURCES AND REPRODUCTION: 5 benchmarks written to exhibit_sources.csv
+
+7. KINDS OF SETS PER BENCHMARK (shares averaged per family within a workflow, then over these units)
+   JOC2015  90%: one structure  59.5% | several, not all  20.4% | every candidate  20.1% | mean size 1.55 of 3.00
+   JOC2015  80%: one structure  89.5% | several, not all   5.2% | every candidate   5.3% | mean size 1.12 of 3.00
+   STX150   90%: one structure  98.0% | several, not all   0.1% | every candidate   1.9% | mean size 1.02 of 2.14
+   STX150   80%: one structure 100.0% | several, not all   0.0% | every candidate   0.0% | mean size 1.00 of 2.14
+   DP4-AI   90%: one structure  30.4% | several, not all  57.0% | every candidate  12.7% | mean size 2.71 of 7.52
+   DP4-AI   80%: one structure  51.3% | several, not all  41.1% | every candidate   7.6% | mean size 1.82 of 7.52
+   Cam2017  90%: one structure  15.7% | several, not all  47.8% | every candidate  36.5% | mean size 3.57 of 7.27
+   Cam2017  80%: one structure  39.4% | several, not all  43.5% | every candidate  17.2% | mean size 2.14 of 7.27
+   Cam2019  90%: one structure   2.9% | several, not all  26.2% | every candidate  70.9% | mean size 5.05 of 6.27
+   Cam2019  80%: one structure  34.7% | several, not all  44.9% | every candidate  20.3% | mean size 2.38 of 6.27

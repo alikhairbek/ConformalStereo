@@ -1,0 +1,7 @@
+# Case 87a of the DP4+ benchmark (J. Org. Chem. 2015), DP4+ at B3LYP/6-31G* in the gas phase, recomputed.
+# shifts: 23
+# workflow: JOC2015 | DP4+ | B3LYP | B3LYP/6-31G*/gas
+87a  0.02184270534
+87b  99.97815729
+87c  4.701696537e-18
+87d  1.03946705e-15

@@ -1,0 +1,11 @@
+Level,Benchmark,Families,Records missed,Never missed,Missed in half or more,Share in three families,The three families
+90%,JOC2015,18,"86 of 1,152",10,0,76%,79 (25 of 192); 85 (20 of 96); 88 (20 of 48)
+,STX150,80,36 of 559,61,5,31%,98 (4 of 11); 132 (4 of 6); 89 (3 of 12)
+,DP4-AI,40,21 of 182,31,3,52%,TS2 (4 of 4); TS3A (4 of 8); JB2 (3 of 8)
+,Cam2017,30,38 of 504,24,2,76%,Zidovudine (12 of 12); Hydroxycurvularin (9 of 24); Similanamide (8 of 12)
+,Cam2019,17,31 of 703,13,1,97%,Zidovudine (20 of 30); Lopinavir (9 of 30); Aldols (1 of 120)
+80%,JOC2015,18,"230 of 1,152",5,1,67%,79 (84 of 192); 85 (41 of 96); 88 (29 of 48)
+,STX150,80,42 of 559,56,6,26%,98 (4 of 11); 132 (4 of 6); 89 (3 of 12)
+,DP4-AI,40,41 of 182,22,7,39%,NP3A (8 of 8); TS2 (4 of 4); TS3A (4 of 8)
+,Cam2017,30,87 of 504,17,5,44%,Aldols (14 of 48); Similanamide (12 of 12); Zidovudine (12 of 12)
+,Cam2019,17,100 of 703,6,2,58%,Lopinavir (23 of 30); Zidovudine (21 of 30); Tetrahydrofurans (14 of 120)

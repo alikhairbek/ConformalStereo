@@ -1,0 +1,9 @@
+stated_probability_of_top_candidate,top_candidate,target,records,families,actual_in_set,single_structure_sets,mean_set_size,mean_candidates
+99% or more,wrong,0.9,225,45,108,92,2.56000000,4.74666667
+99% or more,wrong,0.8,225,45,25,178,1.34666667,4.74666667
+99% or more,right,0.9,1566,126,1566,1075,1.66155811,3.83524904
+99% or more,right,0.8,1566,126,1566,1454,1.08173691,3.83524904
+99.9% or more,wrong,0.9,134,35,42,79,1.97761194,4.37313433
+99.9% or more,wrong,0.8,134,35,8,118,1.17910448,4.37313433
+99.9% or more,right,0.9,1251,114,1251,966,1.49400480,3.60591527
+99.9% or more,right,0.8,1251,114,1251,1210,1.03437250,3.60591527

@@ -1,0 +1,19 @@
+Split by,Class,Records,Families,Candidates,Coverage at 90%,Set,Coverage at 80%,Set
+Number of candidates,2,"1,199",92,2.0,95.1% (92 to 97),1.34,91.5% (87 to 95),1.17
+,3 or 4,"1,359",33,4.0,91.2% (79 to 98),2.69,82.7% (71 to 91),1.76
+,5 to 8,407,17,8.0,88.5% (79 to 98),4.31,66.4% (44 to 90),2.04
+,9 or more,135,12,25.2,90.8% (72 to 100),12.08,74.4% (51 to 97),4.44
+Number of shifts,Fewer than 25 shifts,"1,469",47,2.9,93.4% (84 to 99),1.86,87.6% (79 to 94),1.37
+,25 to 39 shifts,"1,237",63,4.8,94.8% (91 to 98),2.55,88.6% (83 to 93),1.53
+,40 shifts or more,394,46,9.3,87.6% (79 to 95),5.43,72.1% (56 to 87),2.63
+Record without a data problem,Yes,"3,017",144,4.8,93.2% (89 to 97),2.84,85.4% (80 to 90),1.68
+,No,83,35,6.4,84.2% (75 to 92),2.07,77.2% (66 to 87),1.46
+Kind of calculation,"DP4+, B3LYP geometries","1,345",80,2.8,94.6% (90 to 98),1.41,88.2% (81 to 94),1.09
+,"MM-DP4+, MMFF geometries",77,63,2.1,91.3% (85 to 97),1.10,86.5% (79 to 94),1.00
+,"xTB-DP4+, xTB geometries",289,79,2.1,91.7% (87 to 96),1.01,91.0% (86 to 95),1.00
+,"DP4, MMFF geometries",658,68,7.0,91.4% (82 to 98),3.70,81.3% (70 to 91),2.17
+,"DP4, HF or DFT geometries",511,57,7.1,93.0% (84 to 98),4.51,81.8% (72 to 89),2.00
+,"DP4, semi-empirical geometries",220,15,5.5,93.2% (81 to 100),4.63,83.7% (69 to 94),2.81
+Size of the set,One structure,"1,279",115,2.8,90.6% (85 to 95),1.00,85.0% (80 to 89),1.00
+,"More than one, not all",940,55,9.4,89.0% (80 to 96),4.74,81.4% (70 to 90),3.04
+,Every candidate,881,52,3.3,100.0% (100 to 100),3.34,100.0% (100 to 100),2.44

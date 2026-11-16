@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ConformalStereo</title>
+<link rel="icon" href="data:,">
+<style>
+:root {
+  --ink: #1b2430; --soft: #5a6675; --line: #d9dee5; --paper: #ffffff; --ground: #f4f6f8;
+  --accent: #0f5ea8; --accent-ink: #ffffff; --accent-soft: #e8f1fa;
+  --in: #17663f; --in-soft: #e5f4ec; --open: #8a5a00; --open-soft: #fff4d6; --bad: #a3261d; --bad-soft: #fdeceb;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: "Segoe UI", -apple-system, Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; }
+header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.bar { max-width: 1040px; margin: 0 auto; padding: 14px 20px 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; }
+h1 { font-size: 1.25rem; margin: 0; letter-spacing: 0.01em; }
+.tagline { color: var(--soft); font-size: 0.92rem; flex: 1 1 320px; }
+.quit { margin-left: auto; }
+nav { max-width: 1040px; margin: 0 auto; padding: 10px 20px 0; display: flex; gap: 4px; flex-wrap: wrap; }
+nav button { font: inherit; border: 0; background: none; color: var(--soft); padding: 9px 14px; border-bottom: 3px solid transparent; cursor: pointer; }
+nav button:hover { color: var(--ink); }
+nav button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+main { max-width: 1040px; margin: 0 auto; padding: 20px; }
+section.page { display: none; }
+section.page.on { display: block; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; margin-bottom: 16px; }
+.card h2 { font-size: 1.02rem; margin: 0 0 4px; }
+.card h2 .step { display: inline-block; min-width: 1.5em; color: var(--accent); }
+.hint { color: var(--soft); font-size: 0.9rem; margin: 2px 0 12px; }
+label { font-size: 0.92rem; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: inherit; border: 1px solid #b9c1cc; border-radius: 6px; padding: 7px 9px; background: #fff; }
+textarea { width: 100%; font-family: var(--mono); font-size: 0.88rem; line-height: 1.45; resize: vertical; }
+textarea:focus, input:focus, select:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+select { max-width: 100%; }
+.row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 8px 0; }
+.grow { flex: 1 1 280px; }
+button.btn { font: inherit; border-radius: 6px; padding: 8px 14px; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+button.btn:hover { filter: brightness(1.08); }
+button.btn.plain { background: #fff; color: var(--accent); }
+button.btn.small { padding: 4px 9px; font-size: 0.84rem; }
+button.btn:disabled { opacity: 0.55; cursor: default; }
+.drop { border: 1.5px dashed #aeb7c3; border-radius: 8px; padding: 14px; background: #fafbfc; }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.file { display: none; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 6px; background: var(--accent-soft); }
+.file.on { display: flex; }
+.file b { font-weight: 600; word-break: break-all; }
+.msg { border-radius: 6px; padding: 9px 12px; margin: 10px 0 0; font-size: 0.92rem; display: none; }
+.msg.on { display: block; }
+.msg.bad { background: var(--bad-soft); color: var(--bad); }
+.msg.note { background: var(--open-soft); color: #5c3c00; }
+.msg.info { background: var(--accent-soft); color: #123d66; }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; color: var(--soft); font-size: 0.84rem; border-bottom: 1.5px solid #b9c1cc; white-space: nowrap; }
+td.num, th.num { text-align: right; white-space: nowrap; }
+td.num { font-family: var(--mono); font-size: 0.86rem; }
+td.mid, th.mid { text-align: center; }
+.scroll { overflow-x: auto; }
+.chip { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 0.82rem; white-space: nowrap; }
+.chip.in { background: var(--in-soft); color: var(--in); font-weight: 600; }
+.chip.open { background: var(--open-soft); color: var(--open); font-weight: 600; }
+.chip.out { color: #8a94a1; }
+.sentence { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.sentence:last-child { border-bottom: 0; }
+.sentence p { margin: 0; flex: 1; }
+.caveat { color: var(--soft); font-size: 0.88rem; margin: 12px 0 0; }
+.kv { font-size: 0.9rem; color: var(--soft); margin: 6px 0 0; }
+.kv b { color: var(--ink); font-weight: 600; }
+.radio { display: block; margin: 8px 0 2px; }
+.sub { margin: 4px 0 10px 26px; }
+details { margin-top: 12px; }
+summary { cursor: pointer; color: var(--accent); font-size: 0.94rem; }
+.banner { display: none; background: var(--bad); color: #fff; padding: 10px 20px; text-align: center; }
+.banner.on { display: block; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 28px; }
+ol.steps { padding-left: 1.2em; margin: 6px 0; }
+ol.steps li { margin: 4px 0; }
+code { font-family: var(--mono); font-size: 0.9em; background: #eef1f4; padding: 1px 5px; border-radius: 4px; }
+footer { max-width: 1040px; margin: 0 auto; padding: 4px 20px 30px; color: var(--soft); font-size: 0.84rem; }
+@media (max-width: 640px) { main { padding: 12px; } .card { padding: 14px; } }
+</style>
+</head>
+<body>
+<div class="banner" id="gone">The program is not running any more. Start it again with its icon, then reload this page.</div>
+<header>
+  <div class="bar">
+    <h1>ConformalStereo</h1>
+    <div class="tagline">Calibrated candidate sets for NMR assignments by DP4, DP4+, MM-DP4+ and xTB-DP4+</div>
+    <button class="btn plain small quit" id="quit" title="Stop the program">Quit</button>
+  </div>
+  <nav role="tablist">
+    <button role="tab" data-page="assign" aria-selected="true">Assign</button>
+    <button role="tab" data-page="calibrate" aria-selected="false">Calibrate</button>
+    <button role="tab" data-page="workflows" aria-selected="false">Workflows of the paper</button>
+    <button role="tab" data-page="about" aria-selected="false">How it works</button>
+  </nav>
+</header>
+
+<main>
+<!-- ============================================================ ASSIGN -->
+<section class="page on" id="page-assign">
+  <div class="card">
+    <h2><span class="step">1</span>The DP4 or DP4+ result of your molecule</h2>
+    <p class="hint">Open the file with the result, or type the probabilities. Percentages printed with two decimals are often not enough: a candidate shown as 0.00% has lost the digits that decide. The files keep them.</p>
+    <div class="drop" id="drop">
+      <div class="row" style="margin:0">
+        <button class="btn plain" id="pick">Open a file…</button>
+        <span class="hint" style="margin:0">DP4+ Excel sheet (.xlsx) · results of DP4+App (.xlsx) · output of PyDP4 or DP4-AI · or drop the file here</span>
+      </div>
+      <input type="file" id="fileinput" accept=".xlsx,.dp4,.txt,.csv,.out,.log" hidden>
+      <div class="file" id="filebox" style="margin-top:10px"><span>File:</span> <b id="filename"></b> <button class="btn plain small" id="unfile">Remove</button></div>
+    </div>
+    <div id="typedbox">
+      <p class="hint" style="margin:12px 0 6px">or type one candidate per line, a name and its value, with all the digits you have:</p>
+      <textarea id="typed" rows="5" spellcheck="false" placeholder="isomer 1   99.2134&#10;isomer 2   0.7861&#10;isomer 3   0.0005"></textarea>
+      <div class="row">
+        <label><input type="radio" name="kind" value="probability" checked> probabilities (per cent or fractions)</label>
+        <label><input type="radio" name="kind" value="loglik"> natural logarithms of the likelihoods</label>
+        <button class="btn plain small" id="example-typed">Example</button>
+      </div>
+    </div>
+    <div class="row">
+      <label for="shifts">Number of shifts <i>N</i> (carbon plus proton shifts in the calculation)</label>
+      <input type="number" id="shifts" min="1" step="1" style="width:6.5em">
+      <span class="hint" id="shifts-note" style="margin:0"></span>
+    </div>
+    <div id="preview"></div>
+    <div class="msg bad" id="err-read"></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="step">2</span>The cut-off of your workflow</h2>
+    <p class="hint">A cut-off belongs to the workflow with which it was calibrated: the method, the geometries, the NMR level, the solvent model and the error model. Borrowed from another workflow it can be far off.</p>
+    <label class="radio"><input type="radio" name="cut" value="workflow" checked> A workflow of the paper, if your calculation follows it in every step</label>
+    <div class="sub">
+      <select id="workflow" aria-label="Workflow of the paper"></select>
+      <div class="kv" id="workflow-info"></div>
+      <div class="msg info" id="suggest"></div>
+    </div>
+    <label class="radio"><input type="radio" name="cut" value="own"> My own calibration <span class="hint" id="own-state">(none yet: make one on the page “Calibrate”)</span></label>
+    <label class="radio"><input type="radio" name="cut" value="manual"> Cut-offs per shift that I type</label>
+    <div class="sub row" id="manual">
+      <label>80% <input type="text" id="c80" size="7" inputmode="decimal"></label>
+      <label>90% <input type="text" id="c90" size="7" inputmode="decimal"></label>
+      <label>95% <input type="text" id="c95" size="7" inputmode="decimal"></label>
+    </div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="go">Compute the sets</button></div>
+    <div class="msg bad" id="err-assign"></div>
+  </div>
+
+  <div class="card" id="result" style="display:none">
+    <h2><span class="step">3</span>The calibrated sets</h2>
+    <p class="kv" id="res-head"></p>
+    <div class="scroll" style="margin-top:10px"><table id="res-table"></table></div>
+    <div id="res-sentences" style="margin-top:12px"></div>
+    <div id="res-warnings"></div>
+    <p class="caveat" id="res-caveat"></p>
+    <div class="row" style="margin-top:12px">
+      <button class="btn plain" id="copy-report">Copy the report</button>
+      <button class="btn plain" id="save-report">Save the report (.txt)</button>
+    </div>
+    <details id="known">
+      <summary>The structure of this molecule is known? Add it to my calibration table</summary>
+      <div class="row">
+        <label>Actual structure <select id="known-actual"></select></label>
+        <label>Name of the molecule <input type="text" id="known-name" size="16"></label>
+        <label>Family <input type="text" id="known-family" size="16" placeholder="same as the name"></label>
+        <button class="btn plain" id="known-add">Add</button>
+      </div>
+      <p class="hint">Molecules that share a skeleton or come from one series belong to one family; they count together as one unit.</p>
+      <div class="msg info" id="known-msg"></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================================ CALIBRATE -->
+<section class="page" id="page-calibrate">
+  <div class="card">
+    <h2>Calibrate a cut-off with your own workflow</h2>
+    <p class="hint">Use molecules whose structure is known and that were computed exactly like the molecules you want to assign. Give one line per candidate. The 80% level needs at least 4 families, 90% needs 9 and 95% needs 19.</p>
+    <p class="hint">Columns, separated by commas, semicolons or tabs: <code>molecule</code>, <code>family</code> (optional), <code>shifts</code>, <code>candidate</code>, <code>probability</code> or <code>log_likelihood</code>, <code>actual</code> (1 for the actual structure, 0 otherwise).</p>
+    <div class="row">
+      <button class="btn plain" id="cal-pick">Open a table…</button>
+      <button class="btn plain" id="cal-example">Example: a workflow of the paper</button>
+      <button class="btn plain" id="cal-template">Empty template</button>
+      <button class="btn plain" id="cal-save">Save the table (.csv)</button>
+      <input type="file" id="cal-file" accept=".csv,.txt,.tsv" hidden>
+    </div>
+    <textarea id="cal-text" rows="13" spellcheck="false" placeholder="molecule,family,shifts,candidate,probability,actual"></textarea>
+    <div class="row"><button class="btn" id="cal-go">Compute the cut-offs</button> <span class="hint" id="cal-count" style="margin:0"></span></div>
+    <div class="msg bad" id="err-cal"></div>
+  </div>
+  <div class="card" id="cal-result" style="display:none">
+    <h2>Cut-offs of your workflow</h2>
+    <p class="kv" id="cal-head"></p>
+    <div class="scroll" style="margin-top:10px"><table id="cal-levels"></table></div>
+    <div id="cal-warnings"></div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn" id="cal-use">Use these cut-offs on the page “Assign”</button>
+      <button class="btn plain" id="cal-copy">Copy the summary</button>
+    </div>
+    <details>
+      <summary>The molecules, one by one</summary>
+      <div class="scroll"><table id="cal-rows"></table></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================================ WORKFLOWS -->
+<section class="page" id="page-workflows">
+  <div class="card">
+    <h2>The 76 workflows of the paper and their cut-offs</h2>
+    <p class="hint">Cut-off per shift from all families of the workflow, for use with a new molecule. A dash marks a level for which the workflow has too few families. A cut-off of 0 means that the set is the top candidate alone.</p>
+    <div class="row"><input type="text" id="wf-filter" class="grow" placeholder="Filter, for example: PCM mPW1PW91, xTB, Cam2019 HF"></div>
+    <div class="scroll"><table id="wf-table"></table></div>
+  </div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section class="page" id="page-about">
+  <div class="card">
+    <h2>What the program does</h2>
+    <div class="cols">
+      <div>
+        <p>DP4-type methods give each candidate a probability, and this probability is usually read as confidence. In 3,100 recomputed assignments a call of 99% or more was right in 87% of the cases. The program replaces the percentage by a statement that keeps its promise:</p>
+        <ol class="steps">
+          <li>Run DP4 or DP4+ as usual and keep the unrounded probabilities of all candidates.</li>
+          <li>Take the cut-off <i>c</i> of your workflow, from the paper or from your own calibration.</li>
+          <li>Keep every candidate <i>i</i> with ln(<i>P</i><sub>best</sub>/<i>P<sub>i</sub></i>) ≤ <i>c</i>·<i>N</i>, where <i>N</i> is the number of shifts.</li>
+          <li>Report the set with its level. One structure is an assignment; several are the list that further experiments have to separate.</li>
+        </ol>
+      </div>
+      <div>
+        <p><b>What the level means.</b> Sets built this way contain the actual structure, on average, for at least the stated share of molecules that are like the calibration molecules and are computed with the same workflow.</p>
+        <p><b>What it does not mean.</b> It is an average over molecules, not a statement about one molecule. It is conditional on the list of candidates: if the actual structure was not proposed, no set can contain it. For molecules with more than four candidates, or with more shifts than the calibration molecules, report the 90% set.</p>
+        <p><b>Rounded input.</b> When a value was rounded so far that a candidate can be neither kept nor excluded, the program keeps it and says so.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Files the program reads</h2>
+    <table>
+      <tr><th>File</th><th>What is taken from it</th></tr>
+      <tr><td>DP4+ Excel sheet (.xlsx)</td><td>The stored values of the row “DP4+” for all isomers, with all digits, and the number of experimental shifts. Save the sheet in Excel after filling it in.</td></tr>
+      <tr><td>Results of DP4+App (.xlsx)</td><td>The probability of every nucleus from the sheets “p_sca” and “p_uns” (ten decimals), from which the unrounded likelihood is rebuilt. The sheet “results” alone keeps four decimals.</td></tr>
+      <tr><td>Output of PyDP4 or DP4-AI</td><td>The listed errors of the scaled shifts. The likelihood is computed again with the single Gaussian of PyDP4 (2.269 ppm for carbon, 0.187 ppm for proton), the model of the DP4 workflows of the paper.</td></tr>
+      <tr><td>Typed values</td><td>Probabilities on any common scale, or logarithms of likelihoods. The number of digits you type sets the precision of the result.</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2>Reference and privacy</h2>
+    <p>A. A. Khairbek et al., “How sure is DP4? Calibrated candidate sets for NMR stereochemical assignment” (manuscript). The data, the analysis and this program are in the repository that the paper names.</p>
+    <p>Everything is computed on this computer. The page talks only to the program that you started; nothing is sent anywhere else. <span id="about-version"></span></p>
+  </div>
+</section>
+</main>
+<footer><span id="foot"></span></footer>
+
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+const state = { workflows: [], file: null, preview: null, calibration: null, result: null, examples: null };
+const LEVELS = ["80%", "90%", "95%"];
+
+function esc(x) { return String(x).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function show(el, text, kind) { el.textContent = text || ""; el.className = "msg " + (kind || "bad") + (text ? " on" : ""); }
+function num(x, d) { if (x === "inf") return "∞"; if (x === "-inf") return "−∞"; if (x === null || x === undefined) return "–"; return Number(x).toFixed(d); }
+function pct(p) {
+  if (p === 0) return "0%";
+  const v = 100 * p;
+  if (v >= 0.01) return v.toFixed(v >= 99.995 ? 4 : 3).replace(/\.?0+$/, "") + "%";
+  return v.toExponential(2) + "%";
+}
+async function call(path, body) {
+  let r;
+  try {
+    r = await fetch(path, body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  } catch (e) { $("#gone").classList.add("on"); throw new Error("The program does not answer. Is its window still open?"); }
+  $("#gone").classList.remove("on");
+  let data = {};
+  try { data = await r.json(); } catch (e) { data = { error: "The program gave an answer that could not be read." }; }
+  if (!r.ok) throw new Error(data.error || "The request failed.");
+  return data;
+}
+function download(name, text) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
+  a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+async function copy(text, button) {
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) { const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
+  if (button) { const old = button.textContent; button.textContent = "Copied"; setTimeout(() => { button.textContent = old; }, 1200); }
+}
+
+/* ---------------------------------------------------------------- pages */
+$$("nav button").forEach((b) => b.addEventListener("click", () => go(b.dataset.page)));
+function go(page) {
+  $$("nav button").forEach((b) => b.setAttribute("aria-selected", b.dataset.page === page ? "true" : "false"));
+  $$("section.page").forEach((s) => s.classList.toggle("on", s.id === "page-" + page));
+  window.scrollTo(0, 0);
+}
+
+/* ---------------------------------------------------------------- step 1: the result */
+function source() {
+  if (state.file) return { type: "file", name: state.file.name, data: state.file.data };
+  const kind = document.querySelector('input[name="kind"]:checked').value;
+  return { type: "typed", text: $("#typed").value, kind: kind };
+}
+function readFile(file) {
+  if (!file) return;
+  if (file.size > 30 * 1024 * 1024) { show($("#err-read"), "The file is too large (limit 30 MB)."); return; }
+  const fr = new FileReader();
+  fr.onload = async () => {
+    state.file = { name: file.name, data: String(fr.result).split(",")[1] || "" };
+    $("#filename").textContent = file.name; $("#filebox").classList.add("on"); $("#typedbox").style.display = "none";
+    await refreshPreview();
+  };
+  fr.readAsDataURL(file);
+}
+$("#pick").addEventListener("click", () => $("#fileinput").click());
+$("#fileinput").addEventListener("change", (e) => { readFile(e.target.files[0]); e.target.value = ""; });
+$("#unfile").addEventListener("click", () => { state.file = null; state.preview = null; $("#filebox").classList.remove("on"); $("#typedbox").style.display = ""; $("#preview").innerHTML = ""; show($("#err-read"), ""); $("#shifts-note").textContent = ""; show($("#suggest"), ""); });
+const drop = $("#drop");
+["dragenter", "dragover"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", (e) => { if (e.dataTransfer.files.length) readFile(e.dataTransfer.files[0]); });
+window.addEventListener("dragover", (e) => e.preventDefault());
+window.addEventListener("drop", (e) => e.preventDefault());
+
+function renderPreview(p) {
+  let h = '<p class="kv"><b>' + esc(p.source) + "</b>: " + p.names.length + " candidates" + (p.shifts ? ", " + p.shifts + " shifts" : "") + "</p>";
+  const info = Object.keys(p.info || {}).map((k) => esc(k) + ": <b>" + esc(p.info[k]) + "</b>");
+  if (info.length) h += '<p class="kv">' + info.join(" · ") + "</p>";
+  h += '<div class="scroll" style="margin-top:8px"><table><tr><th>Candidate</th><th class="num">Probability</th></tr>';
+  p.names.forEach((n, i) => { h += "<tr><td>" + esc(n) + '</td><td class="num">' + pct(p.probabilities[i]) + "</td></tr>"; });
+  h += "</table></div>";
+  (p.notes || []).forEach((n) => { h += '<div class="msg note on">' + esc(n) + "</div>"; });
+  $("#preview").innerHTML = h;
+}
+async function refreshPreview() {
+  show($("#err-read"), "");
+  try {
+    const p = await call("/api/read", { source: source() });
+    state.preview = p;
+    renderPreview(p);
+    if (p.shifts) { $("#shifts").value = p.shifts; $("#shifts-note").textContent = "counted in the file"; }
+    else { $("#shifts-note").textContent = state.file ? "not stated in the file: type it" : ""; }
+    if (p.suggestion) {
+      $("#workflow").value = p.suggestion; workflowInfo();
+      document.querySelector('input[name="cut"][value="workflow"]').checked = true;
+      show($("#suggest"), "The file names this level, so the workflow was selected for you. Check that the rest of your calculation follows it too.", "info");
+    } else show($("#suggest"), "");
+    return p;
+  } catch (e) { state.preview = null; $("#preview").innerHTML = ""; show($("#err-read"), e.message); return null; }
+}
+$("#example-typed").addEventListener("click", async () => {
+  const ex = await examples();
+  $("#typed").value = ex.typed.split("\n").filter((l) => !l.startsWith("#")).join("\n").trim();
+  const m = ex.typed.match(/shifts:\s*(\d+)/); if (m) $("#shifts").value = m[1];
+  const w = ex.typed.match(/workflow:\s*(.+)/); if (w && state.workflows.some((x) => x.id === w[1].trim())) { $("#workflow").value = w[1].trim(); workflowInfo(); }
+});
+async function examples() { if (!state.examples) state.examples = await call("/api/examples"); return state.examples; }
+
+/* ---------------------------------------------------------------- step 2: the cut-off */
+function workflowInfo() {
+  const w = state.workflows.find((x) => x.id === $("#workflow").value);
+  if (!w) { $("#workflow-info").textContent = ""; return; }
+  const c = LEVELS.map((l) => l + ": <b>" + (w.cutoffs[l] === null || w.cutoffs[l] === undefined ? "–" : num(w.cutoffs[l], 3)) + "</b>").join(" · ");
+  $("#workflow-info").innerHTML = "Cut-off per shift at " + c + "<br>Calibrated on " + w.records + " molecules in " + w.families + " families, with " + w.shifts_min + " to " + w.shifts_max + " shifts and up to " + w.candidates_max + " candidates.";
+}
+$("#workflow").addEventListener("change", () => { workflowInfo(); document.querySelector('input[name="cut"][value="workflow"]').checked = true; show($("#suggest"), ""); });
+["#c80", "#c90", "#c95"].forEach((s) => $(s).addEventListener("input", () => { document.querySelector('input[name="cut"][value="manual"]').checked = true; }));
+function cutoff() {
+  const t = document.querySelector('input[name="cut"]:checked').value;
+  if (t === "workflow") return { type: "workflow", id: $("#workflow").value };
+  if (t === "own") return { type: "own", calibration: state.calibration ? { molecules: state.calibration.molecules, families: state.calibration.families, shifts_max: state.calibration.shifts_max, candidates_max: state.calibration.candidates_max, levels: state.calibration.levels.map((l) => ({ level: l.level, cutoff: l.cutoff })) } : null };
+  return { type: "manual", cutoffs: { "0.8": $("#c80").value, "0.9": $("#c90").value, "0.95": $("#c95").value } };
+}
+
+/* ---------------------------------------------------------------- step 3: the sets */
+$("#go").addEventListener("click", compute);
+async function compute() {
+  show($("#err-assign"), ""); $("#go").disabled = true;
+  try {
+    const res = await call("/api/assign", { source: source(), shifts: $("#shifts").value, cutoff: cutoff() });
+    state.result = res; state.preview = res.preview; renderPreview(res.preview); show($("#err-read"), "");
+    renderResult(res);
+  } catch (e) { show($("#err-assign"), e.message); $("#result").style.display = "none"; }
+  $("#go").disabled = false;
+}
+const CHIP = { "in": '<span class="chip in">in the set</span>', "out": '<span class="chip out">–</span>', "open": '<span class="chip open">kept: undecided</span>' };
+function renderResult(res) {
+  $("#result").style.display = "";
+  $("#res-head").innerHTML = "<b>" + res.candidates + " candidates, " + res.shifts + " shifts.</b> Cut-offs from " + esc(res.origin) + ".";
+  let h = "<tr><th>Candidate</th><th class=\"num\">Probability</th><th class=\"num\" title=\"ln(P_best/P_i)/N\">Score per shift</th>";
+  const shown = res.levels.filter((l) => l.supported);
+  shown.forEach((l) => { h += '<th class="mid">' + esc(l.label) + ' set<br><span style="font-weight:400">cut-off ' + num(l.cutoff, 3) + "</span></th>"; });
+  h += "</tr>";
+  res.rows.forEach((r, i) => {
+    let s = num(r.score, 3);
+    const wide = r.score_hi === "inf" ? r.score_lo !== "inf" : (Number(r.score_hi) - Number(r.score_lo) > 0.0005);
+    if (wide) s += ' <span title="range allowed by the digits given" style="color:#8a94a1">(' + num(r.score_lo, 3) + " to " + num(r.score_hi, 3) + ")</span>";
+    h += "<tr><td>" + esc(r.name) + '</td><td class="num">' + pct(r.probability) + '</td><td class="num">' + s + "</td>";
+    shown.forEach((l) => { h += '<td class="mid">' + CHIP[l.status[i]] + "</td>"; });
+    h += "</tr>";
+  });
+  $("#res-table").innerHTML = h;
+  const box = $("#res-sentences"); box.innerHTML = "";
+  res.levels.forEach((l) => {
+    const d = document.createElement("div"); d.className = "sentence";
+    const p = document.createElement("p"); p.textContent = l.sentence;
+    const b = document.createElement("button"); b.className = "btn plain small"; b.textContent = "Copy"; b.addEventListener("click", () => copy(l.sentence, b));
+    d.appendChild(p); d.appendChild(b); box.appendChild(d);
+  });
+  $("#res-warnings").innerHTML = (res.warnings || []).map((w) => '<div class="msg note on">' + esc(w) + "</div>").join("");
+  $("#res-caveat").textContent = res.caveat;
+  const sel = $("#known-actual"); sel.innerHTML = res.rows.map((r) => "<option>" + esc(r.name) + "</option>").join("");
+  show($("#known-msg"), "", "info");
+  $("#result").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+$("#copy-report").addEventListener("click", (e) => { if (state.result) copy(state.result.report, e.target); });
+$("#save-report").addEventListener("click", () => { if (state.result) download("ConformalStereo_report.txt", state.result.report + "\n"); });
+$("#known-add").addEventListener("click", () => {
+  const res = state.result; if (!res) return;
+  const name = $("#known-name").value.trim();
+  if (!name) { show($("#known-msg"), "Give the molecule a name.", "bad"); return; }
+  if (/[,;\t"]/.test(name) || /[,;\t"]/.test($("#known-family").value)) { show($("#known-msg"), "Names must not contain commas, semicolons or quotation marks.", "bad"); return; }
+  const family = $("#known-family").value.trim() || name;
+  const actual = $("#known-actual").value;
+  const head = "molecule,family,shifts,candidate,log_likelihood,actual";
+  let text = $("#cal-text").value.trim();
+  if (text && text.split("\n")[0].replace(/\s/g, "").toLowerCase() !== head) { show($("#known-msg"), "The calibration table on the page “Calibrate” has other columns. Save or clear it first.", "bad"); return; }
+  if (text && text.split("\n").some((l) => l.split(",")[0].trim() === name)) { show($("#known-msg"), "A molecule of this name is already in the table.", "bad"); return; }
+  const lines = res.rows.map((r) => [name, family, res.shifts, r.name.replace(/[,;"]/g, " "), r.log_ratio === "-inf" ? "-inf" : Number(r.log_ratio).toPrecision(12), r.name === actual ? 1 : 0].join(","));
+  $("#cal-text").value = (text ? text + "\n" : head + "\n") + lines.join("\n") + "\n";
+  remember(); countCal();
+  show($("#known-msg"), "Added to the calibration table (" + plural(countMolecules()) + " now). Compute the cut-offs on the page “Calibrate”.", "info");
+});
+
+/* ---------------------------------------------------------------- calibrate */
+function countMolecules() {
+  const lines = $("#cal-text").value.trim().split("\n").slice(1).filter((l) => l.trim());
+  const d = ($("#cal-text").value.split("\n")[0].match(/[\t;,]/) || [","])[0];
+  return new Set(lines.map((l) => l.split(d)[0].trim())).size;
+}
+function plural(n) { return n + (n === 1 ? " molecule" : " molecules"); }
+function countCal() { const n = $("#cal-text").value.trim() ? countMolecules() : 0; $("#cal-count").textContent = n ? plural(n) + " in the table" : ""; }
+function remember() { try { localStorage.setItem("conformalstereo.table", $("#cal-text").value); } catch (e) { /* storage is a convenience only */ } }
+$("#cal-text").addEventListener("input", () => { remember(); countCal(); });
+$("#cal-pick").addEventListener("click", () => $("#cal-file").click());
+$("#cal-file").addEventListener("change", (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  const fr = new FileReader(); fr.onload = () => { $("#cal-text").value = String(fr.result); remember(); countCal(); }; fr.readAsText(f); e.target.value = "";
+});
+$("#cal-example").addEventListener("click", async () => { const ex = await examples(); $("#cal-text").value = ex.calibration; remember(); countCal(); });
+$("#cal-template").addEventListener("click", async () => { const ex = await examples(); $("#cal-text").value = ex.template; remember(); countCal(); });
+$("#cal-save").addEventListener("click", () => download("my_calibration_table.csv", $("#cal-text").value));
+$("#cal-go").addEventListener("click", async () => {
+  show($("#err-cal"), ""); $("#cal-go").disabled = true;
+  try {
+    const res = await call("/api/calibrate", { text: $("#cal-text").value });
+    state.calibration = res; renderCal(res);
+  } catch (e) { show($("#err-cal"), e.message); $("#cal-result").style.display = "none"; }
+  $("#cal-go").disabled = false;
+});
+function renderCal(res) {
+  $("#cal-result").style.display = "";
+  $("#cal-head").innerHTML = "<b>" + res.molecules + " molecules of known structure in " + res.families + " families</b>, with " + res.shifts_min + " to " + res.shifts_max + " shifts and " + res.candidates_min + " to " + res.candidates_max + " candidates. The top candidate is the actual structure in " + res.top_right + " of them.";
+  let h = '<tr><th>Level</th><th class="num">Cut-off per shift</th><th>With the own family left out</th></tr>';
+  res.levels.forEach((l) => {
+    h += "<tr><td>" + esc(l.label) + "</td>";
+    if (l.supported) {
+      h += '<td class="num">' + num(l.cutoff, 4) + "</td><td>";
+      h += l.mean_set_size === undefined ? "–" : "actual structure in the set " + (100 * l.coverage_left_out).toFixed(0) + "% · " + num(l.mean_set_size, 2) + " structures per set · one structure in " + (100 * l.single_structure_sets).toFixed(0) + "%";
+      h += "</td></tr>";
+    } else h += '<td class="num">–</td><td>needs at least ' + l.families_needed + " families</td></tr>";
+  });
+  $("#cal-levels").innerHTML = h;
+  $("#cal-warnings").innerHTML = (res.warnings || []).map((w) => '<div class="msg note on">' + esc(w) + "</div>").join("");
+  let r = '<tr><th>Molecule</th><th>Family</th><th class="num">Shifts</th><th class="num">Candidates</th><th>Actual structure</th><th class="num">Its rank</th><th class="num">Its score per shift</th></tr>';
+  res.rows.forEach((x) => { r += "<tr><td>" + esc(x.molecule) + "</td><td>" + esc(x.family) + '</td><td class="num">' + x.shifts + '</td><td class="num">' + x.candidates + "</td><td>" + esc(x.actual) + '</td><td class="num">' + x.rank + '</td><td class="num">' + num(x.score_used, 4) + "</td></tr>"; });
+  $("#cal-rows").innerHTML = r;
+  const ok = res.levels.some((l) => l.supported);
+  $("#cal-use").disabled = !ok;
+  $("#own-state").textContent = ok ? "(" + res.molecules + " molecules in " + res.families + " families)" : "(too few families so far)";
+  $("#cal-result").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+$("#cal-use").addEventListener("click", () => { document.querySelector('input[name="cut"][value="own"]').checked = true; go("assign"); });
+$("#cal-copy").addEventListener("click", (e) => { if (state.calibration) copy(state.calibration.report, e.target); });
+
+/* ---------------------------------------------------------------- workflows */
+function renderWorkflows() {
+  const words = $("#wf-filter").value.toLowerCase().split(/\s+/).filter(Boolean);
+  let h = '<tr><th>Benchmark</th><th>Method</th><th>Geometries</th><th>Level</th><th class="num">Families</th><th class="num">Molecules</th><th class="num">Shifts</th><th class="num">80%</th><th class="num">90%</th><th class="num">95%</th></tr>';
+  let n = 0;
+  state.workflows.forEach((w) => {
+    const text = (w.benchmark + " " + w.method + " " + w.geometry + " " + w.level).toLowerCase();
+    if (!words.every((x) => text.includes(x))) return;
+    n += 1;
+    h += "<tr><td>" + esc(w.benchmark) + "</td><td>" + esc(w.method) + "</td><td>" + esc(w.geometry) + "</td><td>" + esc(w.level) + '</td><td class="num">' + w.families + '</td><td class="num">' + w.records + '</td><td class="num">' + w.shifts_min + "–" + w.shifts_max + "</td>";
+    LEVELS.forEach((l) => { h += '<td class="num">' + (w.cutoffs[l] === null || w.cutoffs[l] === undefined ? "–" : num(w.cutoffs[l], 3)) + "</td>"; });
+    h += "</tr>";
+  });
+  if (!n) h += '<tr><td colspan="10">No workflow matches.</td></tr>';
+  $("#wf-table").innerHTML = h;
+}
+$("#wf-filter").addEventListener("input", renderWorkflows);
+
+/* ---------------------------------------------------------------- start */
+$("#quit").addEventListener("click", async () => {
+  try { await call("/api/quit", {}); } catch (e) { /* it is stopping */ }
+  document.body.innerHTML = '<main><div class="card"><h2>ConformalStereo has stopped.</h2><p>You can close this tab.</p></div></main>';
+});
+setInterval(() => { fetch("/api/ping").then(() => $("#gone").classList.remove("on")).catch(() => $("#gone").classList.add("on")); }, 10000);
+(async function start() {
+  try {
+    const d = await call("/api/workflows");
+    state.workflows = d.workflows;
+    const sel = $("#workflow"); let group = null, og = null;
+    d.workflows.forEach((w) => {
+      const g = w.benchmark + " · " + w.method + " · " + w.geometry + " geometries";
+      if (g !== group) { og = document.createElement("optgroup"); og.label = g; sel.appendChild(og); group = g; }
+      const o = document.createElement("option"); o.value = w.id; o.textContent = w.level + "  (" + w.benchmark + ", " + w.method + ")"; og.appendChild(o);
+    });
+    workflowInfo(); renderWorkflows();
+    $("#foot").textContent = "ConformalStereo " + d.version + " · Python " + d.python + " · runs on this computer only";
+    $("#about-version").textContent = "Version " + d.version + ".";
+    fetch("/api/ping");
+  } catch (e) { show($("#err-assign"), e.message); }
+  try { const t = localStorage.getItem("conformalstereo.table"); if (t) { $("#cal-text").value = t; countCal(); } } catch (e) { /* no storage */ }
+})();
+</script>
+</body>
+</html>

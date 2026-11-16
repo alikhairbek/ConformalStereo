@@ -1,0 +1,11 @@
+target,benchmark,families,units,units_missed,families_never_missed,families_missed_in_half_their_records_or_more,share_of_misses_in_the_three_families_with_most,families_with_most_misses
+0.9,JOC2015,18,1152,86,10,0,0.75581395,dp:79 (25 of 192); dp:85 (20 of 96); dp:88 (20 of 48)
+0.9,STX150,80,559,36,61,5,0.30555556,dp:98 (4 of 11); dp:132 (4 of 6); dp:89 (3 of 12)
+0.9,DP4-AI,40,182,21,31,3,0.52380952,ai:TS2 (4 of 4); ai:TS3A (4 of 8); ai:JB2 (3 of 8)
+0.9,Cam2017,30,504,38,24,2,0.76315789,cam:Zidovudine (12 of 12); cam:Hydroxycurvularin (9 of 24); cam:Similanamide (8 of 12)
+0.9,Cam2019,17,703,31,13,1,0.96774194,cam:Zidovudine (20 of 30); cam:Lopinavir (9 of 30); cam:Aldols (1 of 120)
+0.8,JOC2015,18,1152,230,5,1,0.66956522,dp:79 (84 of 192); dp:85 (41 of 96); dp:88 (29 of 48)
+0.8,STX150,80,559,42,56,6,0.26190476,dp:98 (4 of 11); dp:132 (4 of 6); dp:89 (3 of 12)
+0.8,DP4-AI,40,182,41,22,7,0.39024390,ai:NP3A (8 of 8); ai:TS2 (4 of 4); ai:TS3A (4 of 8)
+0.8,Cam2017,30,504,87,17,5,0.43678161,cam:Aldols (14 of 48); cam:Similanamide (12 of 12); cam:Zidovudine (12 of 12)
+0.8,Cam2019,17,703,100,6,2,0.58000000,cam:Lopinavir (23 of 30); cam:Zidovudine (21 of 30); cam:Tetrahydrofurans (14 of 120)

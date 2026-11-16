@@ -1,0 +1,276 @@
+records 3100 | candidates 14437 | families 152 | workflows 76
+
+1. THE BENCHMARKS: how often the top candidate is right, and how often a confident call is right
+benchmark kind of calculation               wf records  fam. cand. | top candidate right    by fam. | calls >= 99%      | calls >= 99.9%    |     T
+JOC2015   DP4+, B3LYP geometries            24    1152    18  3.00 |  857 of 1152 ( 74.4%)   81.3% |  613 of 698   87.8% |  495 of 544   91.0% |  5.19
+STX150    MM-DP4+, MMFF geometries           1      77    63  2.14 |   66 of 77   ( 85.7%)   86.5% |   61 of 65    93.8% |   53 of 56    94.6% |  5.19
+STX150    xTB-DP4+, xTB geometries           3     289    79  2.14 |  264 of 289  ( 91.3%)   91.0% |  238 of 251   94.8% |  200 of 211   94.8% |  4.81
+STX150    DP4+, B3LYP geometries             2     193    78  2.15 |  187 of 193  ( 96.9%)   96.0% |  171 of 174   98.3% |  156 of 159   98.1% |  3.00
+STX150    all                                6     559    80  2.14 |  517 of 559  ( 92.5%)   92.1% |  470 of 490   95.9% |  409 of 426   96.0% |  4.28
+DP4-AI    DP4, MMFF geometries               1      44    38  7.58 |   22 of 44   ( 50.0%)   50.0% |   15 of 19    78.9% |   11 of 14    78.6% |  5.85
+DP4-AI    DP4, HF or DFT geometries          3     138    40  7.50 |   74 of 138  ( 53.6%)   55.0% |   50 of 62    80.6% |   40 of 50    80.0% |  6.25
+DP4-AI    all                                4     182    40  7.52 |   96 of 182  ( 52.7%)   53.8% |   65 of 81    80.2% |   51 of 64    79.7% |  6.08
+Cam2017   DP4, MMFF geometries              12     504    30  7.27 |  326 of 504  ( 64.7%)   62.4% |  215 of 258   83.3% |  165 of 187   88.2% |  9.47
+Cam2019   DP4, MMFF geometries               5     110    15  5.47 |   62 of 110  ( 56.4%)   51.0% |   21 of 31    67.7% |   12 of 14    85.7% | 14.08
+Cam2019   DP4, semi-empirical geometries    10     220    15  5.47 |  111 of 220  ( 50.5%)   51.5% |   60 of 86    69.8% |   32 of 49    65.3% | 28.51
+Cam2019   DP4, HF or DFT geometries         15     373    17  6.98 |  246 of 373  ( 66.0%)   61.8% |  122 of 147   83.0% |   87 of 101   86.1% |  6.22
+Cam2019   all                               30     703    17  6.27 |  419 of 703  ( 59.6%)   56.9% |  203 of 264   76.9% |  131 of 164   79.9% |  9.00
+all records: top candidate right 2215 of 3100 (71.5%) | calls >= 99%: 1566 of 1791 right (87.4%) | calls >= 99.9%: 1251 of 1385 right (90.3%)
+families by benchmark: STX150 64, DP4-AI 40, Cam2017 + Cam2019 17, JOC2015 + STX150 16, Cam2017 13, JOC2015 2
+
+reliability of the stated probability of the top candidate (share right, with 95% interval from resampling families)
+kind of calculation              below 50%              50 to 90%              90 to 99%              99 to 99.9%            99.9 to 99.999%        99.999% or more       
+DP4+, B3LYP geometries            20% ( 0- 33) n=15      47% (41- 61) n=261     69% (59- 84) n=197     79% (66- 92) n=169     89% (81- 95) n=268     95% (85-100) n=435   
+MM-DP4+, MMFF geometries         -                       50% ( 0-100) n=4       38% (12- 75) n=8       89% (67-100) n=9       93% (77-100) n=15      95% (88-100) n=41    
+xTB-DP4+, xTB geometries         -                       54% (25- 80) n=13      76% (59- 92) n=25      95% (87-100) n=40      87% (74- 96) n=54      97% (94-100) n=157   
+DP4, MMFF geometries               8% ( 0- 15) n=13      38% (23- 48) n=204     61% (44- 74) n=133     68% (48- 85) n=93      84% (67- 94) n=76      89% (74-100) n=139   
+DP4, HF or DFT geometries         54% ( 0- 86) n=13      44% (33- 52) n=183     57% (32- 72) n=106     78% (58- 90) n=58      80% (58- 93) n=89      90% (75- 99) n=62    
+DP4, semi-empirical geometries    14% ( 0- 43) n=7       37% (24- 47) n=83      43% (26- 62) n=44      76% (60- 92) n=37      60% (28- 84) n=25      71% (35-100) n=24    
+all                               25% ( 4- 43) n=48      43% (37- 48) n=748     62% (53- 69) n=513     78% (69- 85) n=406     85% (78- 91) n=527     93% (88- 97) n=858   
+
+3. SCORES AND BASELINES, one family out, cut-off from the own workflow
+   cells: coverage | mean set size | single-structure sets (share of them right) | sets with every candidate
+
+target 95%
+method                                       JOC2015                            STX150                             DP4-AI                             Cam2017                            Cam2019                           
+top candidate alone                              -                               92.1%  1.00  100% ( 92%)    0%       53.8%  1.00  100% ( 54%)    0%       62.4%  1.00  100% ( 62%)    0%          -                             
+stated probabilities add up to the target        -                               94.4%  1.07   93% ( 94%)    6%       75.9%  1.61   55% ( 73%)    8%       73.8%  1.44   65% ( 79%)    8%          -                             
+the same after fitting a temperature             -                               98.1%  1.41   60% ( 97%)   36%       96.2%  4.60   12% ( 92%)   21%       94.2%  5.05    3% ( 82%)   57%          -                             
+likelihood ratio per shift                       -                               95.8%  1.13   87% ( 95%)   12%       96.2%  3.98   19% ( 95%)   27%       96.2%  5.41    2% ( 82%)   61%          -                             
+likelihood ratio / sqrt(N)                       -                               96.2%  1.12   88% ( 96%)   11%       96.5%  4.25   15% ( 93%)   33%       96.1%  5.15    4% ( 85%)   63%          -                             
+likelihood ratio                                 -                               96.2%  1.14   86% ( 96%)   13%       96.5%  4.61   12% ( 92%)   38%       96.2%  5.68    1% ( 57%)   69%          -                             
+stated probability                               -                               96.2%  1.14   86% ( 96%)   13%       96.5%  4.66   12% ( 92%)   39%       96.2%  5.69    1% ( 57%)   69%          -                             
+cumulative probability                           -                               96.2%  1.14   86% ( 96%)   13%       96.5%  4.70   12% ( 92%)   39%       96.2%  5.70    1% ( 57%)   69%          -                             
+rank                                             -                               99.3%  1.82   18% ( 97%)   76%       99.1%  3.59    0% (  0%)   58%       97.2%  4.50    0% (  0%)   65%          -                             
+cumulative probability, fitted temperature       -                               96.2%  1.15   85% ( 96%)   14%       96.5%  5.49    8% ( 92%)   39%       96.1%  5.64    0% (  0%)   67%          -                             
+   likelihood ratio per shift, 95% intervals from resampling families: STX150 size 1.13 (1.09 to 1.17), single 87% (83 to 91) | DP4-AI size 3.98 (3.19 to 4.88), single 19% (9 to 30) | Cam2017 size 5.41 (3.78 to 7.44), single 2% (0 to 5)
+
+target 90%
+method                                       JOC2015                            STX150                             DP4-AI                             Cam2017                            Cam2019                           
+top candidate alone                           81.3%  1.00  100% ( 81%)    0%       92.1%  1.00  100% ( 92%)    0%       53.8%  1.00  100% ( 54%)    0%       62.4%  1.00  100% ( 62%)    0%       56.9%  1.00  100% ( 57%)    0%     
+stated probabilities add up to the target     87.9%  1.18   83% ( 87%)    8%       93.9%  1.05   95% ( 94%)    5%       74.1%  1.49   61% ( 69%)    6%       72.2%  1.32   73% ( 75%)    5%       68.3%  1.40   65% ( 66%)    5%     
+the same after fitting a temperature          96.0%  1.84   37% ( 94%)   34%       97.6%  1.30   70% ( 97%)   27%       94.9%  3.87   14% ( 93%)   17%       90.8%  4.32    9% ( 88%)   42%       91.8%  4.04    4% ( 95%)   55%     
+likelihood ratio per shift                    94.0%  1.55   60% ( 92%)   20%       93.1%  1.02   98% ( 93%)    2%       90.8%  2.71   30% ( 91%)   13%       91.1%  3.57   16% ( 85%)   36%       93.7%  5.05    3% ( 36%)   71%     
+likelihood ratio / sqrt(N)                    94.4%  1.60   54% ( 91%)   25%       93.1%  1.02   98% ( 93%)    2%       90.8%  2.83   26% ( 89%)   15%       90.8%  3.77   13% ( 87%)   44%       93.7%  4.44    4% ( 67%)   67%     
+likelihood ratio                              94.4%  1.66   49% ( 91%)   29%       93.0%  1.01   99% ( 93%)    1%       91.1%  2.77   24% ( 87%)   17%       91.0%  3.68   15% ( 82%)   49%       93.7%  4.14    4% ( 73%)   70%     
+stated probability                            94.4%  1.66   49% ( 91%)   30%       93.0%  1.01   99% ( 93%)    1%       91.1%  2.75   24% ( 87%)   17%       91.0%  3.68   15% ( 82%)   48%       93.7%  4.13    4% ( 73%)   69%     
+cumulative probability                        94.3%  1.67   49% ( 90%)   30%       93.0%  1.01   99% ( 93%)    1%       91.1%  2.75   24% ( 89%)   17%       91.0%  3.75   15% ( 82%)   48%       93.7%  4.14    4% ( 74%)   69%     
+rank                                          96.0%  2.07    4% ( 96%)   59%       96.0%  1.31   69% ( 94%)   29%       92.1%  3.15    0% (  0%)   36%       91.7%  3.76    0% (  0%)   63%       96.2%  3.62    0% (  0%)   81%     
+cumulative probability, fitted temperature    94.4%  1.69   44% ( 91%)   30%       93.0%  1.01   99% ( 93%)    1%       91.1%  2.88   21% ( 89%)   11%       90.6%  4.22    8% ( 84%)   40%       93.7%  4.51    2% ( 73%)   66%     
+   likelihood ratio per shift, 95% intervals from resampling families: JOC2015 size 1.55 (1.34 to 1.84), single 60% (49 to 70) | STX150 size 1.02 (1.01 to 1.03), single 98% (97 to 99) | DP4-AI size 2.71 (2.24 to 3.23), single 30% (19 to 43) | Cam2017 size 3.57 (2.66 to 4.68), single 16% (7 to 26) | Cam2019 size 5.05 (2.98 to 8.61), single 3% (0 to 7)
+
+target 80%
+method                                       JOC2015                            STX150                             DP4-AI                             Cam2017                            Cam2019                           
+top candidate alone                           81.3%  1.00  100% ( 81%)    0%       92.1%  1.00  100% ( 92%)    0%       53.8%  1.00  100% ( 54%)    0%       62.4%  1.00  100% ( 62%)    0%       56.9%  1.00  100% ( 57%)    0%     
+stated probabilities add up to the target     85.6%  1.10   90% ( 85%)    4%       93.4%  1.03   97% ( 93%)    3%       65.2%  1.31   73% ( 64%)    3%       68.7%  1.19   82% ( 71%)    3%       64.3%  1.26   76% ( 63%)    4%     
+the same after fitting a temperature          93.6%  1.56   54% ( 92%)   21%       96.9%  1.19   81% ( 96%)   17%       91.8%  2.97   19% ( 88%)   13%       87.2%  3.38   17% ( 86%)   19%       88.8%  3.31   12% ( 80%)   32%     
+likelihood ratio per shift                    85.5%  1.12   89% ( 84%)    5%       92.1%  1.00  100% ( 92%)    0%       80.1%  1.82   51% ( 77%)    8%       81.0%  2.14   39% ( 80%)   17%       83.0%  2.38   35% ( 74%)   20%     
+likelihood ratio / sqrt(N)                    85.4%  1.12   90% ( 84%)    6%       92.1%  1.00  100% ( 92%)    0%       80.7%  1.79   50% ( 75%)    9%       81.0%  2.17   37% ( 80%)   19%       82.6%  2.24   34% ( 76%)   21%     
+likelihood ratio                              85.4%  1.12   89% ( 84%)    6%       92.1%  1.00  100% ( 92%)    0%       80.7%  1.83   49% ( 73%)   11%       81.1%  2.21   36% ( 81%)   20%       82.4%  2.19   32% ( 74%)   24%     
+stated probability                            85.4%  1.12   89% ( 84%)    6%       92.1%  1.00  100% ( 92%)    0%       80.7%  1.80   49% ( 73%)   11%       81.1%  2.22   36% ( 80%)   20%       82.4%  2.19   31% ( 75%)   24%     
+cumulative probability                        85.4%  1.12   89% ( 84%)    6%       92.1%  1.00  100% ( 92%)    0%       81.0%  1.78   50% ( 75%)    9%       81.1%  2.21   36% ( 80%)   20%       82.4%  2.20   31% ( 75%)   24%     
+rank                                          90.9%  1.59   41% ( 84%)   37%       92.1%  1.00  100% ( 92%)    0%       87.3%  2.55    0% (  0%)   20%       84.7%  2.85    0% (  0%)   40%       85.6%  2.71    0% (  0%)   51%     
+cumulative probability, fitted temperature    85.6%  1.13   88% ( 85%)    5%       92.1%  1.00  100% ( 92%)    0%       81.0%  1.89   39% ( 81%)    4%       81.5%  2.55   28% ( 83%)   13%       82.8%  2.52   28% ( 77%)   14%     
+   likelihood ratio per shift, 95% intervals from resampling families: JOC2015 size 1.12 (1.07 to 1.19), single 89% (85 to 93) | STX150 size 1.00 (1.00 to 1.00), single 100% (100 to 100) | DP4-AI size 1.82 (1.58 to 2.07), single 51% (40 to 63) | Cam2017 size 2.14 (1.75 to 2.59), single 39% (27 to 52) | Cam2019 size 2.38 (1.74 to 3.41), single 35% (25 to 45)
+
+mean set size of each alternative minus that of the likelihood ratio per shift score, paired by family (95% interval from resampling families; * = interval excludes zero)
+target 95%
+   the same after fitting a temperature         JOC2015      -                       STX150    +0.28 (+0.22 to +0.34)* DP4-AI    +0.62 (+0.00 to +1.52)* Cam2017   -0.35 (-1.10 to +0.38)  Cam2019      -                      
+   likelihood ratio / sqrt(N)                   JOC2015      -                       STX150    -0.01 (-0.02 to +0.01)  DP4-AI    +0.27 (+0.12 to +0.45)* Cam2017   -0.26 (-0.69 to +0.09)  Cam2019      -                      
+   likelihood ratio                             JOC2015      -                       STX150    +0.01 (-0.01 to +0.04)  DP4-AI    +0.63 (+0.30 to +1.06)* Cam2017   +0.27 (-0.31 to +1.02)  Cam2019      -                      
+   stated probability                           JOC2015      -                       STX150    +0.01 (-0.01 to +0.04)  DP4-AI    +0.68 (+0.32 to +1.13)* Cam2017   +0.28 (-0.31 to +1.04)  Cam2019      -                      
+   cumulative probability                       JOC2015      -                       STX150    +0.01 (-0.01 to +0.04)  DP4-AI    +0.72 (+0.35 to +1.21)* Cam2017   +0.30 (-0.30 to +1.08)  Cam2019      -                      
+   rank                                         JOC2015      -                       STX150    +0.69 (+0.65 to +0.73)* DP4-AI    -0.38 (-1.19 to +0.36)  Cam2017   -0.91 (-2.49 to +0.35)  Cam2019      -                      
+   cumulative probability, fitted temperature   JOC2015      -                       STX150    +0.02 (-0.01 to +0.05)  DP4-AI    +1.52 (+0.61 to +2.77)* Cam2017   +0.23 (-0.35 to +0.98)  Cam2019      -                      
+target 90%
+   the same after fitting a temperature         JOC2015   +0.28 (+0.21 to +0.37)* STX150    +0.28 (+0.22 to +0.35)* DP4-AI    +1.16 (+0.57 to +1.94)* Cam2017   +0.75 (-0.01 to +1.97)  Cam2019   -1.00 (-2.39 to -0.14)*
+   likelihood ratio / sqrt(N)                   JOC2015   +0.05 (+0.01 to +0.10)* STX150    -0.00 (-0.01 to +0.00)  DP4-AI    +0.12 (-0.01 to +0.25)  Cam2017   +0.20 (-0.07 to +0.50)  Cam2019   -0.61 (-1.51 to -0.03)*
+   likelihood ratio                             JOC2015   +0.11 (+0.03 to +0.18)* STX150    -0.01 (-0.01 to +0.00)  DP4-AI    +0.06 (-0.17 to +0.29)  Cam2017   +0.11 (-0.46 to +0.64)  Cam2019   -0.91 (-2.26 to +0.00) 
+   stated probability                           JOC2015   +0.11 (+0.02 to +0.19)* STX150    -0.01 (-0.01 to +0.00)  DP4-AI    +0.04 (-0.20 to +0.27)  Cam2017   +0.11 (-0.47 to +0.64)  Cam2019   -0.92 (-2.28 to -0.00)*
+   cumulative probability                       JOC2015   +0.11 (+0.03 to +0.19)* STX150    -0.01 (-0.01 to +0.00)  DP4-AI    +0.04 (-0.18 to +0.25)  Cam2017   +0.17 (-0.40 to +0.76)  Cam2019   -0.91 (-2.26 to -0.01)*
+   rank                                         JOC2015   +0.52 (+0.22 to +0.73)* STX150    +0.29 (+0.27 to +0.31)* DP4-AI    +0.44 (-0.02 to +0.89)  Cam2017   +0.19 (-0.81 to +0.99)  Cam2019   -1.43 (-4.54 to +0.29) 
+   cumulative probability, fitted temperature   JOC2015   +0.14 (+0.03 to +0.24)* STX150    -0.01 (-0.01 to +0.00)  DP4-AI    +0.17 (-0.17 to +0.60)  Cam2017   +0.65 (-0.07 to +1.75)  Cam2019   -0.54 (-1.66 to +0.18) 
+target 80%
+   the same after fitting a temperature         JOC2015   +0.43 (+0.28 to +0.61)* STX150    +0.19 (+0.14 to +0.25)* DP4-AI    +1.15 (+0.71 to +1.65)* Cam2017   +1.24 (+0.54 to +2.31)* Cam2019   +0.93 (+0.45 to +1.63)*
+   likelihood ratio / sqrt(N)                   JOC2015   -0.01 (-0.02 to +0.01)  STX150    +0.00 (+0.00 to +0.00)  DP4-AI    -0.03 (-0.10 to +0.04)  Cam2017   +0.03 (-0.07 to +0.13)  Cam2019   -0.13 (-0.42 to +0.08) 
+   likelihood ratio                             JOC2015   -0.01 (-0.03 to +0.01)  STX150    +0.00 (+0.00 to +0.00)  DP4-AI    +0.01 (-0.10 to +0.11)  Cam2017   +0.07 (-0.13 to +0.27)  Cam2019   -0.18 (-0.79 to +0.23) 
+   stated probability                           JOC2015   -0.01 (-0.04 to +0.01)  STX150    +0.00 (+0.00 to +0.00)  DP4-AI    -0.02 (-0.13 to +0.09)  Cam2017   +0.08 (-0.14 to +0.28)  Cam2019   -0.18 (-0.79 to +0.23) 
+   cumulative probability                       JOC2015   -0.01 (-0.03 to +0.01)  STX150    +0.00 (+0.00 to +0.00)  DP4-AI    -0.04 (-0.14 to +0.06)  Cam2017   +0.07 (-0.14 to +0.27)  Cam2019   -0.17 (-0.75 to +0.22) 
+   rank                                         JOC2015   +0.46 (+0.38 to +0.53)* STX150    +0.00 (+0.00 to +0.00)  DP4-AI    +0.73 (+0.48 to +0.96)* Cam2017   +0.71 (+0.25 to +1.11)* Cam2019   +0.33 (-0.72 to +0.99) 
+   cumulative probability, fitted temperature   JOC2015   +0.01 (-0.01 to +0.03)  STX150    +0.00 (+0.00 to +0.00)  DP4-AI    +0.07 (-0.12 to +0.28)  Cam2017   +0.41 (-0.00 to +1.09)  Cam2019   +0.14 (-0.11 to +0.52) 
+
+4. WHERE THE CUT-OFF COMES FROM (likelihood ratio per shift score; the family of the record is always left out): coverage (95% interval) and mean set size
+target 90%
+cut-off from                                 JOC2015                  STX150                   DP4-AI                   Cam2017                  Cam2019                 
+own workflow                                  94.0% (88- 98)  1.55     93.1% (90- 96)  1.02     90.8% (84- 97)  2.71     91.1% (82- 98)  3.57     93.7% (84-100)  5.05   
+whole benchmark                               95.1% (89- 99)  1.61     92.1% (88- 95)  1.00     91.5% (85- 97)  2.89     91.9% (83- 99)  3.64     94.1% (85-100)  4.65   
+same kind of calculation                      81.3% (72- 90)  1.00     93.6% (90- 96)  1.03     94.0% (89- 98)  3.02     83.1% (72- 93)  2.26     89.3% (77- 98)  3.21   
+same kind of calculation, other benchmarks    81.3% (72- 90)  1.00    100.0% (100-100)  1.21    99.1% (97-100)  5.45     83.0% (72- 93)  2.23     87.7% (73- 98)  2.43   
+everything                                    90.1% (83- 96)  1.29     95.7% (93- 98)  1.11     91.1% (84- 97)  2.62     78.7% (66- 89)  1.94     79.7% (68- 90)  2.05   
+other benchmarks                              90.0% (83- 96)  1.28     96.4% (94- 98)  1.18     91.8% (85- 97)  2.78     77.0% (64- 88)  1.83     80.9% (70- 91)  2.10   
+target 80%
+cut-off from                                 JOC2015                  STX150                   DP4-AI                   Cam2017                  Cam2019                 
+own workflow                                  85.5% (77- 93)  1.12     92.1% (88- 95)  1.00     80.1% (71- 88)  1.82     81.0% (69- 91)  2.14     83.0% (71- 93)  2.38   
+whole benchmark                               83.9% (75- 92)  1.07     92.1% (88- 95)  1.00     80.7% (72- 89)  1.93     82.5% (71- 92)  2.21     84.3% (73- 94)  2.33   
+same kind of calculation                      81.3% (72- 90)  1.00     92.1% (88- 95)  1.00     83.9% (76- 91)  2.06     76.4% (64- 88)  1.72     77.8% (66- 88)  1.96   
+same kind of calculation, other benchmarks    81.3% (72- 90)  1.00     96.7% (93- 99)  1.02     91.8% (85- 97)  2.71     76.7% (64- 88)  1.75     73.6% (59- 86)  1.64   
+everything                                    83.7% (75- 91)  1.07     92.9% (90- 96)  1.02     70.3% (60- 81)  1.42     67.6% (54- 80)  1.17     62.1% (49- 75)  1.22   
+other benchmarks                              83.5% (75- 91)  1.06     94.5% (92- 97)  1.05     53.8% (42- 65)  1.00     67.4% (54- 80)  1.16     62.4% (49- 75)  1.23   
+coverage per workflow under each design: lowest, highest, and number of workflows more than five points off the target
+   90%  own workflow                                 lowest  90.0% (Cam2017 / DP4 / MMFF / BF12) | highest  97.4% | below target by more than 5:  0 of 76 | above by more than 5:  9
+   90%  whole benchmark                              lowest  86.5% (STX150 / MM-DP4+ / MMFF / MMFF_PBE) | highest 100.0% | below target by more than 5:  0 of 76 | above by more than 5: 19
+   90%  same kind of calculation                     lowest  67.6% (Cam2019 / DP4 / M06-2X / BF7m) | highest  97.4% | below target by more than 5: 30 of 76 | above by more than 5:  3
+   90%  same kind of calculation, other benchmarks   lowest  67.6% (Cam2019 / DP4 / M06-2X / BF7m) | highest 100.0% | below target by more than 5: 29 of 62 | above by more than 5:  7
+   90%  everything                                   lowest  63.3% (Cam2019 / DP4 / PM7 / BF1pm7+E(BF7pm7)) | highest  98.7% | below target by more than 5: 38 of 76 | above by more than 5:  8
+   90%  other benchmarks                             lowest  63.3% (Cam2019 / DP4 / PM7 / BF1pm7+E(BF7pm7)) | highest 100.0% | below target by more than 5: 35 of 76 | above by more than 5:  8
+   80%  own workflow                                 lowest  80.0% (Cam2017 / DP4 / MMFF / BF1) | highest  97.4% | below target by more than 5:  0 of 76 | above by more than 5: 17
+   80%  whole benchmark                              lowest  67.6% (Cam2019 / DP4 / M06-2X / BF7m) | highest  97.4% | below target by more than 5:  4 of 76 | above by more than 5: 32
+   80%  same kind of calculation                     lowest  54.4% (Cam2019 / DP4 / M06-2X / BF7m) | highest  97.4% | below target by more than 5: 19 of 76 | above by more than 5: 22
+   80%  same kind of calculation, other benchmarks   lowest  54.4% (Cam2019 / DP4 / M06-2X / BF7m) | highest  97.4% | below target by more than 5: 19 of 62 | above by more than 5: 18
+   80%  everything                                   lowest  40.0% (Cam2019 / DP4 / PM6 / BF7s) | highest  97.4% | below target by more than 5: 43 of 76 | above by more than 5: 17
+   80%  other benchmarks                             lowest  40.0% (Cam2019 / DP4 / PM6 / BF7s) | highest  98.7% | below target by more than 5: 44 of 76 | above by more than 5: 18
+
+5. FAMILIES OR RECORDS AS THE UNITS (likelihood ratio per shift score, cut-off from the own workflow): coverage by family, mean set size, coverage by record
+target 90%
+   families weighted   one family out JOC2015   94.0%  1.55  92.5% STX150    93.1%  1.02  93.6% DP4-AI    90.8%  2.71  88.5% Cam2017   91.1%  3.57  92.5% Cam2019   93.7%  5.05  95.6%
+   records unweighted  one record out JOC2015   93.3%  1.47  91.7% STX150    93.0%  1.02  93.4% DP4-AI    93.0%  3.21  91.2% Cam2017   89.0%  3.05  90.5% Cam2019   89.3%  2.94  91.5%
+   records unweighted  one family out JOC2015   92.6%  1.43  89.8% STX150    93.0%  1.02  93.4% DP4-AI    92.7%  3.19  90.7% Cam2017   89.2%  3.07  91.1% Cam2019   89.5%  2.98  91.9%
+target 80%
+   families weighted   one family out JOC2015   85.5%  1.12  80.0% STX150    92.1%  1.00  92.5% DP4-AI    80.1%  1.82  77.5% Cam2017   81.0%  2.14  82.7% Cam2019   83.0%  2.38  85.8%
+   records unweighted  one record out JOC2015   86.3%  1.15  81.6% STX150    92.1%  1.00  92.5% DP4-AI    82.9%  1.96  80.8% Cam2017   79.3%  2.01  81.0% Cam2019   77.7%  1.98  81.1%
+   records unweighted  one family out JOC2015   85.7%  1.12  80.5% STX150    92.1%  1.00  92.5% DP4-AI    82.3%  1.93  79.7% Cam2017   79.4%  2.01  81.2% Cam2019   78.0%  2.00  81.9%
+
+6. WHO IS COVERED (cut-off from the own workflow, one family out; 95% intervals from resampling families)
+target 90%: coverage and mean set size by class, for the three likelihood-ratio scores
+   number of candidates  2                     rec 1199 fam  92 top  85.9% of  2.00 | per shift  95.1% (92- 97)  1.34 | / sqrt(N)  95.5% (92- 98)  1.36 | plain  95.4% (92- 98)  1.38
+   number of candidates  3 or 4                rec 1359 fam  33 top  62.4% of  3.99 | per shift  91.2% (79- 98)  2.69 | / sqrt(N)  91.6% (80- 98)  2.79 | plain  94.6% (89- 98)  2.92
+   number of candidates  5 to 8                rec  407 fam  17 top  47.4% of  8.00 | per shift  88.5% (79- 98)  4.31 | / sqrt(N)  86.7% (75- 98)  4.17 | plain  78.8% (58- 98)  3.69
+   number of candidates  9 or more             rec  135 fam  12 top  41.6% of 25.16 | per shift  90.8% (72-100) 12.08 | / sqrt(N)  89.3% (68-100) 10.29 | plain  87.0% (61- 99)  9.02
+   number of shifts      fewer than 25 shifts  rec 1469 fam  47 top  76.6% of  2.86 | per shift  93.4% (84- 99)  1.86 | / sqrt(N)  94.1% (85- 99)  1.97 | plain  96.5% (92- 99)  2.08
+   number of shifts      25 to 39 shifts       rec 1237 fam  63 top  74.8% of  4.76 | per shift  94.8% (91- 98)  2.55 | / sqrt(N)  94.9% (91- 98)  2.52 | plain  94.7% (91- 98)  2.50
+   number of shifts      40 shifts or more     rec  394 fam  46 top  53.3% of  9.32 | per shift  87.6% (79- 95)  5.43 | / sqrt(N)  86.0% (76- 95)  4.75 | plain  81.7% (66- 94)  4.10
+target 90%: likelihood ratio per shift score
+   record without data problems yes                              rec 3017 fam 144 | top right  71.8% | coverage  93.2% (88.8 to  96.5) | set  2.84 of  4.77
+   record without data problems no                               rec   83 fam  35 | top right  64.6% | coverage  84.2% (75.0 to  91.9) | set  2.07 of  6.38
+   kind of calculation          DP4+, B3LYP geometries           rec 1345 fam  80 | top right  85.1% | coverage  94.6% (90.4 to  97.7) | set  1.41 of  2.78
+   kind of calculation          MM-DP4+, MMFF geometries         rec   77 fam  63 | top right  86.5% | coverage  91.3% (84.9 to  96.8) | set  1.10 of  2.14
+   kind of calculation          xTB-DP4+, xTB geometries         rec  289 fam  79 | top right  91.0% | coverage  91.7% (86.6 to  95.9) | set  1.01 of  2.14
+   kind of calculation          DP4, MMFF geometries             rec  658 fam  68 | top right  59.6% | coverage  91.4% (82.3 to  97.9) | set  3.70 of  7.01
+   kind of calculation          DP4, HF or DFT geometries        rec  511 fam  57 | top right  59.6% | coverage  93.0% (83.8 to  98.5) | set  4.51 of  7.15
+   kind of calculation          DP4, semi-empirical geometries   rec  220 fam  15 | top right  51.5% | coverage  93.2% (80.7 to 100.0) | set  4.63 of  5.47
+   size of the set              one structure                    rec 1279 fam 115 | top right  90.6% | coverage  90.6% (85.2 to  94.8) | set  1.00 of  2.77
+   size of the set              more than one, not all           rec  940 fam  55 | top right  52.5% | coverage  89.0% (80.0 to  96.1) | set  4.74 of  9.42
+   size of the set              every candidate                  rec  881 fam  52 | top right  61.9% | coverage 100.0% (100.0 to 100.0) | set  3.34 of  3.34
+target 80%: coverage and mean set size by class, for the three likelihood-ratio scores
+   number of candidates  2                     rec 1199 fam  92 top  85.9% of  2.00 | per shift  91.5% (87- 95)  1.17 | / sqrt(N)  92.0% (88- 95)  1.17 | plain  92.2% (88- 95)  1.18
+   number of candidates  3 or 4                rec 1359 fam  33 top  62.4% of  3.99 | per shift  82.7% (71- 91)  1.76 | / sqrt(N)  84.2% (73- 92)  1.83 | plain  85.8% (74- 94)  1.94
+   number of candidates  5 to 8                rec  407 fam  17 top  47.4% of  8.00 | per shift  66.4% (44- 90)  2.04 | / sqrt(N)  64.4% (39- 91)  1.88 | plain  62.7% (34- 92)  1.87
+   number of candidates  9 or more             rec  135 fam  12 top  41.6% of 25.16 | per shift  74.4% (51- 97)  4.44 | / sqrt(N)  66.0% (44- 97)  3.84 | plain  59.2% (34- 97)  3.29
+   number of shifts      fewer than 25 shifts  rec 1469 fam  47 top  76.6% of  2.86 | per shift  87.6% (79- 94)  1.37 | / sqrt(N)  89.0% (80- 95)  1.43 | plain  90.2% (81- 96)  1.52
+   number of shifts      25 to 39 shifts       rec 1237 fam  63 top  74.8% of  4.76 | per shift  88.6% (83- 93)  1.53 | / sqrt(N)  89.2% (84- 94)  1.55 | plain  89.7% (84- 95)  1.59
+   number of shifts      40 shifts or more     rec  394 fam  46 top  53.3% of  9.32 | per shift  72.1% (56- 87)  2.63 | / sqrt(N)  67.5% (50- 85)  2.29 | plain  63.6% (45- 84)  2.01
+target 80%: likelihood ratio per shift score
+   record without data problems yes                              rec 3017 fam 144 | top right  71.8% | coverage  85.4% (79.8 to  90.2) | set  1.68 of  4.77
+   record without data problems no                               rec   83 fam  35 | top right  64.6% | coverage  77.2% (65.7 to  87.1) | set  1.46 of  6.38
+   kind of calculation          DP4+, B3LYP geometries           rec 1345 fam  80 | top right  85.1% | coverage  88.2% (81.5 to  94.1) | set  1.09 of  2.78
+   kind of calculation          MM-DP4+, MMFF geometries         rec   77 fam  63 | top right  86.5% | coverage  86.5% (78.6 to  93.7) | set  1.00 of  2.14
+   kind of calculation          xTB-DP4+, xTB geometries         rec  289 fam  79 | top right  91.0% | coverage  91.0% (85.8 to  95.3) | set  1.00 of  2.14
+   kind of calculation          DP4, MMFF geometries             rec  658 fam  68 | top right  59.6% | coverage  81.3% (69.6 to  91.3) | set  2.17 of  7.01
+   kind of calculation          DP4, HF or DFT geometries        rec  511 fam  57 | top right  59.6% | coverage  81.8% (72.3 to  89.4) | set  2.00 of  7.15
+   kind of calculation          DP4, semi-empirical geometries   rec  220 fam  15 | top right  51.5% | coverage  83.7% (68.7 to  94.0) | set  2.81 of  5.47
+   size of the set              one structure                    rec 2078 fam 141 | top right  85.0% | coverage  85.0% (80.1 to  89.4) | set  1.00 of  3.72
+   size of the set              more than one, not all           rec  782 fam  53 | top right  44.1% | coverage  81.4% (70.1 to  90.2) | set  3.04 of  8.44
+   size of the set              every candidate                  rec  240 fam  27 | top right  58.1% | coverage 100.0% (100.0 to 100.0) | set  2.44 of  2.44
+
+7. STRESS TESTS: calibration molecules that differ from the test molecules in a known way (same workflow)
+   cells: coverage (95% interval from resampling test families), mean set size; workflows used / test families
+   collection (STX150)    the 2015 collection            -> molecules added later          90%: per shift  92.8% (89- 96)  1.07 | / sqrt(N)  92.8% (89- 96)  1.07 | plain  92.2% (88- 96)  1.06 |  6 wf,  64 fam, of 2.06
+   collection (STX150)    the 2015 collection            -> molecules added later          80%: per shift  91.3% (87- 95)  1.00 | / sqrt(N)  91.3% (87- 95)  1.00 | plain  91.3% (87- 95)  1.00 |  6 wf,  64 fam, of 2.06
+   collection (STX150)    molecules added later          -> the 2015 collection            90%: per shift  96.7% (92-100)  1.06 | / sqrt(N)  96.7% (92-100)  1.05 | plain  96.7% (92-100)  1.04 |  6 wf,  16 fam, of 2.46
+   collection (STX150)    molecules added later          -> the 2015 collection            80%: per shift  95.1% (91- 98)  1.00 | / sqrt(N)  95.1% (91- 98)  1.00 | plain  95.1% (91- 98)  1.00 |  6 wf,  16 fam, of 2.46
+   collection (Cam2017)   molecules not taken up in 2019 -> molecules taken up in 2019     90%: per shift  96.6% (90-100)  5.34 | / sqrt(N)  98.0% (95-100)  5.66 | plain  99.5% (99-100)  6.04 | 12 wf,  17 fam, of 7.18
+   collection (Cam2017)   molecules not taken up in 2019 -> molecules taken up in 2019     80%: per shift  84.7% (70- 97)  2.55 | / sqrt(N)  87.0% (75- 98)  2.89 | plain  89.6% (78-100)  3.29 | 12 wf,  17 fam, of 7.18
+   collection (Cam2017)   molecules taken up in 2019     -> molecules not taken up in 2019 90%: per shift  97.8% (95-100)  5.09 | / sqrt(N)  93.3% (85-100)  4.18 | plain  91.3% (79-100)  4.18 | 12 wf,  13 fam, of 7.38
+   collection (Cam2017)   molecules taken up in 2019     -> molecules not taken up in 2019 80%: per shift  85.6% (69-100)  2.34 | / sqrt(N)  84.9% (67-100)  2.41 | plain  84.9% (67-100)  2.51 | 12 wf,  13 fam, of 7.38
+   size                   the half with fewer shifts     -> the half with more shifts      90%: per shift  90.3% (86- 94)  3.60 | / sqrt(N)  87.5% (82- 92)  2.82 | plain  83.1% (75- 90)  2.21 | 76 wf,  77 fam, of 5.97
+   size                   the half with fewer shifts     -> the half with more shifts      80%: per shift  78.8% (70- 87)  1.86 | / sqrt(N)  76.1% (67- 85)  1.62 | plain  74.3% (64- 84)  1.46 | 76 wf,  77 fam, of 5.97
+   size                   the half with more shifts      -> the half with fewer shifts     90%: per shift  94.7% (91- 98)  2.22 | / sqrt(N)  96.9% (95- 99)  2.78 | plain  97.6% (96- 99)  3.16 | 22 wf,  86 fam, of 4.29
+   size                   the half with more shifts      -> the half with fewer shifts     80%: per shift  93.2% (87- 97)  1.85 | / sqrt(N)  94.3% (88- 98)  2.13 | plain  96.8% (94- 99)  2.49 | 76 wf,  87 fam, of 4.01
+   candidates             at most four candidates        -> five or more candidates        90%: per shift  96.1% (92-100)  7.96 | / sqrt(N)  90.7% (81-100)  6.39 | plain  84.0% (69- 98)  5.13 | 31 wf,  28 fam, of 15.35
+   candidates             at most four candidates        -> five or more candidates        80%: per shift  70.8% (55- 86)  2.44 | / sqrt(N)  67.3% (50- 84)  2.04 | plain  65.0% (44- 85)  1.81 | 31 wf,  28 fam, of 15.35
+   candidates             five or more candidates        -> at most four candidates        90%: per shift  93.6% (87- 99)  2.37 | / sqrt(N)  95.6% (92- 99)  2.62 | plain  96.9% (93- 99)  2.71 | 16 wf,  42 fam, of 3.12
+   candidates             five or more candidates        -> at most four candidates        80%: per shift  89.0% (78- 96)  1.99 | / sqrt(N)  91.3% (82- 97)  2.25 | plain  95.4% (91- 99)  2.51 | 29 wf,  42 fam, of 3.16
+
+8. THE WORKFLOWS: cut-offs for use (all families) and what the sets cost (one family out)
+76 workflows. Cut-off = largest allowed distance of the log-likelihood from the best candidate, per shift.
+   95%: cannot be reached (fewer than 19 families) 54 | cut-off of zero (the best candidate alone)  1 | positive 21: median 0.567, range 0.066 to 1.147
+   90%: cannot be reached (fewer than 9 families)  0 | cut-off of zero (the best candidate alone)  5 | positive 71: median 0.476, range 0.053 to 1.628
+   80%: cannot be reached (fewer than 4 families)  0 | cut-off of zero (the best candidate alone) 16 | positive 60: median 0.184, range 0.038 to 0.681
+rank correlation between the share of top candidates right and the share of candidates kept, over the workflows of a benchmark
+   JOC2015  24 workflows | 90%: -0.69 | 80%: -0.82
+   STX150    6 workflows | 95%: -1.00 | 90%: -0.49 | 80%: -0.14
+   DP4-AI    4 workflows | 95%: +0.40 | 90%: -0.40 | 80%: -0.40
+   Cam2017  12 workflows | 95%: -0.25 | 90%: +0.20 | 80%: -0.41
+   Cam2019  30 workflows | 90%: -0.32 | 80%: -0.72
+kinds of calculation: top candidate right, then per target coverage, mean set size (95% interval), single-structure sets and median cut-off
+   JOC2015  DP4+      B3LYP   wf 24 rec 1152 fam 18 cand  3.00 top  81.3% | 90%:  94.0% 1.55 (1.34 to 1.84) single  60% cut 0.328 | 80%:  85.5% 1.12 (1.07 to 1.19) single  89% cut 0.061
+   STX150   MM-DP4+   MMFF    wf  1 rec   77 fam 63 cand  2.14 top  86.5% | 95%:  95.2% 1.27 (1.17 to 1.37) single  73% cut 0.300 | 90%:  91.3% 1.10 (1.04 to 1.18) single  90% cut 0.159 | 80%:  86.5% 1.00 (1.00 to 1.00) single 100% cut 0.000
+   STX150   xTB-DP4+  xTB     wf  3 rec  289 fam 79 cand  2.14 top  91.0% | 95%:  95.4% 1.17 (1.11 to 1.24) single  83% cut 0.248 | 90%:  91.7% 1.01 (1.00 to 1.02) single  99% cut 0.000 | 80%:  91.0% 1.00 (1.00 to 1.00) single 100% cut 0.000
+   STX150   DP4+      B3LYP   wf  2 rec  193 fam 78 cand  2.15 top  96.0% | 95%:  96.7% 1.01 (1.00 to 1.03) single  99% cut 0.033 | 90%:  96.0% 1.00 (1.00 to 1.00) single 100% cut 0.000 | 80%:  96.0% 1.00 (1.00 to 1.00) single 100% cut 0.000
+   DP4-AI   DP4       MMFF    wf  1 rec   44 fam 38 cand  7.58 top  50.0% | 95%:  97.4% 4.11 (3.22 to 5.11) single  14% cut 0.361 | 90%:  90.8% 2.61 (2.13 to 3.12) single  26% cut 0.182 | 80%:  80.3% 1.95 (1.59 to 2.36) single  46% cut 0.114
+   DP4-AI   DP4       B3LYP   wf  3 rec  138 fam 40 cand  7.50 top  55.0% | 95%:  95.8% 3.94 (3.09 to 4.86) single  21% cut 0.291 | 90%:  90.8% 2.74 (2.23 to 3.30) single  32% cut 0.214 | 80%:  80.0% 1.78 (1.53 to 2.04) single  53% cut 0.095
+   Cam2017  DP4       MMFF    wf 12 rec  504 fam 30 cand  7.27 top  62.4% | 95%:  96.2% 5.41 (3.80 to 7.53) single   2% cut 0.801 | 90%:  91.1% 3.57 (2.67 to 4.71) single  16% cut 0.463 | 80%:  81.0% 2.14 (1.75 to 2.62) single  39% cut 0.195
+   Cam2019  DP4       MMFF    wf  5 rec  110 fam 15 cand  5.47 top  51.0% | 90%:  93.3% 4.89 (2.82 to 8.38) single   1% cut 0.836 | 80%:  83.0% 2.43 (1.85 to 3.35) single  22% cut 0.233
+   Cam2019  DP4       PM6     wf  5 rec  110 fam 15 cand  5.47 top  46.0% | 90%:  93.0% 4.79 (2.64 to 8.64) single   1% cut 1.300 | 80%:  85.0% 3.50 (1.95 to 6.27) single  19% cut 0.517
+   Cam2019  DP4       PM7     wf  5 rec  110 fam 15 cand  5.47 top  57.0% | 90%:  93.3% 4.47 (2.69 to 7.62) single   0% cut 0.967 | 80%:  82.3% 2.11 (1.66 to 2.80) single  33% cut 0.239
+   Cam2019  DP4       HF      wf  5 rec  125 fam 17 cand  7.18 top  63.5% | 90%:  94.1% 4.83 (2.89 to 7.62) single   7% cut 0.809 | 80%:  82.9% 1.79 (1.33 to 2.36) single  59% cut 0.105
+   Cam2019  DP4       B3LYP   wf  5 rec  123 fam 17 cand  6.58 top  66.6% | 90%:  94.0% 5.62 (3.14 to 9.31) single   4% cut 0.876 | 80%:  82.8% 1.99 (1.50 to 2.71) single  45% cut 0.152
+   Cam2019  DP4       M06-2X  wf  5 rec  125 fam 17 cand  7.18 top  55.3% | 90%:  94.1% 5.59 (3.16 to 8.91) single   4% cut 0.929 | 80%:  82.1% 2.52 (1.86 to 3.46) single  28% cut 0.282
+paired differences of mean set size between kinds of calculation of one benchmark (families present in both; shown when the 95% interval excludes zero)
+   STX150   95%  MM-DP4+ MMFF     top  86.5% set 1.27 | xTB-DP4+ xTB     top  89.7% set 1.15 | difference +0.12 (+0.01 to +0.21), 63 families
+   STX150   90%  MM-DP4+ MMFF     top  86.5% set 1.10 | xTB-DP4+ xTB     top  89.7% set 1.01 | difference +0.10 (+0.03 to +0.18), 63 families
+   STX150   95%  MM-DP4+ MMFF     top  87.9% set 1.26 | DP4+ B3LYP       top  96.8% set 1.02 | difference +0.24 (+0.14 to +0.35), 62 families
+   STX150   90%  MM-DP4+ MMFF     top  87.9% set 1.10 | DP4+ B3LYP       top  96.8% set 1.00 | difference +0.10 (+0.04 to +0.18), 62 families
+   STX150   95%  xTB-DP4+ xTB     top  89.4% set 1.17 | DP4+ B3LYP       top  95.5% set 1.01 | difference +0.16 (+0.10 to +0.22), 77 families
+   Cam2019  80%  DP4 MMFF         top  51.0% set 2.43 | DP4 PM7          top  57.0% set 2.11 | difference +0.32 (+0.04 to +0.62), 15 families
+   Cam2019  90%  DP4 MMFF         top  51.0% set 4.89 | DP4 HF           top  59.3% set 4.45 | difference +0.44 (+0.16 to +0.85), 15 families
+   Cam2019  80%  DP4 MMFF         top  51.0% set 2.43 | DP4 B3LYP        top  63.0% set 2.08 | difference +0.35 (+0.08 to +0.63), 15 families
+   Cam2019  80%  DP4 PM6          top  46.0% set 3.50 | DP4 PM7          top  57.0% set 2.11 | difference +1.39 (+0.13 to +3.56), 15 families
+   Cam2019  80%  DP4 PM6          top  46.0% set 3.50 | DP4 HF           top  59.3% set 1.88 | difference +1.62 (+0.01 to +4.10), 15 families
+   Cam2019  80%  DP4 PM6          top  46.0% set 3.50 | DP4 B3LYP        top  63.0% set 2.08 | difference +1.42 (+0.16 to +3.52), 15 families
+   Cam2019  80%  DP4 PM7          top  57.0% set 2.11 | DP4 M06-2X       top  50.0% set 2.62 | difference -0.51 (-0.96 to -0.10), 15 families
+   Cam2019  90%  DP4 HF           top  63.5% set 4.83 | DP4 B3LYP        top  67.4% set 5.99 | difference -1.15 (-2.65 to -0.21), 17 families
+   Cam2019  90%  DP4 HF           top  63.5% set 4.83 | DP4 M06-2X       top  55.3% set 5.59 | difference -0.76 (-1.59 to -0.19), 17 families
+   Cam2019  80%  DP4 HF           top  63.5% set 1.79 | DP4 M06-2X       top  55.3% set 2.52 | difference -0.73 (-1.34 to -0.23), 17 families
+   Cam2019  80%  DP4 B3LYP        top  67.4% set 1.97 | DP4 M06-2X       top  55.3% set 2.52 | difference -0.55 (-0.85 to -0.26), 17 families
+
+9. CONFIDENT CALLS: what the calibrated set does with them (likelihood ratio per shift score, one family out)
+   stated 99% or more   and wrong:  225 records ( 45 families) | 90% set holds the actual structure in  108 ( 48.0%) | one structure in   92 ( 40.9%) | mean size 2.56 of 4.75
+   stated 99% or more   and wrong:  225 records ( 45 families) | 80% set holds the actual structure in   25 ( 11.1%) | one structure in  178 ( 79.1%) | mean size 1.35 of 4.75
+   stated 99% or more   and right: 1566 records (126 families) | 90% set holds the actual structure in 1566 (100.0%) | one structure in 1075 ( 68.6%) | mean size 1.66 of 3.84
+   stated 99% or more   and right: 1566 records (126 families) | 80% set holds the actual structure in 1566 (100.0%) | one structure in 1454 ( 92.8%) | mean size 1.08 of 3.84
+   stated 99.9% or more and wrong:  134 records ( 35 families) | 90% set holds the actual structure in   42 ( 31.3%) | one structure in   79 ( 59.0%) | mean size 1.98 of 4.37
+   stated 99.9% or more and wrong:  134 records ( 35 families) | 80% set holds the actual structure in    8 (  6.0%) | one structure in  118 ( 88.1%) | mean size 1.18 of 4.37
+   stated 99.9% or more and right: 1251 records (114 families) | 90% set holds the actual structure in 1251 (100.0%) | one structure in  966 ( 77.2%) | mean size 1.49 of 3.61
+   stated 99.9% or more and right: 1251 records (114 families) | 80% set holds the actual structure in 1251 (100.0%) | one structure in 1210 ( 96.7%) | mean size 1.03 of 3.61
+   90% sets with one structure: 1279 of 3100 records (41.3%), right in 1150 (89.9%) | stated 99% or more: 1791 records (57.8%), right in 87.4%
+   80% sets with one structure: 2078 of 3100 records (67.0%), right in 1710 (82.3%) | stated 99% or more: 1791 records (57.8%), right in 87.4%
+
+10. UNCERTAIN CONFORMER ENERGIES: likelihood averaged over a noise of 4 kJ/mol on the conformer energies against the plain likelihood
+   records with conformer data 1108 | families 70 | workflows 34 | top candidate right 667 -> 686
+   90% DP4-AI   records  182 families 40 | coverage  90.8% ->  90.8% | set 2.71 -> 2.68, difference -0.03 (-0.18 to +0.11) | single 30% -> 34% | families smaller 15, larger 12
+   90% Cam2017  records  504 families 30 | coverage  91.1% ->  91.3% | set 3.57 -> 3.19, difference -0.38 (-0.66 to -0.13) | single 16% -> 18% | families smaller 21, larger 5
+   90% Cam2019  records  422 families 17 | coverage  93.6% ->  93.3% | set 4.93 -> 3.19, difference -1.74 (-3.59 to -0.51) | single  4% -> 13% | families smaller 14, larger 1
+   90% all      records 1108 families 70 | coverage  92.0% ->  91.9% | set 3.89 -> 3.09, difference -0.79 (-1.54 to -0.23) | single 14% -> 19% | families smaller 40, larger 14
+   80% DP4-AI   records  182 families 40 | coverage  80.1% ->  80.7% | set 1.82 -> 1.68, difference -0.14 (-0.28 to -0.02) | single 51% -> 57% | families smaller 16, larger 8
+   80% Cam2017  records  504 families 30 | coverage  81.0% ->  81.1% | set 2.14 -> 2.02, difference -0.12 (-0.32 to +0.05) | single 39% -> 38% | families smaller 13, larger 8
+   80% Cam2019  records  422 families 17 | coverage  82.8% ->  83.1% | set 2.40 -> 2.27, difference -0.14 (-0.38 to +0.03) | single 34% -> 35% | families smaller 8, larger 6
+   80% all      records 1108 families 70 | coverage  81.5% ->  81.7% | set 2.17 -> 2.04, difference -0.13 (-0.28 to -0.01) | single 40% -> 41% | families smaller 32, larger 17
+
+12. RANDOM HALVES of the families (500 splits): coverage (5% and 95% of the splits), mean set size, sets with every candidate
+target 90%
+   likelihood ratio per shift  JOC2015   98.1% (91-100)  2.38, all 63% STX150    93.7% (90- 97)  1.06, all  5% DP4-AI    92.5% (80-100)  3.22, all 19% Cam2017   93.0% (77-100)  4.41, all 48% Cam2019   96.3% (85-100)  5.34, all 81%
+   likelihood ratio            JOC2015   98.1% (90-100)  2.46, all 69% STX150    93.7% (90- 97)  1.05, all  4% DP4-AI    92.5% (80-100)  3.48, all 25% Cam2017   93.4% (77-100)  4.72, all 60% Cam2019   96.2% (83-100)  5.06, all 81%
+target 80%
+   likelihood ratio per shift  JOC2015   88.3% (78- 98)  1.27, all 10% STX150    92.1% (89- 95)  1.00, all  0% DP4-AI    81.9% (65- 95)  2.00, all  9% Cam2017   83.4% (63- 98)  2.46, all 21% Cam2019   85.5% (67-100)  3.05, all 35%
+   likelihood ratio            JOC2015   88.3% (77- 99)  1.28, all 13% STX150    92.1% (89- 95)  1.00, all  0% DP4-AI    81.7% (64- 95)  2.03, all 12% Cam2017   83.6% (63- 99)  2.63, all 29% Cam2019   85.6% (63-100)  2.85, all 41%

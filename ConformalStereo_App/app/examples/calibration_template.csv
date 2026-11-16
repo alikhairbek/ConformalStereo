@@ -1,0 +1,8 @@
+molecule,family,shifts,candidate,probability,actual
+compound 1,series A,24,isomer 1,97.3312,1
+compound 1,series A,24,isomer 2,2.6688,0
+compound 2,series A,26,isomer 1,0.0412,0
+compound 2,series A,26,isomer 2,99.9588,1
+compound 3,series B,31,isomer 1,64.1,0
+compound 3,series B,31,isomer 2,35.2,1
+compound 3,series B,31,isomer 3,0.7,0

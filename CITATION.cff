@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or these data, please cite the paper."
+title: "ConformalStereo: calibrated candidate sets for NMR stereochemical assignment"
+version: "1.0.0"
+date-released: "2026-11-16"
+authors:
+  - family-names: Khairbek
+    given-names: "Ali A."
+    orcid: "https://orcid.org/0000-0002-0477-5896"
+    affiliation: "University Centre for Research & Development, Chandigarh University"
+preferred-citation:
+  type: unpublished
+  title: "How sure is DP4? Calibrated candidate sets for NMR stereochemical assignment"
+  authors:
+    - family-names: Khairbek
+      given-names: "Ali A."
+  year: 2026
+  notes: "Manuscript. Replace this entry by the journal reference once the paper is published."

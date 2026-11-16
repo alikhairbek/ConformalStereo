@@ -1,0 +1,33 @@
+1. every record recomputed
+   95%: records that differ from final_records.csv: 0 of 3100
+   90%: records that differ from final_records.csv: 0 of 3100
+   80%: records that differ from final_records.csv: 0 of 3100
+2. per benchmark from the recomputed sets (coverage, mean set size) against final_scores.csv
+   95% STX150   coverage 0.9580 (table 0.95804196) size 1.132 (table 1.13170163) same
+   95% DP4-AI   coverage 0.9620 (table 0.96202532) size 3.978 (table 3.97784810) same
+   95% Cam2017  coverage 0.9625 (table 0.96250000) size 5.406 (table 5.40625000) same
+   90% JOC2015  coverage 0.9405 (table 0.94048997) size 1.552 (table 1.55208333) same
+   90% STX150   coverage 0.9312 (table 0.93123543) size 1.020 (table 1.01981352) same
+   90% DP4-AI   coverage 0.9082 (table 0.90822785) size 2.709 (table 2.70886076) same
+   90% Cam2017  coverage 0.9111 (table 0.91111111) size 3.571 (table 3.57083333) same
+   90% Cam2019  coverage 0.9367 (table 0.93671548) size 5.049 (table 5.04864017) same
+   80% JOC2015  coverage 0.8549 (table 0.85493827) size 1.124 (table 1.12413194) same
+   80% STX150   coverage 0.9207 (table 0.92074592) size 1.000 (table 1.00000000) same
+   80% DP4-AI   coverage 0.8006 (table 0.80063291) size 1.820 (table 1.81962025) same
+   80% Cam2017  coverage 0.8104 (table 0.81041667) size 2.140 (table 2.14027778) same
+   80% Cam2019  coverage 0.8300 (table 0.83002092) size 2.375 (table 2.37500000) same
+3. the actual structure drawn at random (20 draws): one family out, coverage per benchmark (lowest draw, mean) and mean share of candidates kept
+   90%: JOC2015 93.6% (lowest 93.2%), kept 94% | STX150 90.7% (lowest 90.5%), kept 91% | DP4-AI 90.9% (lowest 90.2%), kept 90% | Cam2017 91.1% (lowest 90.6%), kept 91% | Cam2019 93.1% (lowest 92.7%), kept 93%
+   80%: JOC2015 83.5% (lowest 83.3%), kept 83% | STX150 80.7% (lowest 80.3%), kept 81% | DP4-AI 80.8% (lowest 80.1%), kept 80% | Cam2017 81.2% (lowest 80.8%), kept 81% | Cam2019 83.3% (lowest 82.8%), kept 83%
+4. who is missed (sets of the likelihood ratio per shift score, one family out)
+   90% JOC2015  families 18 | records missed  86 of 1152 | families never missed 10 | missed in half their records or more  0 | three families carry  76% of the misses: 79 25/192; 85 20/96; 88 20/48
+   90% STX150   families 80 | records missed  36 of  559 | families never missed 61 | missed in half their records or more  5 | three families carry  31% of the misses: 98 4/11; 132 4/6; 89 3/12
+   90% DP4-AI   families 40 | records missed  21 of  182 | families never missed 31 | missed in half their records or more  3 | three families carry  52% of the misses: TS2 4/4; TS3A 4/8; JB2 3/8
+   90% Cam2017  families 30 | records missed  38 of  504 | families never missed 24 | missed in half their records or more  2 | three families carry  76% of the misses: Zidovudine 12/12; Hydroxycurvularin 9/24; Similanamide 8/12
+   90% Cam2019  families 17 | records missed  31 of  703 | families never missed 13 | missed in half their records or more  1 | three families carry  97% of the misses: Zidovudine 20/30; Lopinavir 9/30; Aldols 1/120
+   80% JOC2015  families 18 | records missed 230 of 1152 | families never missed  5 | missed in half their records or more  1 | three families carry  67% of the misses: 79 84/192; 85 41/96; 88 29/48
+   80% STX150   families 80 | records missed  42 of  559 | families never missed 56 | missed in half their records or more  6 | three families carry  26% of the misses: 98 4/11; 132 4/6; 89 3/12
+   80% DP4-AI   families 40 | records missed  41 of  182 | families never missed 22 | missed in half their records or more  7 | three families carry  39% of the misses: NP3A 8/8; TS2 4/4; TS3A 4/8
+   80% Cam2017  families 30 | records missed  87 of  504 | families never missed 17 | missed in half their records or more  5 | three families carry  44% of the misses: Aldols 14/48; Similanamide 12/12; Zidovudine 12/12
+   80% Cam2019  families 17 | records missed 100 of  703 | families never missed  6 | missed in half their records or more  2 | three families carry  58% of the misses: Lopinavir 23/30; Zidovudine 21/30; Tetrahydrofurans 14/120
+ALL CHECKS PASSED

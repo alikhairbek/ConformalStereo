@@ -1,0 +1,49 @@
+test,calibrated_on,tested_on,target,score,workflows,test_families,test_records,coverage,coverage_lo,coverage_hi,mean_set_size,mean_candidates
+collection (STX150),the 2015 collection,molecules added later,0.9,likelihood ratio per shift,6,64,384,0.92751479,0.88629379,0.96108075,1.07248521,2.05917160
+collection (STX150),the 2015 collection,molecules added later,0.9,likelihood ratio / sqrt(N),6,64,384,0.92751479,0.88629379,0.96108075,1.06952663,2.05917160
+collection (STX150),the 2015 collection,molecules added later,0.9,likelihood ratio,6,64,384,0.92159763,0.87915045,0.95714286,1.05621302,2.05917160
+collection (STX150),the 2015 collection,molecules added later,0.8,likelihood ratio per shift,6,64,384,0.91272189,0.86675979,0.95147300,1.00000000,2.05917160
+collection (STX150),the 2015 collection,molecules added later,0.8,likelihood ratio / sqrt(N),6,64,384,0.91272189,0.86675979,0.95147300,1.00000000,2.05917160
+collection (STX150),the 2015 collection,molecules added later,0.8,likelihood ratio,6,64,384,0.91272189,0.86675979,0.95147300,1.00000000,2.05917160
+collection (STX150),molecules added later,the 2015 collection,0.9,likelihood ratio per shift,6,16,175,0.96703297,0.92441860,1.00000000,1.05952381,2.46153846
+collection (STX150),molecules added later,the 2015 collection,0.9,likelihood ratio / sqrt(N),6,16,175,0.96703297,0.92441860,1.00000000,1.05128205,2.46153846
+collection (STX150),molecules added later,the 2015 collection,0.9,likelihood ratio,6,16,175,0.96703297,0.92441860,1.00000000,1.04212454,2.46153846
+collection (STX150),molecules added later,the 2015 collection,0.8,likelihood ratio per shift,6,16,175,0.95054945,0.90909091,0.98369565,1.00000000,2.46153846
+collection (STX150),molecules added later,the 2015 collection,0.8,likelihood ratio / sqrt(N),6,16,175,0.95054945,0.90909091,0.98369565,1.00000000,2.46153846
+collection (STX150),molecules added later,the 2015 collection,0.8,likelihood ratio,6,16,175,0.95054945,0.90909091,0.98369565,1.00000000,2.46153846
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.9,likelihood ratio per shift,12,17,300,0.96568627,0.89705882,1.00000000,5.34068627,7.17647059
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.9,likelihood ratio / sqrt(N),12,17,300,0.98039216,0.94607843,1.00000000,5.66299020,7.17647059
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.9,likelihood ratio,12,17,300,0.99509804,0.98529412,1.00000000,6.04166667,7.17647059
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.8,likelihood ratio per shift,12,17,300,0.84681373,0.69849877,0.96574755,2.55147059,7.17647059
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.8,likelihood ratio / sqrt(N),12,17,300,0.87009804,0.74509804,0.97549020,2.88602941,7.17647059
+collection (Cam2017),molecules not taken up in 2019,molecules taken up in 2019,0.8,likelihood ratio,12,17,300,0.89583333,0.77941176,0.99754902,3.29044118,7.17647059
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.9,likelihood ratio per shift,12,13,204,0.97756410,0.94551282,1.00000000,5.09294872,7.38461538
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.9,likelihood ratio / sqrt(N),12,13,204,0.93269231,0.84615385,1.00000000,4.17628205,7.38461538
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.9,likelihood ratio,12,13,204,0.91346154,0.79487179,1.00000000,4.18269231,7.38461538
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.8,likelihood ratio per shift,12,13,204,0.85576923,0.68581731,1.00000000,2.33974359,7.38461538
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.8,likelihood ratio / sqrt(N),12,13,204,0.84935897,0.66666667,1.00000000,2.41025641,7.38461538
+collection (Cam2017),molecules taken up in 2019,molecules not taken up in 2019,0.8,likelihood ratio,12,13,204,0.84935897,0.66666667,1.00000000,2.50641026,7.38461538
+size,the half with fewer shifts,the half with more shifts,0.9,likelihood ratio per shift,76,77,1382,0.90319392,0.85887150,0.94259142,3.59717020,5.96504370
+size,the half with fewer shifts,the half with more shifts,0.9,likelihood ratio / sqrt(N),76,77,1382,0.87494798,0.82016863,0.92398519,2.82183729,5.96504370
+size,the half with fewer shifts,the half with more shifts,0.9,likelihood ratio,76,77,1382,0.83109655,0.74823946,0.90334895,2.20724095,5.96504370
+size,the half with fewer shifts,the half with more shifts,0.8,likelihood ratio per shift,76,77,1382,0.78844153,0.70357279,0.86661697,1.85981065,5.96504370
+size,the half with fewer shifts,the half with more shifts,0.8,likelihood ratio / sqrt(N),76,77,1382,0.76144403,0.66560982,0.84980179,1.61756138,5.96504370
+size,the half with fewer shifts,the half with more shifts,0.8,likelihood ratio,76,77,1382,0.74256138,0.63714149,0.83969663,1.45588847,5.96504370
+size,the half with more shifts,the half with fewer shifts,0.9,likelihood ratio per shift,22,86,745,0.94746717,0.90590718,0.97858672,2.21873046,4.28893058
+size,the half with more shifts,the half with fewer shifts,0.9,likelihood ratio / sqrt(N),22,86,745,0.96904315,0.94771676,0.98589160,2.78064415,4.28893058
+size,the half with more shifts,the half with fewer shifts,0.9,likelihood ratio,22,86,745,0.97560976,0.95590623,0.99016188,3.16291432,4.28893058
+size,the half with more shifts,the half with fewer shifts,0.8,likelihood ratio per shift,76,87,1718,0.93205492,0.86505990,0.97264064,1.84848485,4.01325758
+size,the half with more shifts,the half with fewer shifts,0.8,likelihood ratio / sqrt(N),76,87,1718,0.94270833,0.88330849,0.97812840,2.12642045,4.01325758
+size,the half with more shifts,the half with fewer shifts,0.8,likelihood ratio,76,87,1718,0.96827652,0.94370786,0.98596321,2.49029356,4.01325758
+candidates,at most four candidates,five or more candidates,0.9,likelihood ratio per shift,31,28,320,0.96108949,0.91632545,0.99530890,7.95719844,15.34630350
+candidates,at most four candidates,five or more candidates,0.9,likelihood ratio / sqrt(N),31,28,320,0.90661479,0.80577938,0.99530571,6.38521401,15.34630350
+candidates,at most four candidates,five or more candidates,0.9,likelihood ratio,31,28,320,0.84046693,0.68903470,0.97727273,5.13229572,15.34630350
+candidates,at most four candidates,five or more candidates,0.8,likelihood ratio per shift,31,28,320,0.70817121,0.54627924,0.86441678,2.43579767,15.34630350
+candidates,at most four candidates,five or more candidates,0.8,likelihood ratio / sqrt(N),31,28,320,0.67315175,0.49603168,0.84397574,2.04085603,15.34630350
+candidates,at most four candidates,five or more candidates,0.8,likelihood ratio,31,28,320,0.64980545,0.44379615,0.85097509,1.81322957,15.34630350
+candidates,five or more candidates,at most four candidates,0.9,likelihood ratio per shift,16,42,439,0.93573668,0.87303949,0.98546675,2.36755486,3.12225705
+candidates,five or more candidates,at most four candidates,0.9,likelihood ratio / sqrt(N),16,42,439,0.95611285,0.91611585,0.98660752,2.62304075,3.12225705
+candidates,five or more candidates,at most four candidates,0.9,likelihood ratio,16,42,439,0.96865204,0.93256354,0.99356965,2.70689655,3.12225705
+candidates,five or more candidates,at most four candidates,0.8,likelihood ratio per shift,29,42,699,0.89036885,0.78458002,0.96189613,1.99026639,3.15983607
+candidates,five or more candidates,at most four candidates,0.8,likelihood ratio / sqrt(N),29,42,699,0.91290984,0.82305837,0.97417310,2.25204918,3.15983607
+candidates,five or more candidates,at most four candidates,0.8,likelihood ratio,29,42,699,0.95440574,0.91241557,0.98726594,2.50665984,3.15983607

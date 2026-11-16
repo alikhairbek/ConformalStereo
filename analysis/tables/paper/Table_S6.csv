@@ -1,0 +1,21 @@
+Level,Score,JOC2015,STX150,DP4-AI,Cam2017,Cam2019
+90%,Likelihood ratio per shift (the method),94.0%; 1.55,93.1%; 1.02,90.8%; 2.71,91.1%; 3.57,93.7%; 5.05
+,Likelihood ratio over the square root of N,94.4%; 1.60,93.1%; 1.02,90.8%; 2.83,90.8%; 3.77,93.7%; 4.44
+,"Likelihood ratio, undivided",94.4%; 1.66,93.0%; 1.01,91.1%; 2.77,91.0%; 3.68,93.7%; 4.14
+,Stated probability,94.4%; 1.66,93.0%; 1.01,91.1%; 2.75,91.0%; 3.68,93.7%; 4.13
+,Cumulative probability,94.3%; 1.67,93.0%; 1.01,91.1%; 2.75,91.0%; 3.75,93.7%; 4.14
+,Cumulative probability after a fitted temperature,94.4%; 1.69,93.0%; 1.01,91.1%; 2.88,90.6%; 4.22,93.7%; 4.51
+,Rank,96.0%; 2.07,96.0%; 1.31,92.1%; 3.15,91.7%; 3.76,96.2%; 3.62
+,No guarantee: stated probabilities add up to the level,87.9%; 1.18,93.9%; 1.05,74.1%; 1.49,72.2%; 1.32,68.3%; 1.40
+,No guarantee: the same after a fitted temperature,96.0%; 1.84,97.6%; 1.30,94.9%; 3.87,90.8%; 4.32,91.8%; 4.04
+,No guarantee: top candidate alone,81.3%; 1.00,92.1%; 1.00,53.8%; 1.00,62.4%; 1.00,56.9%; 1.00
+80%,Likelihood ratio per shift (the method),85.5%; 1.12,92.1%; 1.00,80.1%; 1.82,81.0%; 2.14,83.0%; 2.38
+,Likelihood ratio over the square root of N,85.4%; 1.12,92.1%; 1.00,80.7%; 1.79,81.0%; 2.17,82.6%; 2.24
+,"Likelihood ratio, undivided",85.4%; 1.12,92.1%; 1.00,80.7%; 1.83,81.1%; 2.21,82.4%; 2.19
+,Stated probability,85.4%; 1.12,92.1%; 1.00,80.7%; 1.80,81.1%; 2.22,82.4%; 2.19
+,Cumulative probability,85.4%; 1.12,92.1%; 1.00,81.0%; 1.78,81.1%; 2.21,82.4%; 2.20
+,Cumulative probability after a fitted temperature,85.6%; 1.13,92.1%; 1.00,81.0%; 1.89,81.5%; 2.55,82.8%; 2.52
+,Rank,90.9%; 1.59,92.1%; 1.00,87.3%; 2.55,84.7%; 2.85,85.6%; 2.71
+,No guarantee: stated probabilities add up to the level,85.6%; 1.10,93.4%; 1.03,65.2%; 1.31,68.7%; 1.19,64.3%; 1.26
+,No guarantee: the same after a fitted temperature,93.6%; 1.56,96.9%; 1.19,91.8%; 2.97,87.2%; 3.38,88.8%; 3.31
+,No guarantee: top candidate alone,81.3%; 1.00,92.1%; 1.00,53.8%; 1.00,62.4%; 1.00,56.9%; 1.00
